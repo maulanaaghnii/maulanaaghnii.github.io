@@ -1,9 +1,40 @@
+
+# Project Information
 site_name: "MekProjects Wiki"
+site_url: https://maulanaaghnii.github.io/docs/
+site_author: TB Maulana Aghni
+site_description: >-
+  This personal wiki is my go-to resource for documenting key knowledge, 
+  project notes, and cheat sheets across various technologies.
+
+# Copyright
+copyright: Copyright &copy; 2024 TB. Maulana Aghni
+
+# Repository
+repo_name: anyname-space/anyname
+repo_url: https://github.com/anyname-space/anyname
+
 theme:
   name: material
   palette:
-    primary: 'indigo'
-    accent: 'pink'
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
   font:
     text: Roboto
     code: Roboto Mono
