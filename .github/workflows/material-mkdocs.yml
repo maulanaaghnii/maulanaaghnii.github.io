@@ -27,13 +27,15 @@ jobs:
 
       - name: Move build to docs folder
         run: |
-          rm -rf docs/*  # Hapus konten lama di folder docs
-          cp -r site/* docs/  # Salin hasil build MkDocs ke folder docs
+          rm -rf docs/*  
+          cp -r site/* docs/  
 
       - name: Commit and push changes
         run: |
-          git config user.name "maulanaaghnii"  
-          git config user.email "maulanaaghni.contact@gmail.com" 
-          git add -f docs/* 
+          git config user.name "maulanaaghnii"
+          git config user.email "maulanaaghni.contact@gmail.com"  # Ganti dengan alamat email kamu
+          git add -f docs/*  
           git commit -m "Deploy MkDocs site" || echo "No changes to commit"
-          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/maulanaaghnii/maulanaaghnii.github.io.git main
+          git push -f https://$PAT_TOKEN@github.com/maulanaaghnii/maulanaaghnii.github.io.git main
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
