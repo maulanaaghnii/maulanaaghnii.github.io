@@ -39,6 +39,6 @@ jobs:
           git commit -m "Update MkDocs site" || echo "No changes to commit"
           git push origin main
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          PAT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
         
