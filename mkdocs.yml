@@ -1,0 +1,10 @@
+site_name: "MekProjects Wiki"
+theme:
+  name: material
+  palette:
+    primary: 'indigo'
+    accent: 'pink'
+  font:
+    text: Roboto
+    code: Roboto Mono
+docs_dir: docs
