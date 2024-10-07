@@ -1,9 +1,9 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy MkDocs to Main Branch
 
 on:
   push:
     branches:
-      - main  # Atur trigger ketika ada push ke branch main
+      - main  
 
 jobs:
   deploy:
@@ -16,19 +16,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  # Versi Python yang ingin digunakan
+          python-version: '3.12'  
 
       - name: Install MkDocs and Material
         run: |
           pip install mkdocs mkdocs-material
 
       - name: Build MkDocs
-        run: mkdocs build  # Membangun situs MkDocs
+        run: mkdocs build  
 
-      - name: Deploy to GitHub Pages
+      - name: Move build to docs folder
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f site/*  # Menambahkan hasil build ke staging area
+          rm -rf docs/*  # Hapus konten lama di folder docs
+          cp -r site/* docs/  # Salin hasil build MkDocs ke folder docs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "maulanaaghnii"  
+          git config user.email "maulanaaghni.contact@gmail.com" 
+          git add -f docs/* 
           git commit -m "Deploy MkDocs site" || echo "No changes to commit"
-          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/maulanaaghnii/maulanaaghnii.github.io.git HEAD:gh-pages
+          git push -f https://${{ secrets.GITHUB_TOKEN }}@github.com/maulanaaghnii/maulanaaghnii.github.io.git main
