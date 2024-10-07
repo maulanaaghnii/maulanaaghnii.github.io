@@ -38,7 +38,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/mekprojectwiki.png
+  logo: assets/images/mekprojectslogo.png
+  favicon: assets/images/favicon.ico
 docs_dir: docs
 
 nav:
