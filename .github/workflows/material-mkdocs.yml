@@ -26,8 +26,15 @@ jobs:
         run: |
           mkdocs build
 
-      - name: Deploy to GitHub Pages
+      - name: Copy site to docs folder
         run: |
-          mkdocs gh-deploy --config-file mkdocs.yml --remote-branch main --destination docs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          rm -rf docs/*        # Hapus konten lama di folder docs
+          cp -r site/* docs/   # Salin hasil build MkDocs ke folder docs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git commit -m "Update MkDocs site" || echo "No changes to commit"
+          git push origin main
