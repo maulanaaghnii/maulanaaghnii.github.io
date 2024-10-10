@@ -17,6 +17,7 @@ repo_url: https://github.com/anyname-space/anyname
 theme:
   features:
     - navigation.tabs
+    - content.code.copy
   name: material
   palette:
     - media: "(prefers-color-scheme)"
