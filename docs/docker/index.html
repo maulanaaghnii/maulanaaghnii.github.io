@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#docker" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -491,6 +496,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#show-all-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show All Images
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#show-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Show Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stop-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stop Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart Container
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Container
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -508,9 +604,44 @@
   
 
 
-  <h1>Docker</h1>
-
-<p>test</p>
+<h1 id="docker">Docker</h1>
+<p>Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker's methodologies for shipping, testing, and deploying code, you can significantly reduce the delay between writing code and running it in production.</p>
+<h2 id="show-all-images">Show All Images</h2>
+<pre><code>docker images
+</code></pre>
+<h2 id="show-container">Show Container</h2>
+<pre><code>docker ps
+</code></pre>
+<p>show all container both active &amp; inactive</p>
+<pre><code>docker ps -a
+</code></pre>
+<h2 id="build">Build</h2>
+<pre><code>docker build -t &lt;image_name&gt;:&lt;tag_version&gt; .
+</code></pre>
+<h2 id="run-container">Run Container</h2>
+<pre><code>docker run -d --name container_name &lt;image_name&gt;:&lt;tag_version&gt;
+</code></pre>
+<h2 id="stop-container">Stop Container</h2>
+<pre><code>docker stop CONTAINER_ID
+</code></pre>
+<h2 id="start-container">Start Container</h2>
+<pre><code>docker start CONTAINER_ID
+</code></pre>
+<h2 id="restart-container">Restart Container</h2>
+<pre><code>docker restart CONTAINER_NAME_OR_ID
+</code></pre>
+<h2 id="delete-image">Delete Image</h2>
+<pre><code>docker rmi IMAGE_ID
+</code></pre>
+<p>with force method</p>
+<pre><code>docker rmi -f IMAGE_ID
+</code></pre>
+<h2 id="delete-container">Delete Container</h2>
+<pre><code>docker rm CONTAINER_ID
+</code></pre>
+<p>with force method</p>
+<pre><code>docker rm -f CONTAINER_ID
+</code></pre>
 
 
 
