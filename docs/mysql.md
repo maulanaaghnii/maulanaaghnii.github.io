@@ -17,7 +17,7 @@ sudo apt-get autoclean
 
 # Install Mysql
 
-```
+``` {.yaml .copy}
 CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password123';
 
 GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'localhost' WITH GRANT OPTION;
