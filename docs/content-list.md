@@ -6,6 +6,7 @@
 - [Free Course](free-course.md)
 - [Git](git.md)
 - [Github](github.md)
+- [Mysql](mysql.md)
 - [Programming Language](programming-language.md)
 - [Ubuntu](ubuntu.md)
 - [Web Framework](web-framework.md)
