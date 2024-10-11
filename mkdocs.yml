@@ -46,10 +46,8 @@ theme:
 docs_dir: docs
 
 nav:
-  - Home: 
-      - Algorithm: algorithm.md
-      - Docker: docker.md
-      - Excel Formula: excel-formula.md
+  - Home: index.md
+  - Content List: content-list.md
   - About: about.md
   - Guide:
       - Getting Started: guide/getting-started.md
