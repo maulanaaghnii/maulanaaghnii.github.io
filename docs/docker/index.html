@@ -479,6 +479,9 @@
 <h2 id="run-container">Run Container</h2>
 <pre><code>docker run -d --name container_name &lt;image_name&gt;:&lt;tag_version&gt;
 </code></pre>
+<p>with port mapping</p>
+<pre><code>docker run -d -p &lt;host_port&gt;:&lt;container_port&gt; --name container_name &lt;image_name&gt;:&lt;tag_version&gt;
+</code></pre>
 <h2 id="stop-container">Stop Container</h2>
 <pre><code>docker stop CONTAINER_ID
 </code></pre>
