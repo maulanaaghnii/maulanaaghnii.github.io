@@ -28,6 +28,10 @@ docker build -t <image_name>:<tag_version> .
 ```
 docker run -d --name container_name <image_name>:<tag_version>
 ```
+with port mapping
+```
+docker run -d -p <host_port>:<container_port> --name container_name <image_name>:<tag_version>
+```
 
 ## Stop Container
 
