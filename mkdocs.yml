@@ -48,6 +48,16 @@ site_dir: wiki
 nav:
   - Home: index.md
   - Content List: content-list.md
+  - Interesting Pages:
+    - When You Bored:  when-you-bored.md
+    - Underrated Tools: underrated-tools.md
+    - Cheat Sheets: cheat-sheets.md
+    - Tips and Tricks: tips-and-tricks.md
+  - Ongoing Projects:
+    - Machine Learning: machine-learning.md
+    - Golang Microservices: golang-microservices.md
+    - .NET Microservices: dotnet-microservices.md
+
     
   # - About: about.md
   # - Guide:
