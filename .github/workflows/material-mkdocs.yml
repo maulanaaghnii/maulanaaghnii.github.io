@@ -21,6 +21,7 @@ jobs:
       - name: Install MkDocs and Material
         run: |
           pip install mkdocs mkdocs-material
+      - run: mkdocs gh-deploy --force
 
       # - name: Build MkDocs
       #   run: mkdocs build  
