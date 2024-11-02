@@ -1,0 +1,41 @@
+name: Deploy MkDocs to Main Branch
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'  
+
+      - name: Install MkDocs and Material
+        run: |
+          pip install mkdocs mkdocs-material
+
+      # - name: Build MkDocs
+      #   run: mkdocs build  
+
+      # - name: Move build to docs folder
+      #   run: |
+      #     rm -rf docs/*  
+      #     cp -r site/* docs/  
+
+      # - name: Commit and push changes
+      #   run: |
+      #     git config user.name "maulanaaghnii"
+      #     git config user.email "maulanaaghni.contact@gmail.com"  # Ganti dengan alamat email kamu
+      #     git add -f docs/*  
+      #     git commit -m "Deploy MkDocs site" || echo "No changes to commit"
+      #     git push -f https://$PAT_TOKEN@github.com/maulanaaghnii/maulanaaghnii.github.io.git main
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
