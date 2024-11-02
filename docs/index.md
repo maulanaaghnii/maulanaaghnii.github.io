@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# Welcome
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org). hehe
+This wiki is a collection of my personal notes, tutorials, and projects. One of the goals in establishing this wiki is to document the projects I am currently undertaking or researching.
 
-## Commands
+Not only that, but you can also find various programming tutorials, both basic and advanced, on this wiki.
+The next step is to visit the [Table of Content](content-list.md) to see the list of available articles.
+You can contribute to enriching the content of this wiki. You can register and create an account at this registration link.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+All resources you access on this wiki are free and open source.
 
-## Project layout
+Provide feedback to me in developing this wiki.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Visit the Table of Content to see the list of available articles.
+
+Some articles are quite useful,
+
+- [Docker](docker.md)
+- [Github](github.md)
+- [Programming Language](programming-language.md)
+- [Ubuntu](ubuntu.md)
+
+Go to see list of [Table of Content](content-list.md).
