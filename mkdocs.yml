@@ -44,7 +44,7 @@ theme:
   logo: assets/images/67958.png
   favicon: assets/images/favicon.ico
 docs_dir: docs
-
+site_dir: wiki
 nav:
   - Home: index.md
   - Content List: content-list.md
