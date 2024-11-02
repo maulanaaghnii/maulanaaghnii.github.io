@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://maulanaaghnii.github.io/docs/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/content-list/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/docker/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-starter/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-webapi/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/mysql/</loc>
-         <lastmod>2024-10-18</lastmod>
+         <lastmod>2024-11-02</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/content-list/what-is-this/what-is-this/</loc>
+         <lastmod>2024-11-02</lastmod>
     </url>
 </urlset>
