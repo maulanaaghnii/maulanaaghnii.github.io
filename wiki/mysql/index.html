@@ -12,10 +12,8 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/content-list/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/mysql/">
       
-      
-        <link rel="prev" href="..">
       
       
       
@@ -24,7 +22,7 @@
     
     
       
-        <title>Content List - MekProjects Wiki</title>
+        <title>Uninstall MySQL - MekProjects Wiki</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#content-list" class="md-skip">
+        <a href="#uninstall-mysql" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Content List
+              Uninstall MySQL
             
           </span>
         </div>
@@ -241,11 +239,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../content-list/" class="md-tabs__link">
         
   
     
@@ -325,19 +321,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -346,7 +333,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -387,20 +373,37 @@
   
 
 
-<h1 id="content-list">Content List</h1>
-<ul>
-<li><a href="algorithm.md">Algorithm</a></li>
-<li><a href="../docker/">Docker</a></li>
-<li><a href="../dotnet/">.NET Framework</a></li>
-<li><a href="excel-formula.md">Excel Formula</a></li>
-<li><a href="free-course.md">Free Course</a></li>
-<li><a href="git.md">Git</a></li>
-<li><a href="github.md">Github</a></li>
-<li><a href="../mysql/">Mysql</a></li>
-<li><a href="programming-language.md">Programming Language</a></li>
-<li><a href="ubuntu.md">Ubuntu</a></li>
-<li><a href="web-framework.md">Web Framework</a></li>
-</ul>
+<h1 id="uninstall-mysql">Uninstall MySQL</h1>
+<pre><code>sudo systemctl stop mysql
+
+sudo apt-get remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-* -y
+
+sudo rm -rf /etc/mysql /var/lib/mysql
+
+sudo rm -rf /var/log/mysql
+
+sudo apt-get autoremove
+
+sudo apt-get autoclean
+</code></pre>
+<h1 id="install-mysql">Install Mysql</h1>
+<pre class="copy"><code class="language-yaml">CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password123';
+
+GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'localhost' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+EXIT;
+
+</code></pre>
+<h1 id="create-new-user-with-grant">Create New User With GRANT</h1>
+<pre><code>CREATE USER 'new_user'@'%' IDENTIFIED BY 'new_user_password';
+
+GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%';
+
+FLUSH PRIVILEGES;
+
+</code></pre>
 
 
 
