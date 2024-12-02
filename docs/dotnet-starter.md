@@ -1,35 +1,28 @@
 # .Net Starter
 
-## install Entity Framework Core Tools
+## Create .NET Project
+
+### Console Based Application
 ```
-dotnet tool install --global dotnet-ef
+dotnet new console -n AppName
+```
+or 
+```
+dotnet new console --name AppName
 ```
 
-## Insall Entity .NET Framework
+### Web Based Application
 ```
-dotnet add package MySql.Data
-dotnet add package Pomelo.EntityFrameworkCore.MySql
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-
+dotnet new web -n AppName
 ```
-
-## Migration
+or 
 ```
-dotnet ef migrations add InitialCreate
-dotnet ef database update
+dotnet new web --name AppName
 ```
-
-## Run
+### MVC Web Application
 ```
-dotnet run
+dotnet new mvc -n AppName
 ```
-
-## Build
+or 
 ```
-dotnet build
-```
-
-## Create .gitignore
-```
-dotnet new gitignore
-```
+dotnet new mvc --name AppName

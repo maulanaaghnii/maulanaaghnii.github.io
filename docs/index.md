@@ -14,6 +14,7 @@ Visit the Table of Content to see the list of available articles.
 
 Some articles are quite useful,
 
+- [C#](csharp.md)
 - [Docker](docker.md)
 - [Github](github.md)
 - [Programming Language](programming-language.md)
