@@ -2,7 +2,7 @@ import os
 import re
 from pathlib import Path 
 
-glob_path = Path(r"docs/")
+glob_path = Path(r"D:\Dev\0maulanaaghnii.github.io\docs")
 
 file_list = [pp.name for pp in glob_path.glob("**/*.md")]
 file_dict = {pp.name:pp.name.replace(".md", "").replace("-", " ").title() for pp in glob_path.glob("**/*.md")}
@@ -24,8 +24,8 @@ def content_list_string():
     return mdStr
 
 
-os.remove(r"docs/content-list.md")
-f = open(r"docs/content-list.md", "a")
+os.remove(r"D:\Dev\0maulanaaghnii.github.io\docs\content-list.md")
+f = open(r"D:\Dev\0maulanaaghnii.github.io\docs\content-list.md", "a")
 f.write(content_list_string())
 f.close()
 
