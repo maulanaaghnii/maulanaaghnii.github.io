@@ -1,0 +1,25 @@
+name: Run Python Script on Push
+
+on:
+  push:
+    branches:
+      - main  # Branch utama yang memicu workflow
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x' # Sesuaikan dengan versi Python Anda
+
+      # Step 4: Run Python script
+      - name: Run Python Script
+        run: python docs/updatemarkdownfiles.py # Ganti nama file sesuai file Python Anda
