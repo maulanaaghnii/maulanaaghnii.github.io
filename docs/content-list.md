@@ -19,6 +19,7 @@
 - [Material Mkdocs Yml](material-mkdocs-yml.md)
 - [Mysql](mysql.md)
 - [Postgresql](postgresql.md)
+- [Python](python.md)
 - [Tips And Tricks](tips-and-tricks.md)
 - [Underrated Tools](underrated-tools.md)
 - [When You Bored](when-you-bored.md)
