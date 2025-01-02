@@ -18,6 +18,8 @@
 - [Index](index.md)
 - [Material Mkdocs Yml](material-mkdocs-yml.md)
 - [Mysql](mysql.md)
+- [Postgresql](postgresql.md)
 - [Tips And Tricks](tips-and-tricks.md)
 - [Underrated Tools](underrated-tools.md)
 - [When You Bored](when-you-bored.md)
+- [Wsl](wsl.md)
