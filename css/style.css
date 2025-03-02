@@ -539,3 +539,9 @@ body {
 #experiences h2{
   margin-top: 2ch;
 }
+
+
+.small-text {
+  font-size: 0.6em;
+  font-weight: normal;
+}
