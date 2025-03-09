@@ -25,17 +25,15 @@
             "id": "cd21cbfdde81e8b7",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": -315,
-                  "y": -250,
-                  "zoom": 0
-                }
+                "file": "docker.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "docker"
             }
           },
           {
@@ -191,11 +189,11 @@
   },
   "active": "cd21cbfdde81e8b7",
   "lastOpenFiles": [
-    "underrated-tools.md",
+    "index.md",
     "Untitled.canvas",
+    "underrated-tools.md",
     "content-list.md",
     "2025-03-09.md",
-    "index.md",
     "programming-language.md",
     "ubuntu.md",
     "golang-microservices.md",
