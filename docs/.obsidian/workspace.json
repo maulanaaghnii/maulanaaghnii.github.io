@@ -27,13 +27,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dotnet-cheatsheet.md",
+                "file": "csharp.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "dotnet-cheatsheet"
+              "title": "csharp"
             }
           },
           {
@@ -189,9 +189,13 @@
   },
   "active": "cd21cbfdde81e8b7",
   "lastOpenFiles": [
+    "csharp-threading.md",
+    "csharp.md",
+    "dotnet-cheatsheet.md",
+    "csharp-basic.md",
+    "content-list.md",
     "dotnet-package.md",
     "dotnet-nuget.md",
-    "dotnet-cheatsheet.md",
     "dotnet-clean-architecture.md",
     "dotnet-microservices.md",
     "dotnet-logging-tutorial.md",
@@ -206,15 +210,11 @@
     "index.md",
     "Untitled.canvas",
     "underrated-tools.md",
-    "content-list.md",
     "2025-03-09.md",
     "programming-language.md",
     "golang-microservices.md",
     "material-mkdocs-yml.md",
-    "csharp-basic.md",
-    "csharp.md",
     "cheat-sheets.md",
-    "wsl.md",
-    "dicoding-machine-learning.md"
+    "wsl.md"
   ]
 }

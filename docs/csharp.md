@@ -26,3 +26,4 @@ List of content
 
 ## Relate Pages
 - [.NET](dotnet.md)
+- [.NET Cheatsheet](dotnet-cheatsheet.md)
