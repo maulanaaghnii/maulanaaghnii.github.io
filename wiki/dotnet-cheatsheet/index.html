@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-webapi/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-cheatsheet/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>.Net Web API - MekProjects Wiki</title>
+        <title>.NET CheatSheet - MekProjects Wiki</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-web-api" class="md-skip">
+        <a href="#net-cheatsheet" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .Net Web API
+              .NET CheatSheet
             
           </span>
         </div>
@@ -648,54 +648,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-entity-framework-core-tools" class="md-nav__link">
+  <a href="#add-project-references" class="md-nav__link">
     <span class="md-ellipsis">
-      install Entity Framework Core Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insall-entity-net-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Insall Entity .NET Framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-gitignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create .gitignore
+      Add project references
     </span>
   </a>
   
@@ -720,31 +675,10 @@
   
 
 
-<h1 id="net-web-api">.Net Web API</h1>
-<h2 id="install-entity-framework-core-tools">install Entity Framework Core Tools</h2>
-<pre><code>dotnet tool install --global dotnet-ef
+<h1 id="net-cheatsheet">.NET CheatSheet</h1>
+<h4 id="add-project-references">Add project references</h4>
+<pre><code>dotnet add reference path_to_reference_csproj
 </code></pre>
-<h2 id="insall-entity-net-framework">Insall Entity .NET Framework</h2>
-<pre><code>dotnet add package MySql.Data
-dotnet add package Pomelo.EntityFrameworkCore.MySql
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-
-</code></pre>
-<h2 id="migration">Migration</h2>
-<pre><code>dotnet ef migrations add InitialCreate
-dotnet ef database update
-</code></pre>
-<h2 id="run">Run</h2>
-<pre><code>dotnet run
-</code></pre>
-<h2 id="build">Build</h2>
-<pre><code>dotnet build
-</code></pre>
-<h2 id="create-gitignore">Create .gitignore</h2>
-<pre><code>dotnet new gitignore
-</code></pre>
-<p>Read : 
-- <a href="../dotnet-ping-pong-api/">Create PingPing API</a></p>
 
 
 

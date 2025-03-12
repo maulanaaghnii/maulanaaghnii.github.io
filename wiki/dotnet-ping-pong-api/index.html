@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-webapi/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-ping-pong-api/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>.Net Web API - MekProjects Wiki</title>
+        <title>Dotnet ping pong api - MekProjects Wiki</title>
       
     
     
@@ -73,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#net-web-api" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -107,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .Net Web API
+              Dotnet ping pong api
             
           </span>
         </div>
@@ -638,70 +633,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-entity-framework-core-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      install Entity Framework Core Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#insall-entity-net-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      Insall Entity .NET Framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-gitignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create .gitignore
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -720,31 +651,18 @@
   
 
 
-<h1 id="net-web-api">.Net Web API</h1>
-<h2 id="install-entity-framework-core-tools">install Entity Framework Core Tools</h2>
-<pre><code>dotnet tool install --global dotnet-ef
-</code></pre>
-<h2 id="insall-entity-net-framework">Insall Entity .NET Framework</h2>
-<pre><code>dotnet add package MySql.Data
-dotnet add package Pomelo.EntityFrameworkCore.MySql
-dotnet add package Microsoft.EntityFrameworkCore.Tools
+  <h1>Dotnet ping pong api</h1>
 
+<pre><code>dotnet new web -n PingPongAPI --framework net8.0
 </code></pre>
-<h2 id="migration">Migration</h2>
-<pre><code>dotnet ef migrations add InitialCreate
-dotnet ef database update
+<p>code : </p>
+<pre><code>var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+
+app.MapGet(&quot;/ping&quot;, () =&gt; Results.Ok(&quot;pong&quot;));
+
+app.Run();
 </code></pre>
-<h2 id="run">Run</h2>
-<pre><code>dotnet run
-</code></pre>
-<h2 id="build">Build</h2>
-<pre><code>dotnet build
-</code></pre>
-<h2 id="create-gitignore">Create .gitignore</h2>
-<pre><code>dotnet new gitignore
-</code></pre>
-<p>Read : 
-- <a href="../dotnet-ping-pong-api/">Create PingPing API</a></p>
 
 
 
