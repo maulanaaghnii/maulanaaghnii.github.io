@@ -1,5 +1,6 @@
 # .Net Web API
 
+
 ## install Entity Framework Core Tools
 ```
 dotnet tool install --global dotnet-ef
@@ -33,4 +34,8 @@ dotnet build
 ```
 dotnet new gitignore
 ```
+
+
+Read : 
+- [Create PingPing API](dotnet-ping-pong-api.md)
 
