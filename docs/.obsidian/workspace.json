@@ -114,13 +114,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "kubernetes-installation.md",
+                "file": "github.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "kubernetes-installation"
+              "title": "github"
             }
           }
         ],
@@ -265,18 +265,23 @@
   },
   "active": "f0194ca44e47ae42",
   "lastOpenFiles": [
+    "golang-microservices.md",
+    "github.md",
+    "dotnet-webapi.md",
+    "index.md",
+    "kubernetes-installation.md",
+    "csharp-basic.md",
+    "csharp.md",
+    "cheat-sheets.md",
+    "dotnet-cheatsheet.md",
+    "content-list.md",
     "kubernetes-deploy-application.md",
     "kubernetes-start-locally-windows.md",
-    "kubernetes-installation.md",
     "dotnet-basic-api-gateway-endpoint.md",
     "dotnet-ping-pong-api.md",
     "dotnet-project-creation.md",
     "dotnet-clean-architecture.md",
-    "dotnet-cheatsheet.md",
-    "csharp.md",
     "csharp-threading.md",
-    "csharp-basic.md",
-    "content-list.md",
     "dotnet-package.md",
     "dotnet-nuget.md",
     "dotnet-microservices.md",
@@ -284,13 +289,8 @@
     "when-you-bored.md",
     "ubuntu.md",
     "dotnet-ping-pong-api.md.md",
-    "dotnet-webapi.md",
     "dotnet.md",
     "dotnet-starter.md",
-    "docker.md",
-    "index.md",
-    "Untitled.canvas",
-    "underrated-tools.md",
-    "2025-03-09.md"
+    "Untitled.canvas"
   ]
 }
