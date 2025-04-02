@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-webapi/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-class-objects/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>.Net Web API - MekProjects Wiki</title>
+        <title>.NET Class Objects - MekProjects Wiki</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-web-api" class="md-skip">
+        <a href="#net-class-objects" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              .Net Web API
+              .NET Class Objects
             
           </span>
         </div>
@@ -672,56 +672,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#install-entity-framework-core-tools" class="md-nav__link">
+  <a href="#value-types-reference-types" class="md-nav__link">
     <span class="md-ellipsis">
-      install Entity Framework Core Tools
+      Value types &amp; Reference types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Value types &amp; Reference types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#value-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Value types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#insall-entity-net-framework" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reference-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Insall Entity .NET Framework
+      Reference types
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      Build
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-gitignore" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create .gitignore
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -744,31 +723,22 @@
   
 
 
-<h1 id="net-web-api">.Net Web API</h1>
-<h2 id="install-entity-framework-core-tools">install Entity Framework Core Tools</h2>
-<pre><code>dotnet tool install --global dotnet-ef
-</code></pre>
-<h2 id="insall-entity-net-framework">Insall Entity .NET Framework</h2>
-<pre><code>dotnet add package MySql.Data
-dotnet add package Pomelo.EntityFrameworkCore.MySql
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-
-</code></pre>
-<h2 id="migration">Migration</h2>
-<pre><code>dotnet ef migrations add InitialCreate
-dotnet ef database update
-</code></pre>
-<h2 id="run">Run</h2>
-<pre><code>dotnet run
-</code></pre>
-<h2 id="build">Build</h2>
-<pre><code>dotnet build
-</code></pre>
-<h2 id="create-gitignore">Create .gitignore</h2>
-<pre><code>dotnet new gitignore
-</code></pre>
-<p>Read : 
-- <a href="../dotnet-ping-pong-api/">Create PingPing API</a></p>
+<h1 id="net-class-objects">.NET Class Objects</h1>
+<h2 id="value-types-reference-types">Value types &amp; Reference types</h2>
+<h3 id="value-types">Value types</h3>
+<ul>
+<li>struct</li>
+<li>enum</li>
+</ul>
+<h3 id="reference-types">Reference types</h3>
+<p>Reference types contains "null" until we assign it with an instance of that type.</p>
+<ul>
+<li>class</li>
+<li>record</li>
+<li>delegate</li>
+<li>array</li>
+<li>interface</li>
+</ul>
 
 
 
