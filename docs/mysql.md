@@ -38,3 +38,12 @@ FLUSH PRIVILEGES;
 
 ```
 
+# Docker
+
+```
+docker run -d \
+  --name mariadb-container \
+  -e MARIADB_ROOT_PASSWORD=yourpassword \
+  -p 3306:3306 \
+  mariadb
+```
