@@ -1,0 +1,25 @@
+{
+    "stack": [
+        {
+            "section_id" : 1,
+            "section_title" : "Create Index Statement",
+            "content" : [
+                {
+                    "description" : "An index is a database object that improves the speed of data retrieval operations on a database table.",
+                    "query" : "CREATE INDEX index_name ON table_name (column1, column2, ...);"
+                }
+            ]
+        }
+
+
+
+
+
+
+
+
+
+
+
+    ]
+} 

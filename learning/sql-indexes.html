@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+      function copyToClipboard(element) {
+        const codeBlock = element.parentElement.querySelector('code');
+        const text = codeBlock.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          element.innerHTML = '<i class="fas fa-check"></i>';
+          element.classList.add('copied');
+          setTimeout(() => {
+            element.innerHTML = '<i class="far fa-copy"></i>';
+            element.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    </script>
+  </head>
+  <body>
+  <div class="container">
+    <h1>SQL Indexes</h1>
+    <h3>Introduction</h3>
+    <p style="text-align: justify;">
+        Index dalam SQL berfungsi sebagai mekanisme untuk mempercepat pencarian data di dalam tabel. Ia bekerja dengan menyimpan referensi yang menunjuk langsung ke lokasi data, sehingga sistem bisa menemukan informasi yang dicari tanpa harus memindai seluruh tabel.
+Walaupun penggunaan index dapat meningkatkan kecepatan dalam menjalankan query SELECT, keberadaannya justru bisa memperlambat proses seperti INSERT atau UPDATE karena index juga harus diperbarui setiap kali ada perubahan data. Meskipun begitu, index tidak mengubah isi data apa pun.
+Secara teknis, index membutuhkan ruang penyimpanan tersendiri di database. 
+
+<p style="text-align: justify;">Namun, karena fungsinya hanya sebagai alat bantu performa, index tidak terlihat secara langsung oleh pengguna.</p>
+    </p>
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq1" />
+      <label for="faq1">
+        <h2>1</h2>
+        <h3>Create Index Statement</h3>
+      </label>
+      
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Index dalam SQL dapat dibuat menggunakan pernyataan CREATE INDEX. Pernyataan ini memungkinkan Anda untuk memberi nama index, menentukan tabel dan kolom mana yang akan diindeks, serta menunjukkan apakah index dalam urutan menaik atau menurun.</p>
+        <div class="code-background">
+          <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i></button>
+          <pre><code>
+<span class="purple">CREATE INDEX</span> index_name ON table_name;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq2" />
+      <label for="faq2">
+        <h2>2</h2>
+        <h3>Unique Index</h3>
+      </label>
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Index unik tidak hanya digunakan untuk performa, tetapi juga untuk integritas data. Index unik tidak mengizinkan nilai duplikat untuk dimasukkan ke dalam tabel. Index ini secara otomatis dibuat oleh konstrain PRIMARY dan UNIQUE ketika diterapkan pada tabel database, untuk mencegah pengguna memasukkan nilai duplikat ke dalam kolom tabel yang diindeks.</p>
+        <div class="code-background">
+          <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i></button>
+          <pre><code>
+<span class="purple">CREATE UNIQUE INDEX</span> index_name
+on table_name (column_name);
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq3" />
+      <label for="faq3">
+        <h2>3</h2>
+        <h3>Single Column Index</h3>
+      </label>
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Index kolom tunggal dibuat hanya pada satu kolom tabel. Berikut adalah sintaksnya.</p>
+        <div class="code-background">
+          <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i></button>
+          <pre><code>
+<span class="purple">CREATE INDEX</span> index_name
+ON table_name (column_name);
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq4" />
+      <label for="faq4">
+        <h2>4</h2>
+        <h3>Composite Index</h3>
+      </label>
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Index komposit adalah index yang dapat dibuat pada dua atau lebih kolom dari sebuah tabel. Berikut adalah sintaks dasarnya.</p>
+        <div class="code-background">
+          <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i></button>
+          <pre><code>
+<span class="purple">CREATE INDEX</span> index_name
+on table_name (column1, column2);
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq5" />
+      <label for="faq5">
+        <h2>5</h2>
+        <h3>Implicit Index</h3>
+      </label>
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Index implisit adalah index yang secara otomatis dibuat oleh server database ketika sebuah objek dibuat. Sebagai contoh, index secara otomatis dibuat ketika konstrain primary key dan unique dibuat pada tabel dalam database MySQL.</p>
+      </div>
+    </div>
+    
+    <div class="stack">
+      <input type="checkbox" name="faq" id="faq6" />
+      <label for="faq6">
+        <h2>6</h2>
+        <h3>Drop Index Statement</h3>
+      </label>
+      <div class="content">
+        <br>
+        <hr>
+        <p class="desc">Sebuah index dapat dihapus menggunakan perintah SQL DROP. Menghapus index dapat mempengaruhi performa query dalam database. Oleh karena itu, index perlu dihapus hanya ketika benar-benar diperlukan.</p>
+        <div class="code-background">
+          <button class="copy-btn" onclick="copyToClipboard(this)"><i class="far fa-copy"></i></button>
+          <pre><code>
+<span class="purple">DROP INDEX</span> index_name;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  </body>
+</html>

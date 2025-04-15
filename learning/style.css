@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  color: white;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "poppins";
+}
+
+p {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+
+}
+
+
+
+.desc {
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+h1, h2, h3, h4 {
+  color: #000000;
+}
+
+/* pre {
+  color: #000000;
+} */
+.code-background {
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 0.3rem;
+  position: relative;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  
+}
+
+.copy-btn:hover {
+  background: #000000;
+  transform: scale(1.1);
+}
+
+.copy-btn.copied {
+  background: #4CAF50;
+  color: white;
+}
+
+.copy-btn i {
+  font-size: 16px;
+}
+
+pre {
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
+  font-weight:  500;
+  font-style: bold;
+}
+
+code {
+  color: #ffffff;
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-style: bold;
+}
+.purple {
+  color: #ff00c8;
+  font-family: 'Fira Code', monospace;
+  font-weight: 500;
+  font-style: bold;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 850px;
+  margin: 2rem 0;
+}
+
+.container img {
+  margin: auto;
+  display: block;
+  width: 350px;
+}
+
+.container .stack {
+  background: #ffffff;
+  padding: 0 20px 20px;
+  border-radius: 0.3rem;
+  border-style: solid;
+  border-color: #ffc400;
+  /* box-shadow: 2px 2px 12px 0 #ffcd42,
+    -2px -2px 12px 0 #ffcd42; */
+  position: relative;
+}
+
+.stack label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stack label h2 {
+  width: 40px;
+  height: 40px;
+  background: white;
+  color: black;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+}
+
+.stack:hover label::after {
+  color: black;
+  transition: 0.5s;
+}
+
+.stack input:checked ~ label::after {
+  transform: rotate(135deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.stack input {
+  appearance: none;
+}
+
+.stack input:checked ~ .content {
+  /* max-height: 100vh; */
+  max-height: 3000px;
+}
+
+.content p,
+.content ul {
+  padding-top: 20px;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 2em;
+}

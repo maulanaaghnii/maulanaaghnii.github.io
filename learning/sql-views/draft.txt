@@ -1,0 +1,43 @@
+0. Introduction
+A view in SQL is a virtual table that is stored in the database with an associated name. It is actually a composition of a table in the form of a predefined SQL query. A view can contain rows from an existing table (all or selected). A view can be created from one or many tables. Unless indexed, a view does not exist in a database.
+
+1. Create  View statement
+To create a view in a database, you can use the SQL CREATE VIEW statement.
+```
+CREATE VIEW view_name AS
+SELECT column1, column2....
+FROM table_name
+WHERE [condition];
+```
+
+verifying view that just created
+
+```
+SELECT * FROM view_name;
+```
+
+
+title desc : 
+Unlike CREATE VIEW and DROP VIEW there is no direct statement to update the records of an existing view. We can use the SQL UPDATE Statement to modify the existing records in a table or a view.
+
+2. Update view statement
+The basic syntax of the UPDATE query with a WHERE clause is as follows −
+
+```
+UPDATE view_name
+SET column1 = value1, column2 = value2...., columnN = valueN
+WHERE [condition];
+```
+
+title desc : The SQL DROP VIEW statement is used to delete an existing view, along with its definition and other information. Once the view is dropped, all the permissions for it will also be removed. We can also drop indexed views with this statement.
+3. drop view statement
+The basic syntax of this DROP VIEW statement is as follows −
+```
+DROP VIEW view_name;
+```
+
+4. rename view statement
+The RENAME TABLE statement in MySQL database is used to rename views. You just have to make sure that the new name of the view does not overlap with the name of any existing views.
+```
+RENAME VIEW old_view_name TO new_view_name;
+```

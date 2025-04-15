@@ -1,0 +1,30 @@
+{
+    "stack" : [
+        {
+            "title": "Introduction",
+            "topics": [
+                {
+                    "desc": "Create new database",
+                    "code": "CREATE DATABASE nama_database;"
+                }
+            ]
+        },
+        {
+            "title": "Basic Database and Table",
+            "topics": [
+                {
+                    "desc": "Create new database",
+                    "code": "CREATE DATABASE nama_database;"
+                },
+                {
+                    "desc": "Using database",
+                    "code": "USE nama_database;"
+                },
+                {
+                    "desc": "Create new table",
+                    "code": "CREATE TABLE products (\n    id INT PRIMARY KEY AUTO_INCREMENT,\n    name VARCHAR(100) NOT NULL,\n    price DECIMAL(10,2),\n    category VARCHAR(50),\n    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n);"
+                }
+            ]
+        }
+    ]
+}
