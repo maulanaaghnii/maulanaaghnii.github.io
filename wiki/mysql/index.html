@@ -713,6 +713,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%';
 FLUSH PRIVILEGES;
 
 </code></pre>
+<h1 id="docker">Docker</h1>
+<pre><code>docker run -d \
+  --name mariadb-container \
+  -e MARIADB_ROOT_PASSWORD=yourpassword \
+  -p 3306:3306 \
+  mariadb
+</code></pre>
 
 
 
