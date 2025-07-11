@@ -49,14 +49,14 @@ nav:
   - Home: index.md
   - Content List: content-list.md
   - Interesting Pages:
-    - When You Bored:  interesting-pages/when-you-bored.md
-    - Underrated Tools: interesting-pages/underrated-tools.md
-    - Cheat Sheets: interesting-pages/cheat-sheets.md
-    - Tips and Tricks: interesting-pages/tips-and-tricks.md
+    - When You Bored:  when-you-bored.md
+    - Underrated Tools: underrated-tools.md
+    - Cheat Sheets: cheat-sheets.md
+    - Tips and Tricks: tips-and-tricks.md
   - Ongoing Projects:
-    - Machine Learning: ongoing-projects/dicoding-machine-learning.md
-    - Golang Microservices: ongoing-projects/golang-microservices.md
-    - .NET Microservices: ongoing-projects/dotnet-microservices.md
+    - Machine Learning: dicoding-machine-learning.md
+    - Golang Microservices: golang-microservices.md
+    - .NET Microservices: dotnet-microservices.md
 
     
   # - About: about.md
