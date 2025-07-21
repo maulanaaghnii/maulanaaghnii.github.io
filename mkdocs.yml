@@ -18,6 +18,8 @@ theme:
   features:
     - navigation.tabs
     - content.code.copy
+    - content.tabs.link
+
   name: material
   palette:
     - media: "(prefers-color-scheme)"
