@@ -716,14 +716,14 @@
 
 <h1 id="kubernetes-installation">Kubernetes Installation</h1>
 <h2 id="windows">🪟Windows</h2>
-<pre><code>curl.exe -LO &quot;https://dl.k8s.io/release/v1.32.0/bin/windows/amd64/kubectl.exe&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code>curl.exe -LO &quot;https://dl.k8s.io/release/v1.32.0/bin/windows/amd64/kubectl.exe&quot;
+</code></pre></div>
 <h4 id="validate-installation-optional">Validate installation (optional)</h4>
-<pre><code class="language-powershell">curl.exe -LO &quot;https://dl.k8s.io/v1.32.0/bin/windows/amd64/kubectl.exe.sha256&quot;
-</code></pre>
-<pre><code class="language-cmd">CertUtil -hashfile kubectl.exe SHA256
+<p><div class="highlight"><pre><span></span><code><span class="n">curl</span><span class="p">.</span><span class="n">exe</span> <span class="n">-LO</span> <span class="s2">&quot;https://dl.k8s.io/v1.32.0/bin/windows/amd64/kubectl.exe.sha256&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>CertUtil -hashfile kubectl.exe SHA256
 type kubectl.exe.sha256
-</code></pre>
+</code></pre></div></p>
 
 
 

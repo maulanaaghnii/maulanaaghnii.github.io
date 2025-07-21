@@ -684,14 +684,14 @@
 <p>jobs:
   deploy:
     runs-on: ubuntu-latest</p>
-<pre><code>steps:
+<div class="highlight"><pre><span></span><code>steps:
   - name: Checkout repository
     uses: actions/checkout@v3
 
   - name: Set up Python
     uses: actions/setup-python@v4
     with:
-      python-version: '3.12'
+      python-version: &#39;3.12&#39;
 
   - name: Install MkDocs and Material
     run: |
@@ -707,14 +707,14 @@
 
   - name: Commit and push changes
     run: |
-      git config user.name "maulanaaghnii"
-      git config user.email "maulanaaghni.contact@gmail.com"  # Ganti dengan alamat email kamu
+      git config user.name &quot;maulanaaghnii&quot;
+      git config user.email &quot;maulanaaghni.contact@gmail.com&quot;  # Ganti dengan alamat email kamu
       git add -f docs/*  
-      git commit -m "Deploy MkDocs site" || echo "No changes to commit"
+      git commit -m &quot;Deploy MkDocs site&quot; || echo &quot;No changes to commit&quot;
       git push -f https://$PAT_TOKEN@github.com/maulanaaghnii/maulanaaghnii.github.io.git main
     env:
       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-</code></pre>
+</code></pre></div>
 
 
 
