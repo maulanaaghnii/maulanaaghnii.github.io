@@ -45,13 +45,13 @@ theme:
     code: Roboto Mono
   logo: assets/images/67958.png
   favicon: assets/images/favicon.ico
-  markdown_extensions:
-    - pymdownx.superfences
-    - pymdownx.tabbed
-    - pymdownx.snippets
-    - pymdownx.inlinehilite
-    - pymdownx.highlight
-    - pymdownx.keys
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.snippets
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
+  - pymdownx.keys
 docs_dir: docs
 site_dir: wiki
 nav:
