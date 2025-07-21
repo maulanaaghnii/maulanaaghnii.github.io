@@ -683,7 +683,7 @@
 
 
 <h1 id="uninstall-mysql">Uninstall MySQL</h1>
-<pre><code>sudo systemctl stop mysql
+<div class="highlight"><pre><span></span><code>sudo systemctl stop mysql
 
 sudo apt-get remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-* -y
 
@@ -694,32 +694,30 @@ sudo rm -rf /var/log/mysql
 sudo apt-get autoremove
 
 sudo apt-get autoclean
-</code></pre>
+</code></pre></div>
 <h1 id="install-mysql">Install Mysql</h1>
-<pre class="copy"><code class="language-yaml">CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'password123';
+<div class="copy highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">CREATE USER &#39;new_user&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;password123&#39;;</span>
 
-GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'localhost' WITH GRANT OPTION;
+<span class="l l-Scalar l-Scalar-Plain">GRANT ALL PRIVILEGES ON *.* TO &#39;new_user&#39;@&#39;localhost&#39; WITH GRANT OPTION;</span>
 
-FLUSH PRIVILEGES;
+<span class="l l-Scalar l-Scalar-Plain">FLUSH PRIVILEGES;</span>
 
-EXIT;
-
-</code></pre>
+<span class="l l-Scalar l-Scalar-Plain">EXIT;</span>
+</code></pre></div>
 <h1 id="create-new-user-with-grant">Create New User With GRANT</h1>
-<pre><code>CREATE USER 'new_user'@'%' IDENTIFIED BY 'new_user_password';
+<div class="highlight"><pre><span></span><code>CREATE USER &#39;new_user&#39;@&#39;%&#39; IDENTIFIED BY &#39;new_user_password&#39;;
 
-GRANT ALL PRIVILEGES ON *.* TO 'new_user'@'%';
+GRANT ALL PRIVILEGES ON *.* TO &#39;new_user&#39;@&#39;%&#39;;
 
 FLUSH PRIVILEGES;
-
-</code></pre>
+</code></pre></div>
 <h1 id="docker">Docker</h1>
-<pre><code>docker run -d \
+<div class="highlight"><pre><span></span><code>docker run -d \
   --name mariadb-container \
   -e MARIADB_ROOT_PASSWORD=yourpassword \
   -p 3306:3306 \
   mariadb
-</code></pre>
+</code></pre></div>
 
 
 

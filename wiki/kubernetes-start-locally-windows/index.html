@@ -738,20 +738,20 @@
 <li><strong>Virtualization</strong> diaktifkan (Cek di Task Manager → Performance → CPU → Virtualization: <strong>Enabled</strong>).</li>
 <li><strong>Hyper-V atau Docker Desktop</strong> sudah terinstal (pilih salah satu sebagai driver Minikube).</li>
 </ul>
-<p>Jika belum ada <strong>Docker Desktop</strong>, kamu bisa <strong>aktifkan Hyper-V</strong>:</p>
-<pre><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -NoRestart
-</code></pre>
+<p>Jika belum ada <strong>Docker Desktop</strong>, kamu bisa <strong>aktifkan Hyper-V</strong>:
+<div class="highlight"><pre><span></span><code>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -NoRestart
+</code></pre></div></p>
 <h3 id="install-minikube">Install Minikube</h3>
-<pre><code>winget install Kubernetes.minikube
-</code></pre>
+<div class="highlight"><pre><span></span><code>winget install Kubernetes.minikube
+</code></pre></div>
 <h3 id="start-your-cluster">Start your cluster</h3>
-<pre><code>minikube start
-</code></pre>
+<div class="highlight"><pre><span></span><code>minikube start
+</code></pre></div>
 <h3 id="interact-with-your-cluster">Interact with your cluster</h3>
-<pre><code>minikube start
-</code></pre>
-<pre><code>minikube dashboard
-</code></pre>
+<div class="highlight"><pre><span></span><code>minikube start
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>minikube dashboard
+</code></pre></div>
 
 
 

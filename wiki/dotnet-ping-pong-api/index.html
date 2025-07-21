@@ -677,16 +677,16 @@
 
   <h1>Dotnet ping pong api</h1>
 
-<pre><code>dotnet new web -n PingPongAPI --framework net8.0
-</code></pre>
-<p>code : </p>
-<pre><code>var builder = WebApplication.CreateBuilder(args);
+<div class="highlight"><pre><span></span><code>dotnet new web -n PingPongAPI --framework net8.0
+</code></pre></div>
+<p>code : 
+<div class="highlight"><pre><span></span><code>var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet(&quot;/ping&quot;, () =&gt; Results.Ok(&quot;pong&quot;));
 
 app.Run();
-</code></pre>
+</code></pre></div></p>
 
 
 
