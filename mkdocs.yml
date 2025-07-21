@@ -47,11 +47,14 @@ theme:
   favicon: assets/images/favicon.ico
 markdown_extensions:
   - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.snippets
-  - pymdownx.inlinehilite
-  - pymdownx.highlight
-  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+      enable_code_blocks: true
+      enable_tabs: true
+      enable_snippets: true
+      enable_inline_hilite: true
+      enable_highlight: true
+      enable_keys: true
 docs_dir: docs
 site_dir: wiki
 nav:
