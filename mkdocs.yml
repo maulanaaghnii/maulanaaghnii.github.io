@@ -16,7 +16,7 @@ repo_url: https://github.com/maulanaaghnii
 
 theme:
   icon:
-    repo: fontawesome
+    repo: fontawesome/brands/github
   features:
     - navigation.tabs
     - content.code.copy
