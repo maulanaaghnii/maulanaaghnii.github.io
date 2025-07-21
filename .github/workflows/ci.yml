@@ -18,7 +18,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material pymdown-extensions "mkdocs-material[icons]"
+      - run: |
+          pip uninstall -y mkdocs-material
+          pip install "mkdocs-material[icons]" pymdown-extensions
+
       - name: Build MkDocs
         run: mkdocs build
       - name: Deploy to main branch
