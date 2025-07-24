@@ -58,6 +58,8 @@ markdown_extensions:
   - md_in_html
 docs_dir: docs
 site_dir: wiki
+plugins:
+  - live-edit
 nav:
   - Home: index.md
   - Content List: content-list.md
