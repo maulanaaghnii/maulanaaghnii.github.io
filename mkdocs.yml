@@ -15,14 +15,14 @@ repo_name: maulanaaghnii/maulanaaghnii
 repo_url: https://github.com/maulanaaghnii
 
 theme:
+  name: material
   icon:
-    repo: fontawesome
+    repo: fontawesome/brands/git-alt
   features:
     - navigation.tabs
     - content.code.copy
     - content.tabs.link
 
-  name: material
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
