@@ -19,7 +19,7 @@
       return 0;
     }
     ```
-
+![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left }
 
 <div class="grid cards" markdown>
 
