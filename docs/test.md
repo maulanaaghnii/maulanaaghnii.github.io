@@ -29,7 +29,7 @@
 - :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
 
 </div>
-
+![Image title](https://dummyimage.com/600x400/eee/aaa)
 <div class="grid cards" markdown>
 
 -   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
@@ -66,7 +66,7 @@
     [:octicons-arrow-right-24: License](#)
 
 </div>
-
+![Image title](https://dummyimage.com/600x400/eee/aaa){ align=center }
 <div class="grid" markdown>
 
 :fontawesome-brands-html5: __HTML__ for content and structure
