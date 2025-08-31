@@ -7,7 +7,6 @@ This wiki is a collection of my personal notes, tutorials, and projects. One of 
 
 Not only that, but you can also find various programming tutorials, both basic and advanced, on this wiki.
 The next step is to visit the [Table of Content](content-list.md) to see the list of available articles.
-You can contribute to enriching the content of this wiki. You can register and create an account at this registration link.
 
 All resources you access on this wiki are free and open source.
 Provide feedback to me in developing this wiki.
@@ -25,30 +24,27 @@ Go to see list of [Table of Content](content-list.md).
 
 __Docker Fundamentals: Essential Basics Every Developer Should Know__
 
-Install [`mkdocs-material`](#) with [`pip`](#) and get up
-and running in minutes
+Build, ship, and run anything, anywhere—discover the power of Docker fundamentals.
+
+[:octicons-arrow-right-24: Getting started](https://maulanaaghnii.github.io/wiki/docker/)
+</div>
+
+<div class="card" markdown>
+![Image title](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5t2876a077mmqjbc8rdt.png){ .card-image }
+
+__Getting Started with C# and .NET: Fundamentals Made Easy__
+
+Understand key concepts and workflows in .NET C# to build a solid programming foundation.
 
 [:octicons-arrow-right-24: Getting started](#)
 </div>
 
 <div class="card" markdown>
-![Image title](https://squidfunk.github.io/mkdocs-material/assets/images/zelda-dark-world.png){ .card-image }
+![Image title](https://betanews.com/wp-content/uploads/2018/01/ubuntu-logo.jpg){ .card-image }
 
-__Set up in 5 minutes__
+__Ubuntu 101 Unlocked: Master the Basics Like a Professional__
 
-Install [`mkdocs-material`](#) with [`pip`](#) and get up
-and running in minutes
-
-[:octicons-arrow-right-24: Getting started](#)
-</div>
-
-<div class="card" markdown>
-![Image title](https://dummyimage.com/600x400/eee/aaa){ .card-image }
-
-__Set up in 5 minutes__
-
-Install [`mkdocs-material`](#) with [`pip`](#) and get up
-and running in minutes
+Learn the key tricks and tools that make Ubuntu a powerhouse for your workflow.
 
 [:octicons-arrow-right-24: Getting started](#)
 </div>
