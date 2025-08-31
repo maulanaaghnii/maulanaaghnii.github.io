@@ -21,9 +21,9 @@ Go to see list of [Table of Content](content-list.md).
 <div class="grid cards" markdown>
 
 <div class="card" markdown>
-![Image title](https://dummyimage.com/600x400/){ .card-image }
+![Image title](https://github.com/maulanaaghnii/maulanaaghnii.github.io/blob/main/docs/assets/images/docker.jpg?raw=true){ .card-image }
 
-__Set up in 5 minutes__
+__Docker Fundamentals: Essential Basics Every Developer Should Know__
 
 Install [`mkdocs-material`](#) with [`pip`](#) and get up
 and running in minutes
