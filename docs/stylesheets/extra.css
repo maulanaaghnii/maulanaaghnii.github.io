@@ -1,0 +1,63 @@
+/* docs/stylesheets/extra.css */
+.md-grid {
+    max-width: 100%; /* Example: Set a specific maximum width */
+    /* or */
+    /* max-width: 100%; */ /* Example: Stretch to full available width */
+}
+/* .img-card img {
+    width: 100%;
+    height: 250px;      
+    object-fit: cover;
+} */
+/* .md-sidebar--primary, */
+/* .md-sidebar--secondary {
+  display: none;
+} */
+.md-main__inner {
+    max-width: 100% !important;
+    margin: 0;
+}
+
+.md-content {
+    max-width: 100% !important;
+    margin: 0;
+}
+.md-content h1:first-of-type {
+    display: none;
+}
+/* .card-image {
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;   
+    border-radius: 6px 6px 0 0; 
+    display: block;
+} */
+
+.md-typeset .grid.cards .card img.card-image {
+    width: 100% !important;
+    height: 200px !important;      /* samakan tinggi */
+    object-fit: cover !important;  /* crop biar proporsional */
+    border-radius: 6px 6px 0 0;
+    display: block;
+  }
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+font-family: "Playfair Display", serif !important;
+}  */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 700 !important; /* bold */
+}

@@ -19,7 +19,7 @@
       return 0;
     }
     ```
-![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left }
+<!-- ![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left } -->
 
 <div class="grid cards" markdown>
 
@@ -29,7 +29,47 @@
 - :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
 
 </div>
-![Image title](https://dummyimage.com/600x400/eee/aaa)
+
+<div class="grid cards" markdown>
+
+<div class="card" markdown>
+![Image title](https://dummyimage.com/600x400/){ .card-image }
+
+__Set up in 5 minutes__
+
+Install [`mkdocs-material`](#) with [`pip`](#) and get up
+and running in minutes
+
+[:octicons-arrow-right-24: Getting started](#)
+</div>
+
+<div class="card" markdown>
+![Image title](https://squidfunk.github.io/mkdocs-material/assets/images/zelda-dark-world.png){ .card-image }
+
+__Set up in 5 minutes__
+
+Install [`mkdocs-material`](#) with [`pip`](#) and get up
+and running in minutes
+
+[:octicons-arrow-right-24: Getting started](#)
+</div>
+
+<div class="card" markdown>
+![Image title](https://dummyimage.com/600x400/eee/aaa){ .card-image }
+
+__Set up in 5 minutes__
+
+Install [`mkdocs-material`](#) with [`pip`](#) and get up
+and running in minutes
+
+[:octicons-arrow-right-24: Getting started](#)
+</div>
+
+</div>
+
+<!-- bawah orr -->
+
+
 <div class="grid cards" markdown>
 
 -   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__

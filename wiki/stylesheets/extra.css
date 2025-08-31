@@ -1,0 +1,6 @@
+/* docs/stylesheets/extra.css */
+.md-grid {
+    max-width: 1440px; /* Example: Set a specific maximum width */
+    /* or */
+    /* max-width: 100%; */ /* Example: Stretch to full available width */
+}
