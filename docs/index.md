@@ -22,15 +22,29 @@ Go to see list of [Table of Content](content-list.md).
 <div class="card" markdown>
 ![Image title](https://github.com/maulanaaghnii/maulanaaghnii.github.io/blob/main/docs/assets/images/docker.jpg?raw=true){ .card-image }
 
+<div class="card-labels">
+<a href="#"><span class="label label-devops">DevOps</span></a>
+<a href="#"><span class="label label-containerization">Containerization</span></a>
+</div>
+
+---
+
 __Docker Fundamentals: Essential Basics Every Developer Should Know__
 
 Build, ship, and run anything, anywhere—discover the power of Docker fundamentals.
 
 [:octicons-arrow-right-24: Getting started](https://maulanaaghnii.github.io/wiki/docker/)
 </div>
-
 <div class="card" markdown>
 ![Image title](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5t2876a077mmqjbc8rdt.png){ .card-image }
+
+<div class="card-labels">
+<a href="category-programming.md"><span class="label label-programming">Programming</span></a>
+<a href="#"><span class="label label-dotnet">.NET</span></a>
+<a href="#"><span class="label label-backend">Backend</span></a>
+</div>
+
+---
 
 __Getting Started with C# and .NET: Fundamentals Made Easy__
 
@@ -41,6 +55,14 @@ Understand key concepts and workflows in .NET C# to build a solid programming fo
 
 <div class="card" markdown>
 ![Image title](https://betanews.com/wp-content/uploads/2018/01/ubuntu-logo.jpg){ .card-image }
+
+<div class="card-labels">
+<a href="#"><span class="label label-linux">Linux</span></a>
+<a href="#"><span class="label label-os">Operating System</span></a>
+<a href="#"><span class="label label-terminal">Terminal</span></a>
+</div>
+
+---
 
 __Ubuntu 101 Unlocked: Master the Basics Like a Professional__
 
