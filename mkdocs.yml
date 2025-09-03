@@ -69,48 +69,41 @@ plugins:
 nav:
   - Home: 
     - index.md
-    - Blog: blog.md
-    - Get in touch: get-in-touch.md
+    # - Blog: blog.md
+    - Content List: content-list.md
     - About: about.md
-    - Tips and Tricks: tips-and-tricks.md
+    - .NET Basic: 
+      - .NET Basic : dotnet-basic-1.md
+      - .NET Cheatsheet: dotnet-cheatsheet.md
+      - .NET Class Objects: dotnet-class-objects.md
+      - .NET Clean Architecture: dotnet-clean-architecture.md
+      - .NET Logging Tutorial: dotnet-logging-tutorial.md
+      - .NET Microservices: dotnet-microservices.md
+      - .NET Nuget: dotnet-nuget.md
+    # - Get in touch: get-in-touch.md
+    - Python Basic:
+      - Python Basic: python-basic.md
+      - Python Cheatsheet: python-cheatsheet.md
+      - Python Class Objects: python-class-objects.md
+      - Python Clean Architecture: python-clean-architecture.md
+      - Python Logging Tutorial: python-logging-tutorial.md
+      - Python Microservices: python-microservices.md
+      - Python Nuget: python-nuget.md
     - Underrated Tools: underrated-tools.md
     - When You Bored: when-you-bored.md
     - Cheat Sheets: cheat-sheets.md
     - Category:
-      - Category-Programming: category-programming.md
-      - Category-DevOps: category-devops.md
-      - Category-Linux: category-linux.md
-      - Category-Containerization: category-containerization.md
-      - Category-Dotnet: category-dotnet.md
-      - Category-Backend: category-backend.md
-      - Category-Cloud: category-cloud.md
-      - Category-Operating System: category-operating-system.md
-      - Category-Terminal: category-terminal.md
+      - Programming: category-programming.md
+      - DevOps: category-devops.md
+      - Linux: category-linux.md
+      - Containerization: category-containerization.md
+      - .NET: category-dotnet.md
+      - Backend: category-backend.md
+      - Cloud: category-cloud.md
+      - Operating System: category-operating-system.md
+      - Terminal: category-terminal.md
 
-    - Drop1:
-      - Drop1-1: drop1-1.md
-      - Drop1-2: drop1-2.md
-      - Drop1-3: drop1-3.md
-      - Drop1-4: drop1-4.md
-      - Drop1-5: drop1-5.md
-      - Drop1-6: drop1-6.md
-      - Drop1-7: drop1-7.md
-    - Drop2:
-      - Drop2-1: drop2-1.md
-      - Drop2-2: drop2-2.md
-      - Drop2-3: drop2-3.md
-      - Drop2-4: drop2-4.md
-      - Drop2-5: drop2-5.md
-      - Drop2-6: drop2-6.md
-      - Drop2-7: drop2-7.md
-    - Drop3:
-      - Drop3-1: drop3-1.md
-      - Drop3-2: drop3-2.md
-      - Drop3-3: drop3-3.md
-      - Drop3-4: drop3-4.md
-      - Drop3-5: drop3-5.md
-      - Drop3-6: drop3-6.md
-      - Drop3-7: drop3-7.md
+
     
   - Content List: content-list.md
   - Interesting Pages:
