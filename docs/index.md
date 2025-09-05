@@ -33,7 +33,7 @@ __Docker Fundamentals: Essential Basics Every Developer Should Know__
 
 Build, ship, and run anything, anywhere—discover the power of Docker fundamentals.
 
-[:octicons-arrow-right-24: Getting started](https://maulanaaghnii.github.io/wiki/docker/)
+[:octicons-arrow-right-24: Getting Started](docker-overview.md)
 </div>
 <div class="card" markdown>
 ![Image title](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5t2876a077mmqjbc8rdt.png){ .card-image }
@@ -50,7 +50,7 @@ __Getting Started with C# and .NET: Fundamentals Made Easy__
 
 Understand key concepts and workflows in .NET C# to build a solid programming foundation.
 
-[:octicons-arrow-right-24: Getting started](#)
+[:octicons-arrow-right-24: Getting started](dotnet-overview.md)
 </div>
 
 <div class="card" markdown>
@@ -68,7 +68,7 @@ __Ubuntu 101 Unlocked: Master the Basics Like a Professional__
 
 Learn the key tricks and tools that make Ubuntu a powerhouse for your workflow.
 
-[:octicons-arrow-right-24: Getting started](#)
+[:octicons-arrow-right-24: Getting started](ubuntu-overview.md)
 </div>
 
 </div>
