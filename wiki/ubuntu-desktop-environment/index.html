@@ -1,0 +1,3067 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This personal wiki is my go-to resource for documenting key knowledge,  project notes, and cheat sheets across various technologies.">
+      
+      
+        <meta name="author" content="TB Maulana Aghni">
+      
+      
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-desktop-environment/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Getting to Know Desktop Environment in Ubuntu - MekProjects Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-to-know-desktop-environment-in-ubuntu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MekProjects Wiki" class="md-header__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MekProjects Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting to Know Desktop Environment in Ubuntu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../content-list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Content List
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../when-you-bored/" class="md-tabs__link">
+          
+  
+  
+  Interesting Pages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dicoding-machine-learning/" class="md-tabs__link">
+          
+  
+  
+  Ongoing Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MekProjects Wiki" class="md-nav__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    MekProjects Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            .NET Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-basic-1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-class-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-clean-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-logging-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-nuget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-basic.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-cheatsheet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-class-objects.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-clean-architecture.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-logging-tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-microservices.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-nuget.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Category
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Category
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-devops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevOps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-linux.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-containerization.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containerization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-dotnet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-backend.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-cloud.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-operating-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-terminal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interesting Pages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interesting Pages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips and Tricks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ongoing Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ongoing Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicoding-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Golang Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-desktop-environment-gnome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Desktop Environment (GNOME)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu Desktop Environment (GNOME)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-gnome" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is GNOME?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnome-shell-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNOME Shell Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Desktop Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-top-bar-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Top Bar (Panel)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Top Bar (Panel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#left-side-activities-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      Left Side: Activities Button
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#center-clock-and-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Center: Clock and Calendar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-side-system-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Right Side: System Indicators
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activities-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Activities Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Activities Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dock-ubuntu-dock" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Dock (Ubuntu Dock)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Dock (Ubuntu Dock)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-application-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Application Menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces-and-window-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspaces and Window Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workspaces and Window Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-workspaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Workspaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workspace-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workspace Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Window Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tiling-and-snapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tiling and Snapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Switching
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customizing-the-desktop-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing the Desktop Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customizing the Desktop Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-gnome-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using GNOME Settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using GNOME Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#appearance-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appearance Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#desktop-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnome-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNOME Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GNOME Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popular Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Keyboard Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#window-management_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Window Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customizing-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customizing Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternative-desktop-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternative Desktop Environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternative Desktop Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kde-plasma-kubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      KDE Plasma (Kubuntu)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="KDE Plasma (Kubuntu)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xfce-xubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xfce (Xubuntu)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Xfce (Xubuntu)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lxqt-lubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      LXQt (Lubuntu)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LXQt (Lubuntu)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mate-ubuntu-mate" class="md-nav__link">
+    <span class="md-ellipsis">
+      MATE (Ubuntu MATE)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="MATE (Ubuntu MATE)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-manager-nautilus" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Manager (Nautilus)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Manager (Nautilus)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Navigation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookmarks-and-places" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bookmarks and Places
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-launcher-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Launcher and Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Launcher and Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-software-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Software Center
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-line-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command Line Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications-and-system-tray" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notifications and System Tray
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notifications and System Tray">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing Notifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessibility Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Accessibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#motor-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Motor Accessibility
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-and-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance and Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance and Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimizing-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimizing Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-desktop-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Desktop Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Desktop Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Problems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Problems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desktop-not-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Not Loading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extensions-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions Not Working
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customization Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theme-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Theme Customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icon-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Icon Customization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wallpaper-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wallpaper Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#desktop-environment-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Desktop Environment Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="getting-to-know-desktop-environment-in-ubuntu">Getting to Know Desktop Environment in Ubuntu</h1>
+<h2 id="overview">Overview</h2>
+<p>Ubuntu's desktop environment is your gateway to interacting with the system. Understanding the desktop environment helps you navigate efficiently, customize your workspace, and maximize productivity. This guide covers GNOME (Ubuntu's default) and other popular alternatives.</p>
+<h2 id="ubuntu-desktop-environment-gnome">Ubuntu Desktop Environment (GNOME)</h2>
+<h3 id="what-is-gnome">What is GNOME?</h3>
+<p>GNOME (GNU Network Object Model Environment) is Ubuntu's default desktop environment since version 17.10. It provides a modern, clean, and user-friendly interface designed for productivity and ease of use.</p>
+<h3 id="gnome-shell-architecture">GNOME Shell Architecture</h3>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[GNOME Shell] --&gt; B[Top Bar]
+    A --&gt; C[Activities Overview]
+    A --&gt; D[Dash to Dock]
+    A --&gt; E[Application Grid]
+    A --&gt; F[Workspace Switcher]
+
+    B --&gt; B1[Clock &amp; Calendar]
+    B --&gt; B2[System Indicators]
+    B --&gt; B3[User Menu]
+
+    C --&gt; C1[Search]
+    C --&gt; C2[Running Apps]
+    C --&gt; C3[Workspaces]
+
+    D --&gt; D1[Favorite Apps]
+    D --&gt; D2[Running Apps]
+    D --&gt; D3[App Launcher]
+</code></pre></div>
+<h2 id="desktop-components">Desktop Components</h2>
+<h3 id="1-top-bar-panel">1. Top Bar (Panel)</h3>
+<p>The top bar spans the full width of your screen and contains:</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│ Activities  ⏰ Mon 15:30  📶 🔊 🔋 ⚙️ 👤                  │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div>
+<h4 id="left-side-activities-button">Left Side: Activities Button</h4>
+<ul>
+<li>Click to open Activities Overview</li>
+<li>Search for applications and files</li>
+<li>Switch between workspaces</li>
+</ul>
+<h4 id="center-clock-and-calendar">Center: Clock and Calendar</h4>
+<ul>
+<li>Shows current time and date</li>
+<li>Click to view calendar</li>
+<li>Displays notifications and events</li>
+</ul>
+<h4 id="right-side-system-indicators">Right Side: System Indicators</h4>
+<ul>
+<li><strong>Network</strong>: Wi-Fi, Ethernet, VPN status</li>
+<li><strong>Audio</strong>: Volume control and output selection</li>
+<li><strong>Battery</strong>: Power level and settings (laptops)</li>
+<li><strong>Settings</strong>: Quick settings menu</li>
+<li><strong>User Menu</strong>: Account options and power controls</li>
+</ul>
+<h3 id="2-activities-overview">2. Activities Overview</h3>
+<p>Press <code>Super</code> key or click "Activities" to access:</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│                        🔍 Search                            │
+├─────────────────────────────────────────────────────────────┤
+│  🖥️     📁     🌐     ✉️      📝     🎵                    │
+│ Apps   Files Firefox Thunderbird Text   Music              │
+├─────────────────────────────────────────────────────────────┤
+│                                                 │ Workspace │
+│          Active Application Windows             │     1     │
+│                                                 ├───────────┤
+│                                                 │ Workspace │
+│                                                 │     2     │
+└─────────────────────────────────────────────────┴───────────┘
+</code></pre></div>
+<h4 id="features">Features:</h4>
+<ul>
+<li><strong>Universal Search</strong>: Find apps, files, settings</li>
+<li><strong>Application Grid</strong>: Browse all installed applications</li>
+<li><strong>Running Applications</strong>: Switch between open windows</li>
+<li><strong>Workspaces</strong>: Organize applications across virtual desktops</li>
+</ul>
+<h3 id="3-dock-ubuntu-dock">3. Dock (Ubuntu Dock)</h3>
+<p>The left sidebar shows:</p>
+<div class="highlight"><pre><span></span><code>┌─┐
+│📁│ Files
+├─┤
+│🌐│ Firefox
+├─┤
+│⚙️│ Settings
+├─┤
+│📧│ Thunderbird
+├─┤
+│🗑️│ Trash
+└─┘
+</code></pre></div>
+<h4 id="functions">Functions:</h4>
+<ul>
+<li><strong>Launch Applications</strong>: Click to open</li>
+<li><strong>Switch Windows</strong>: Click running app to switch</li>
+<li><strong>Indicators</strong>: Dots show running applications</li>
+<li><strong>Drag &amp; Drop</strong>: Organize and add favorites</li>
+</ul>
+<h3 id="4-application-menu">4. Application Menu</h3>
+<p>Access all applications via:</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────┐
+│  📱 All Applications                    │
+├─────────────────────────────────────────┤
+│ 🎨 Graphics    📊 Office    🔧 System  │
+│ 🌐 Internet    🎵 Media     🔬 Science │
+│ 🎮 Games       📚 Education 🛠️ Dev    │
+└─────────────────────────────────────────┘
+</code></pre></div>
+<h2 id="workspaces-and-window-management">Workspaces and Window Management</h2>
+<h3 id="understanding-workspaces">Understanding Workspaces</h3>
+<p>Workspaces are virtual desktops that help organize your work:</p>
+<div class="highlight"><pre><span></span><code>graph LR
+    A[Workspace 1&lt;br/&gt;Web Development] --&gt; B[Workspace 2&lt;br/&gt;Email &amp; Chat]
+    B --&gt; C[Workspace 3&lt;br/&gt;Media &amp; Design]
+    C --&gt; D[Workspace 4&lt;br/&gt;System Admin]
+</code></pre></div>
+<h3 id="workspace-management">Workspace Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Keyboard shortcuts for workspaces</span>
+Super<span class="w"> </span>+<span class="w"> </span>Page<span class="w"> </span>Up<span class="w">     </span><span class="c1"># Move to workspace above</span>
+Super<span class="w"> </span>+<span class="w"> </span>Page<span class="w"> </span>Down<span class="w">   </span><span class="c1"># Move to workspace below</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>Alt<span class="w"> </span>+<span class="w"> </span>Up<span class="w">     </span><span class="c1"># Switch to workspace above</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>Alt<span class="w"> </span>+<span class="w"> </span>Down<span class="w">   </span><span class="c1"># Switch to workspace below</span>
+
+<span class="c1"># Move windows between workspaces</span>
+Super<span class="w"> </span>+<span class="w"> </span>Shift<span class="w"> </span>+<span class="w"> </span>Page<span class="w"> </span>Up<span class="w">    </span><span class="c1"># Move window to workspace above</span>
+Super<span class="w"> </span>+<span class="w"> </span>Shift<span class="w"> </span>+<span class="w"> </span>Page<span class="w"> </span>Down<span class="w">  </span><span class="c1"># Move window to workspace below</span>
+</code></pre></div>
+<h3 id="window-management">Window Management</h3>
+<h4 id="tiling-and-snapping">Tiling and Snapping</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Window tiling shortcuts</span>
+Super<span class="w"> </span>+<span class="w"> </span>Left<span class="w">   </span><span class="c1"># Snap window to left half</span>
+Super<span class="w"> </span>+<span class="w"> </span>Right<span class="w">  </span><span class="c1"># Snap window to right half</span>
+Super<span class="w"> </span>+<span class="w"> </span>Up<span class="w">     </span><span class="c1"># Maximize window</span>
+Super<span class="w"> </span>+<span class="w"> </span>Down<span class="w">   </span><span class="c1"># Restore/minimize window</span>
+
+<span class="c1"># Advanced tiling</span>
+Super<span class="w"> </span>+<span class="w"> </span>H<span class="w">      </span><span class="c1"># Hide window</span>
+Alt<span class="w"> </span>+<span class="w"> </span>F4<span class="w">       </span><span class="c1"># Close window</span>
+Alt<span class="w"> </span>+<span class="w"> </span>F10<span class="w">      </span><span class="c1"># Maximize/restore toggle</span>
+</code></pre></div>
+<h4 id="window-switching">Window Switching</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Application switching</span>
+Alt<span class="w"> </span>+<span class="w"> </span>Tab<span class="w">              </span><span class="c1"># Switch between applications</span>
+Alt<span class="w"> </span>+<span class="w"> </span>Shift<span class="w"> </span>+<span class="w"> </span>Tab<span class="w">      </span><span class="c1"># Reverse application switching</span>
+Alt<span class="w"> </span>+<span class="w"> </span><span class="sb">`</span><span class="w">                </span><span class="c1"># Switch between windows of same app</span>
+Super<span class="w"> </span>+<span class="w"> </span>Tab<span class="w">            </span><span class="c1"># Switch between applications on all workspaces</span>
+</code></pre></div>
+<h2 id="customizing-the-desktop-environment">Customizing the Desktop Environment</h2>
+<h3 id="using-gnome-settings">Using GNOME Settings</h3>
+<p>Access settings via: <code>Settings</code> app or <code>gnome-control-center</code></p>
+<h4 id="appearance-settings">Appearance Settings</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Change theme and appearance</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Appearance
+-<span class="w"> </span>Style:<span class="w"> </span>Light/Dark<span class="w"> </span>mode
+-<span class="w"> </span>Wallpaper:<span class="w"> </span>Background<span class="w"> </span>images
+-<span class="w"> </span>Desktop<span class="w"> </span>Icons:<span class="w"> </span>Show/hide<span class="w"> </span>desktop<span class="w"> </span>icons
+</code></pre></div>
+<h4 id="desktop-behavior">Desktop Behavior</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Customize desktop behavior</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Desktop
+-<span class="w"> </span>Auto<span class="w"> </span>Hide<span class="w"> </span>Dock:<span class="w"> </span>Show/hide<span class="w"> </span>dock<span class="w"> </span>automatically
+-<span class="w"> </span>Dock<span class="w"> </span>Position:<span class="w"> </span>Left,<span class="w"> </span>Bottom,<span class="w"> </span>Right
+-<span class="w"> </span>Icon<span class="w"> </span>Size:<span class="w"> </span>Small,<span class="w"> </span>Medium,<span class="w"> </span>Large
+</code></pre></div>
+<h3 id="gnome-extensions">GNOME Extensions</h3>
+<p>Extensions add functionality to GNOME Shell:</p>
+<h4 id="installing-extensions">Installing Extensions</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Method 1: Browser extension</span>
+<span class="c1"># Visit: https://extensions.gnome.org/</span>
+<span class="c1"># Install browser extension</span>
+<span class="c1"># Browse and install GNOME extensions</span>
+
+<span class="c1"># Method 2: Package manager</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-shell-extensions
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-shell-extension-manager
+
+<span class="c1"># Method 3: Manual installation</span>
+<span class="c1"># Download .zip file</span>
+gnome-extensions<span class="w"> </span>install<span class="w"> </span>extension.zip
+</code></pre></div>
+<h4 id="popular-extensions">Popular Extensions</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Essential extensions</span>
+-<span class="w"> </span>Dash<span class="w"> </span>to<span class="w"> </span>Panel:<span class="w"> </span>Windows-style<span class="w"> </span>taskbar
+-<span class="w"> </span>AppIndicator<span class="w"> </span>Support:<span class="w"> </span>System<span class="w"> </span>tray<span class="w"> </span>support
+-<span class="w"> </span>Workspace<span class="w"> </span>Indicator:<span class="w"> </span>Workspace<span class="w"> </span>numbers<span class="w"> </span><span class="k">in</span><span class="w"> </span>top<span class="w"> </span>bar
+-<span class="w"> </span>User<span class="w"> </span>Themes:<span class="w"> </span>Custom<span class="w"> </span>theme<span class="w"> </span>support
+-<span class="w"> </span>Clipboard<span class="w"> </span>Indicator:<span class="w"> </span>Clipboard<span class="w"> </span><span class="nb">history</span>
+-<span class="w"> </span>Weather:<span class="w"> </span>Weather<span class="w"> </span><span class="k">in</span><span class="w"> </span>top<span class="w"> </span>bar
+-<span class="w"> </span>Vitals:<span class="w"> </span>System<span class="w"> </span>monitoring
+</code></pre></div>
+<h4 id="managing-extensions">Managing Extensions</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Command line management</span>
+gnome-extensions<span class="w"> </span>list<span class="w">                    </span><span class="c1"># List installed extensions</span>
+gnome-extensions<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>extension-name<span class="w">   </span><span class="c1"># Enable extension</span>
+gnome-extensions<span class="w"> </span>disable<span class="w"> </span>extension-name<span class="w">  </span><span class="c1"># Disable extension</span>
+gnome-extensions<span class="w"> </span>reset<span class="w"> </span>extension-name<span class="w">    </span><span class="c1"># Reset extension settings</span>
+
+<span class="c1"># GUI management</span>
+gnome-extensions-app<span class="w">  </span><span class="c1"># Extensions app</span>
+</code></pre></div>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<h4 id="essential-shortcuts">Essential Shortcuts</h4>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Super</code></td>
+<td>Open Activities Overview</td>
+</tr>
+<tr>
+<td><code>Super + A</code></td>
+<td>Show applications grid</td>
+</tr>
+<tr>
+<td><code>Super + L</code></td>
+<td>Lock screen</td>
+</tr>
+<tr>
+<td><code>Super + D</code></td>
+<td>Show desktop</td>
+</tr>
+<tr>
+<td><code>Alt + F2</code></td>
+<td>Run command dialog</td>
+</tr>
+<tr>
+<td><code>Ctrl + Alt + T</code></td>
+<td>Open terminal</td>
+</tr>
+<tr>
+<td><code>Print Screen</code></td>
+<td>Take screenshot</td>
+</tr>
+</tbody>
+</table>
+<h4 id="window-management_1">Window Management</h4>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Super + M</code></td>
+<td>Open notification list</td>
+</tr>
+<tr>
+<td><code>Super + V</code></td>
+<td>Show notification list</td>
+</tr>
+<tr>
+<td><code>Alt + Space</code></td>
+<td>Window menu</td>
+</tr>
+<tr>
+<td><code>Alt + F4</code></td>
+<td>Close window</td>
+</tr>
+<tr>
+<td><code>Alt + F10</code></td>
+<td>Maximize/restore window</td>
+</tr>
+</tbody>
+</table>
+<h4 id="customizing-shortcuts">Customizing Shortcuts</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access keyboard shortcuts</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Keyboard<span class="w"> </span>→<span class="w"> </span>Keyboard<span class="w"> </span>Shortcuts
+
+<span class="c1"># Categories:</span>
+-<span class="w"> </span>Navigation:<span class="w"> </span>Workspace<span class="w"> </span>and<span class="w"> </span>window<span class="w"> </span>switching
+-<span class="w"> </span>Windows:<span class="w"> </span>Window<span class="w"> </span>management
+-<span class="w"> </span>System:<span class="w"> </span>System<span class="w"> </span>functions
+-<span class="w"> </span>Custom:<span class="w"> </span>User-defined<span class="w"> </span>shortcuts
+</code></pre></div>
+<h2 id="alternative-desktop-environments">Alternative Desktop Environments</h2>
+<h3 id="kde-plasma-kubuntu">KDE Plasma (Kubuntu)</h3>
+<h4 id="installation">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install KDE Plasma</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>kubuntu-desktop
+
+<span class="c1"># Switch session at login screen</span>
+<span class="c1"># Select &quot;Plasma&quot; session</span>
+</code></pre></div>
+<h4 id="features_1">Features</h4>
+<div class="highlight"><pre><span></span><code>KDE Plasma Features:
+├── Highly Customizable Interface
+├── Advanced Window Management
+├── Integrated Applications (Konqueror, Dolphin)
+├── Widgets and Plasmoids
+├── Multiple Panel Layouts
+└── Advanced System Settings
+</code></pre></div>
+<h3 id="xfce-xubuntu">Xfce (Xubuntu)</h3>
+<h4 id="installation_1">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Xfce</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>xubuntu-desktop
+
+<span class="c1"># Lightweight and fast</span>
+<span class="c1"># Good for older hardware</span>
+</code></pre></div>
+<h4 id="characteristics">Characteristics</h4>
+<ul>
+<li><strong>Lightweight</strong>: Low resource usage</li>
+<li><strong>Traditional</strong>: Classic desktop metaphor</li>
+<li><strong>Customizable</strong>: Flexible layout options</li>
+<li><strong>Stable</strong>: Reliable and proven</li>
+</ul>
+<h3 id="lxqt-lubuntu">LXQt (Lubuntu)</h3>
+<h4 id="installation_2">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install LXQt</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>lubuntu-desktop
+
+<span class="c1"># Very lightweight</span>
+<span class="c1"># Minimal resource usage</span>
+</code></pre></div>
+<h3 id="mate-ubuntu-mate">MATE (Ubuntu MATE)</h3>
+<h4 id="installation_3">Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install MATE</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ubuntu-mate-desktop
+
+<span class="c1"># Traditional GNOME 2 experience</span>
+<span class="c1"># Familiar interface for long-time users</span>
+</code></pre></div>
+<h2 id="file-manager-nautilus">File Manager (Nautilus)</h2>
+<h3 id="basic-navigation">Basic Navigation</h3>
+<div class="highlight"><pre><span></span><code>Nautilus Interface:
+┌─────────────────────────────────────────────────────┐
+│ ← → ↑ Home Documents Pictures Music Videos Downloads │
+├─────────────────────────────────────────────────────┤
+│ Sidebar   │           Main View                     │
+│           │                                         │
+│ Places    │  📁 folder1    📄 document.txt         │
+│ Bookmarks │  📁 folder2    🖼️ image.jpg            │
+│ Devices   │  📁 folder3    🎵 song.mp3             │
+│           │                                         │
+└───────────┴─────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="file-operations">File Operations</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Keyboard shortcuts in Files</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>N<span class="w">         </span><span class="c1"># New window</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>T<span class="w">         </span><span class="c1"># New tab</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>W<span class="w">         </span><span class="c1"># Close tab</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>L<span class="w">         </span><span class="c1"># Address bar</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span>H<span class="w">         </span><span class="c1"># Show hidden files</span>
+F9<span class="w">               </span><span class="c1"># Toggle sidebar</span>
+Ctrl<span class="w"> </span>+<span class="w"> </span><span class="m">1</span>/2/3<span class="w">     </span><span class="c1"># Change view (icons/list/compact)</span>
+Space<span class="w">            </span><span class="c1"># Preview file</span>
+</code></pre></div>
+<h3 id="bookmarks-and-places">Bookmarks and Places</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Default places</span>
+-<span class="w"> </span>Home:<span class="w"> </span>User<span class="w"> </span>home<span class="w"> </span>directory
+-<span class="w"> </span>Desktop:<span class="w"> </span>Desktop<span class="w"> </span>folder
+-<span class="w"> </span>Documents:<span class="w"> </span>Documents<span class="w"> </span>folder
+-<span class="w"> </span>Downloads:<span class="w"> </span>Download<span class="w"> </span>folder
+-<span class="w"> </span>Music:<span class="w"> </span>Music<span class="w"> </span>folder
+-<span class="w"> </span>Pictures:<span class="w"> </span>Pictures<span class="w"> </span>folder
+-<span class="w"> </span>Videos:<span class="w"> </span>Videos<span class="w"> </span>folder
+-<span class="w"> </span>Computer:<span class="w"> </span>System<span class="w"> </span>drives
+-<span class="w"> </span>Network:<span class="w"> </span>Network<span class="w"> </span>locations
+</code></pre></div>
+<h2 id="application-launcher-and-management">Application Launcher and Management</h2>
+<h3 id="application-categories">Application Categories</h3>
+<div class="highlight"><pre><span></span><code>Application Categories:
+├── Accessories (Utilities)
+├── Games
+├── Graphics
+├── Internet
+├── Office
+├── Programming
+├── Sound &amp; Video
+├── System Tools
+└── Universal Access
+</code></pre></div>
+<h3 id="installing-applications">Installing Applications</h3>
+<h4 id="ubuntu-software-center">Ubuntu Software Center</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Launch Ubuntu Software</span>
+ubuntu-software
+
+<span class="c1"># Or from command line</span>
+snap-store
+
+<span class="c1"># Features:</span>
+-<span class="w"> </span>Browse<span class="w"> </span>by<span class="w"> </span>category
+-<span class="w"> </span>Search<span class="w"> </span>applications
+-<span class="w"> </span>Read<span class="w"> </span>reviews<span class="w"> </span>and<span class="w"> </span>ratings
+-<span class="w"> </span>Install/remove<span class="w"> </span>software
+-<span class="w"> </span>Manage<span class="w"> </span>updates
+</code></pre></div>
+<h4 id="command-line-installation">Command Line Installation</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># APT packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>application-name
+
+<span class="c1"># Snap packages</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>application-name
+
+<span class="c1"># Flatpak packages</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>application-id
+</code></pre></div>
+<h2 id="notifications-and-system-tray">Notifications and System Tray</h2>
+<h3 id="notification-system">Notification System</h3>
+<div class="highlight"><pre><span></span><code>Notification Area:
+┌─────────────────────────────────────┐
+│ 📧 New Email from John              │
+│ 📱 System Update Available          │
+│ 🔔 Calendar: Meeting in 15 minutes  │
+└─────────────────────────────────────┘
+</code></pre></div>
+<h3 id="managing-notifications">Managing Notifications</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access notification settings</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Notifications
+
+<span class="c1"># Options:</span>
+-<span class="w"> </span>Do<span class="w"> </span>Not<span class="w"> </span>Disturb:<span class="w"> </span>Silence<span class="w"> </span>notifications
+-<span class="w"> </span>Application<span class="w"> </span>notifications:<span class="w"> </span>Per-app<span class="w"> </span>settings
+-<span class="w"> </span>Lock<span class="w"> </span>screen<span class="w"> </span>notifications:<span class="w"> </span>Show/hide<span class="w"> </span>on<span class="w"> </span>lock<span class="w"> </span>screen
+</code></pre></div>
+<h2 id="accessibility-features">Accessibility Features</h2>
+<h3 id="visual-accessibility">Visual Accessibility</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Access accessibility settings</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Accessibility
+
+<span class="c1"># Visual options:</span>
+-<span class="w"> </span>High<span class="w"> </span>Contrast:<span class="w"> </span>Enhanced<span class="w"> </span>visibility
+-<span class="w"> </span>Large<span class="w"> </span>Text:<span class="w"> </span>Increased<span class="w"> </span>font<span class="w"> </span>size
+-<span class="w"> </span>Magnifier:<span class="w"> </span>Screen<span class="w"> </span>magnification
+-<span class="w"> </span>Screen<span class="w"> </span>Reader:<span class="w"> </span>Orca<span class="w"> </span>screen<span class="w"> </span>reader
+-<span class="w"> </span>Sound<span class="w"> </span>Keys:<span class="w"> </span>Audio<span class="w"> </span>feedback<span class="w"> </span><span class="k">for</span><span class="w"> </span>typing
+</code></pre></div>
+<h3 id="motor-accessibility">Motor Accessibility</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Motor accessibility features:</span>
+-<span class="w"> </span>Sticky<span class="w"> </span>Keys:<span class="w"> </span>Modifier<span class="w"> </span>key<span class="w"> </span>assistance
+-<span class="w"> </span>Slow<span class="w"> </span>Keys:<span class="w"> </span>Typing<span class="w"> </span>assistance
+-<span class="w"> </span>Bounce<span class="w"> </span>Keys:<span class="w"> </span>Repeat<span class="w"> </span>key<span class="w"> </span>filtering
+-<span class="w"> </span>Mouse<span class="w"> </span>Keys:<span class="w"> </span>Keyboard<span class="w"> </span>mouse<span class="w"> </span>control
+-<span class="w"> </span>Click<span class="w"> </span>Assist:<span class="w"> </span>Click<span class="w"> </span>timing<span class="w"> </span>assistance
+</code></pre></div>
+<h2 id="performance-and-optimization">Performance and Optimization</h2>
+<h3 id="system-monitoring">System Monitoring</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check system resources</span>
+gnome-system-monitor<span class="w">  </span><span class="c1"># GUI system monitor</span>
+htop<span class="w">                 </span><span class="c1"># Terminal system monitor</span>
+
+<span class="c1"># GNOME usage monitoring</span>
+gnome-usage<span class="w">          </span><span class="c1"># Disk and system usage</span>
+</code></pre></div>
+<h3 id="optimizing-performance">Optimizing Performance</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Disable unnecessary extensions</span>
+gnome-extensions<span class="w"> </span>disable<span class="w"> </span>extension-name
+
+<span class="c1"># Reduce animations</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>org.gnome.desktop.interface<span class="w"> </span>enable-animations<span class="w"> </span><span class="nb">false</span>
+
+<span class="c1"># Limit background applications</span>
+<span class="c1"># Use System Monitor to identify resource-heavy processes</span>
+</code></pre></div>
+<h2 id="troubleshooting-desktop-issues">Troubleshooting Desktop Issues</h2>
+<h3 id="common-problems">Common Problems</h3>
+<h4 id="desktop-not-loading">Desktop Not Loading</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Reset GNOME settings</span>
+dconf<span class="w"> </span>reset<span class="w"> </span>-f<span class="w"> </span>/org/gnome/
+
+<span class="c1"># Restart GNOME Shell</span>
+Alt<span class="w"> </span>+<span class="w"> </span>F2<span class="w"> </span>→<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="s2">&quot;r&quot;</span><span class="w"> </span>→<span class="w"> </span>Enter
+
+<span class="c1"># Reinstall GNOME packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>--reinstall<span class="w"> </span>ubuntu-desktop-minimal
+</code></pre></div>
+<h4 id="extensions-not-working">Extensions Not Working</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Reload extensions</span>
+gnome-extensions<span class="w"> </span>list
+gnome-extensions<span class="w"> </span>reset<span class="w"> </span>extension-name
+
+<span class="c1"># Check compatibility</span>
+gnome-shell<span class="w"> </span>--version
+<span class="c1"># Ensure extensions support your GNOME version</span>
+</code></pre></div>
+<h4 id="performance-issues">Performance Issues</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check graphics drivers</span>
+ubuntu-drivers<span class="w"> </span>devices
+sudo<span class="w"> </span>ubuntu-drivers<span class="w"> </span>autoinstall
+
+<span class="c1"># Reduce visual effects</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>org.gnome.desktop.interface<span class="w"> </span>enable-animations<span class="w"> </span><span class="nb">false</span>
+
+<span class="c1"># Monitor resource usage</span>
+gnome-system-monitor
+</code></pre></div>
+<h2 id="customization-examples">Customization Examples</h2>
+<h3 id="theme-customization">Theme Customization</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install GNOME Tweaks</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-tweaks
+
+<span class="c1"># Custom themes location</span>
+~/.themes/<span class="w">          </span><span class="c1"># User themes</span>
+/usr/share/themes/<span class="w">  </span><span class="c1"># System themes</span>
+
+<span class="c1"># Apply custom theme</span>
+gnome-tweaks<span class="w"> </span>→<span class="w"> </span>Appearance<span class="w"> </span>→<span class="w"> </span>Themes
+</code></pre></div>
+<h3 id="icon-customization">Icon Customization</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Icon themes location</span>
+~/.icons/<span class="w">          </span><span class="c1"># User icons</span>
+/usr/share/icons/<span class="w">  </span><span class="c1"># System icons</span>
+
+<span class="c1"># Popular icon themes</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>papirus-icon-theme
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>numix-icon-theme
+</code></pre></div>
+<h3 id="wallpaper-management">Wallpaper Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Wallpaper locations</span>
+~/Pictures/<span class="w">                    </span><span class="c1"># User wallpapers</span>
+/usr/share/backgrounds/<span class="w">        </span><span class="c1"># System wallpapers</span>
+
+<span class="c1"># Set wallpaper via command line</span>
+gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>org.gnome.desktop.background<span class="w"> </span>picture-uri<span class="w"> </span>file:///path/to/image.jpg
+</code></pre></div>
+<h2 id="desktop-environment-comparison">Desktop Environment Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>GNOME</th>
+<th>KDE Plasma</th>
+<th>Xfce</th>
+<th>LXQt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resource Usage</strong></td>
+<td>Medium</td>
+<td>Medium-High</td>
+<td>Low</td>
+<td>Very Low</td>
+</tr>
+<tr>
+<td><strong>Customization</strong></td>
+<td>Limited</td>
+<td>Extensive</td>
+<td>Good</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>Modern Design</strong></td>
+<td>Excellent</td>
+<td>Excellent</td>
+<td>Traditional</td>
+<td>Simple</td>
+</tr>
+<tr>
+<td><strong>Touch Support</strong></td>
+<td>Good</td>
+<td>Excellent</td>
+<td>Limited</td>
+<td>Limited</td>
+</tr>
+<tr>
+<td><strong>Learning Curve</strong></td>
+<td>Easy</td>
+<td>Moderate</td>
+<td>Easy</td>
+<td>Easy</td>
+</tr>
+</tbody>
+</table>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="workflow-optimization">Workflow Optimization</h3>
+<ol>
+<li><strong>Use Workspaces</strong>: Organize different tasks</li>
+<li><strong>Master Shortcuts</strong>: Learn essential keyboard shortcuts</li>
+<li><strong>Customize Dock</strong>: Add frequently used applications</li>
+<li><strong>Configure Notifications</strong>: Minimize distractions</li>
+<li><strong>Regular Maintenance</strong>: Keep system updated</li>
+</ol>
+<h3 id="security-considerations">Security Considerations</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Lock screen automatically</span>
+Settings<span class="w"> </span>→<span class="w"> </span>Privacy<span class="w"> </span>→<span class="w"> </span>Screen<span class="w"> </span>Lock
+-<span class="w"> </span>Automatic<span class="w"> </span>Screen<span class="w"> </span>Lock:<span class="w"> </span>ON
+-<span class="w"> </span>Lock<span class="w"> </span>Screen<span class="w"> </span>Delay:<span class="w"> </span><span class="m">5</span><span class="w"> </span>minutes
+
+<span class="c1"># Disable guest session</span>
+sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;printf &quot;[Seat:*]\nallow-guest=false\n&quot; &gt;/etc/lightdm/lightdm.conf.d/50-no-guest.conf&#39;</span>
+</code></pre></div>
+<h2 id="next-steps">Next Steps</h2>
+<p>After mastering the desktop environment:</p>
+<ol>
+<li><strong><a href="ubuntu-file-folder-management.md">Learn file and folder management</a></strong></li>
+<li><strong><a href="ubuntu-user-permissions.md">Master user and permissions</a></strong></li>
+<li><strong><a href="ubuntu-interface-customization.md">Explore system customization</a></strong></li>
+<li><strong><a href="ubuntu-software-development.md">Set up development environment</a></strong></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>Ubuntu's desktop environment provides:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+<th>Key Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GNOME Shell</strong></td>
+<td>Main interface</td>
+<td>Activities overview, search, workspaces</td>
+</tr>
+<tr>
+<td><strong>Top Bar</strong></td>
+<td>System status</td>
+<td>Clock, indicators, user menu</td>
+</tr>
+<tr>
+<td><strong>Dock</strong></td>
+<td>App launcher</td>
+<td>Favorites, running apps, quick access</td>
+</tr>
+<tr>
+<td><strong>File Manager</strong></td>
+<td>File operations</td>
+<td>Browse, search, organize files</td>
+</tr>
+<tr>
+<td><strong>Extensions</strong></td>
+<td>Extended functionality</td>
+<td>Customization and additional features</td>
+</tr>
+</tbody>
+</table>
+<p>Understanding these components enables you to work efficiently and customize Ubuntu to match your workflow preferences.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 TB. Maulana Aghni
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

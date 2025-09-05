@@ -1,0 +1,2621 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This personal wiki is my go-to resource for documenting key knowledge,  project notes, and cheat sheets across various technologies.">
+      
+      
+        <meta name="author" content="TB Maulana Aghni">
+      
+      
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-introduction/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Introduction to Ubuntu: What and Why? - MekProjects Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-ubuntu-what-and-why" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MekProjects Wiki" class="md-header__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MekProjects Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Ubuntu: What and Why?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../content-list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Content List
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../when-you-bored/" class="md-tabs__link">
+          
+  
+  
+  Interesting Pages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dicoding-machine-learning/" class="md-tabs__link">
+          
+  
+  
+  Ongoing Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MekProjects Wiki" class="md-nav__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    MekProjects Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            .NET Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-basic-1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-class-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-clean-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-logging-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-nuget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-basic.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-cheatsheet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-class-objects.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-clean-architecture.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-logging-tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-microservices.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-nuget.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Category
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Category
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-devops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevOps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-linux.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-containerization.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containerization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-dotnet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-backend.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-cloud.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-operating-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-terminal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interesting Pages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interesting Pages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips and Tricks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ongoing Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ongoing Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicoding-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Golang Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Ubuntu?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Philosophy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-family-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Family Tree
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-release-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Release Cycle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu Release Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lts-vs-regular-releases" class="md-nav__link">
+    <span class="md-ellipsis">
+      LTS vs Regular Releases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-naming-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Naming Scheme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-choose-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Choose Ubuntu?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Choose Ubuntu?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-user-friendly-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. User-Friendly Interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-security-and-stability" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Security and Stability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-software-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Software Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hardware-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Hardware Compatibility
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-development-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Development Environment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-editions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Editions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu Editions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ubuntu-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Ubuntu Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ubuntu-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Ubuntu Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-ubuntu-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Ubuntu Core
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-desktop-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Desktop Environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu Desktop Environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gnome-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNOME (Default)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-alternatives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Alternatives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-advanced-package-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      APT (Advanced Package Tool)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Sources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-system-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      File System Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-and-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal and Command Line
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal and Command Line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#essential-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Essential Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Permissions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubuntu-for-different-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu for Different Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ubuntu for Different Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-home-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Home Desktop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-development-workstation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Development Workstation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-server-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Server Environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-educational-institution" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Educational Institution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#community-and-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community and Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Community and Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contributing-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing Back
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advantages-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-beginners" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Beginners
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Developers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-system-administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      For System Administrators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-students" class="md-nav__link">
+    <span class="md-ellipsis">
+      For Students
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="introduction-to-ubuntu-what-and-why">Introduction to Ubuntu: What and Why?</h1>
+<h2 id="what-is-ubuntu">What is Ubuntu?</h2>
+<p>Ubuntu is a <strong>free and open-source Linux distribution</strong> based on Debian. It's designed to be user-friendly, secure, and accessible to both beginners and advanced users. Ubuntu is one of the most popular Linux distributions, known for its stability, extensive community support, and regular release cycle.</p>
+<h2 id="ubuntu-philosophy">Ubuntu Philosophy</h2>
+<p>Ubuntu is built on the African philosophy of <strong>"Ubuntu"</strong> which means <em>"I am because we are"</em> - emphasizing community, sharing, and interconnectedness.</p>
+<h3 id="core-values">Core Values</h3>
+<ul>
+<li><strong>Free Software</strong>: No licensing fees, complete freedom to use, modify, and distribute</li>
+<li><strong>Community Driven</strong>: Developed by a global community of volunteers</li>
+<li><strong>Security First</strong>: Built-in security features and regular updates</li>
+<li><strong>Accessibility</strong>: Designed to be usable by everyone</li>
+</ul>
+<h2 id="ubuntu-family-tree">Ubuntu Family Tree</h2>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Debian] --&gt; B[Ubuntu]
+    B --&gt; C[Ubuntu Desktop]
+    B --&gt; D[Ubuntu Server]
+    B --&gt; E[Ubuntu Core]
+
+    B --&gt; F[Official Flavors]
+    F --&gt; F1[Kubuntu - KDE]
+    F --&gt; F2[Xubuntu - Xfce]
+    F --&gt; F3[Lubuntu - LXQt]
+    F --&gt; F4[Ubuntu MATE]
+    F --&gt; F5[Ubuntu Studio]
+    F --&gt; F6[Ubuntu Budgie]
+
+    B --&gt; G[Derivatives]
+    G --&gt; G1[Linux Mint]
+    G --&gt; G2[Elementary OS]
+    G --&gt; G3[Pop!_OS]
+    G --&gt; G4[Zorin OS]
+</code></pre></div>
+<h2 id="ubuntu-release-cycle">Ubuntu Release Cycle</h2>
+<h3 id="lts-vs-regular-releases">LTS vs Regular Releases</h3>
+<div class="highlight"><pre><span></span><code>timeline
+    title Ubuntu Release Timeline
+    2020 : Ubuntu 20.04 LTS
+         : Focal Fossa
+         : 5 years support
+    2021 : Ubuntu 21.04
+         : Hirsute Hippo
+         : 9 months support
+    2021 : Ubuntu 21.10
+         : Impish Indri
+         : 9 months support
+    2022 : Ubuntu 22.04 LTS
+         : Jammy Jellyfish
+         : 5 years support
+    2022 : Ubuntu 22.10
+         : Kinetic Kudu
+         : 9 months support
+    2023 : Ubuntu 23.04
+         : Lunar Lobster
+         : 9 months support
+    2023 : Ubuntu 23.10
+         : Mantic Minotaur
+         : 9 months support
+    2024 : Ubuntu 24.04 LTS
+         : Noble Numbat
+         : 5 years support
+</code></pre></div>
+<h3 id="version-naming-scheme">Version Naming Scheme</h3>
+<p>Ubuntu versions follow the pattern: <strong>YY.MM</strong> (Year.Month)
+- <strong>20.04</strong>: Released in April 2020
+- <strong>22.04</strong>: Released in April 2022
+- <strong>24.04</strong>: Released in April 2024</p>
+<h2 id="why-choose-ubuntu">Why Choose Ubuntu?</h2>
+<h3 id="1-user-friendly-interface">1. <strong>User-Friendly Interface</strong></h3>
+<p>Ubuntu provides an intuitive desktop environment that's easy to navigate:</p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────┐
+│ ☰ Activities    🕐 Time    🔋 ⚙️ 👤    │  ← Top Bar
+├─────────────────────────────────────────┤
+│                                         │
+│     🗂️ Files    🌐 Firefox             │  ← Application Icons
+│                                         │
+│     ⚙️ Settings  📝 Text Editor        │
+│                                         │
+│     📦 Software  🎵 Music              │
+│                                         │
+│                                         │
+├─────────────────────────────────────────┤
+│ 🗂️ Files 🌐 Firefox 📧 Mail 📱 Phone │  ← Dock
+└─────────────────────────────────────────┘
+</code></pre></div>
+<h3 id="2-security-and-stability">2. <strong>Security and Stability</strong></h3>
+<ul>
+<li><strong>Built-in Firewall</strong>: UFW (Uncomplicated Firewall)</li>
+<li><strong>Automatic Security Updates</strong>: Critical patches applied automatically</li>
+<li><strong>Sandboxed Applications</strong>: Snap packages run in isolation</li>
+<li><strong>Encrypted Storage</strong>: Full disk encryption options</li>
+<li><strong>Regular Security Audits</strong>: Community-driven security reviews</li>
+</ul>
+<h3 id="3-software-management">3. <strong>Software Management</strong></h3>
+<p>Ubuntu offers multiple ways to install software:</p>
+<div class="highlight"><pre><span></span><code>graph LR
+    A[Software Installation] --&gt; B[APT Package Manager]
+    A --&gt; C[Snap Store]
+    A --&gt; D[Flatpak]
+    A --&gt; E[AppImage]
+    A --&gt; F[DEB Packages]
+
+    B --&gt; B1[Command Line]
+    B --&gt; B2[Synaptic GUI]
+
+    C --&gt; C1[Ubuntu Software]
+    C --&gt; C2[Snap Command]
+
+    D --&gt; D1[GNOME Software]
+    D --&gt; D2[Flatpak Command]
+</code></pre></div>
+<h3 id="4-hardware-compatibility">4. <strong>Hardware Compatibility</strong></h3>
+<p>Ubuntu supports a wide range of hardware:</p>
+<table>
+<thead>
+<tr>
+<th>Hardware Type</th>
+<th>Support Level</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intel/AMD CPUs</strong></td>
+<td>Excellent</td>
+<td>Full support for modern processors</td>
+</tr>
+<tr>
+<td><strong>NVIDIA Graphics</strong></td>
+<td>Very Good</td>
+<td>Proprietary drivers available</td>
+</tr>
+<tr>
+<td><strong>AMD Graphics</strong></td>
+<td>Excellent</td>
+<td>Open-source drivers included</td>
+</tr>
+<tr>
+<td><strong>WiFi Adapters</strong></td>
+<td>Very Good</td>
+<td>Most adapters work out-of-box</td>
+</tr>
+<tr>
+<td><strong>Printers</strong></td>
+<td>Excellent</td>
+<td>CUPS printing system</td>
+</tr>
+<tr>
+<td><strong>Touchscreens</strong></td>
+<td>Good</td>
+<td>Basic multi-touch support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-development-environment">5. <strong>Development Environment</strong></h3>
+<p>Ubuntu is excellent for developers:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pre-installed development tools</span>
+gcc<span class="w"> </span>--version<span class="w">        </span><span class="c1"># GNU Compiler Collection</span>
+python3<span class="w"> </span>--version<span class="w">    </span><span class="c1"># Python programming language</span>
+git<span class="w"> </span>--version<span class="w">        </span><span class="c1"># Version control system</span>
+ssh<span class="w"> </span>--version<span class="w">        </span><span class="c1"># Secure Shell</span>
+
+<span class="c1"># Easy installation of development tools</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm<span class="w">       </span><span class="c1"># Node.js development</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-17-jdk<span class="w">  </span><span class="c1"># Java development</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker.io<span class="w">       </span><span class="c1"># Containerization</span>
+</code></pre></div>
+<h2 id="ubuntu-editions">Ubuntu Editions</h2>
+<h3 id="1-ubuntu-desktop">1. <strong>Ubuntu Desktop</strong></h3>
+<ul>
+<li><strong>Target</strong>: Home users, developers, students</li>
+<li><strong>Desktop Environment</strong>: GNOME (default)</li>
+<li><strong>Features</strong>: Complete desktop experience with GUI</li>
+<li><strong>System Requirements</strong>: </li>
+<li>4 GB RAM (minimum), 8 GB recommended</li>
+<li>25 GB disk space</li>
+<li>1 GHz dual-core processor</li>
+</ul>
+<h3 id="2-ubuntu-server">2. <strong>Ubuntu Server</strong></h3>
+<ul>
+<li><strong>Target</strong>: Servers, cloud deployments, IoT</li>
+<li><strong>Interface</strong>: Command-line only</li>
+<li><strong>Features</strong>: Optimized for server workloads</li>
+<li><strong>System Requirements</strong>:</li>
+<li>1 GB RAM (minimum), 2 GB recommended</li>
+<li>2.5 GB disk space</li>
+<li>1 GHz processor</li>
+</ul>
+<h3 id="3-ubuntu-core">3. <strong>Ubuntu Core</strong></h3>
+<ul>
+<li><strong>Target</strong>: IoT devices, embedded systems</li>
+<li><strong>Package System</strong>: Snap-only</li>
+<li><strong>Features</strong>: Minimal, transactional updates</li>
+<li><strong>Benefits</strong>: Automatic security updates, rollback capability</li>
+</ul>
+<h2 id="ubuntu-desktop-environments">Ubuntu Desktop Environments</h2>
+<h3 id="gnome-default">GNOME (Default)</h3>
+<div class="highlight"><pre><span></span><code>Features:
+├── Modern Design
+├── Touch-friendly Interface
+├── Extension Support
+├── Integrated Search
+└── Accessibility Features
+</code></pre></div>
+<h3 id="available-alternatives">Available Alternatives</h3>
+<table>
+<thead>
+<tr>
+<th>Desktop Environment</th>
+<th>Flavor</th>
+<th>Resource Usage</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>KDE Plasma</strong></td>
+<td>Kubuntu</td>
+<td>Medium-High</td>
+<td>Power users, customization</td>
+</tr>
+<tr>
+<td><strong>Xfce</strong></td>
+<td>Xubuntu</td>
+<td>Low</td>
+<td>Older hardware, simplicity</td>
+</tr>
+<tr>
+<td><strong>LXQt</strong></td>
+<td>Lubuntu</td>
+<td>Very Low</td>
+<td>Very old hardware</td>
+</tr>
+<tr>
+<td><strong>MATE</strong></td>
+<td>Ubuntu MATE</td>
+<td>Low-Medium</td>
+<td>Traditional desktop feel</td>
+</tr>
+<tr>
+<td><strong>Budgie</strong></td>
+<td>Ubuntu Budgie</td>
+<td>Medium</td>
+<td>Modern, elegant interface</td>
+</tr>
+</tbody>
+</table>
+<h2 id="package-management">Package Management</h2>
+<h3 id="apt-advanced-package-tool">APT (Advanced Package Tool)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update package lists</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Upgrade installed packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Install new software</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># Remove software</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>package-name
+
+<span class="c1"># Search for packages</span>
+apt<span class="w"> </span>search<span class="w"> </span>keyword
+
+<span class="c1"># Show package information</span>
+apt<span class="w"> </span>show<span class="w"> </span>package-name
+
+<span class="c1"># List installed packages</span>
+apt<span class="w"> </span>list<span class="w"> </span>--installed
+</code></pre></div>
+<h3 id="snap-packages">Snap Packages</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install snap package</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># List installed snaps</span>
+snap<span class="w"> </span>list
+
+<span class="c1"># Update all snaps</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh
+
+<span class="c1"># Remove snap package</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>package-name
+
+<span class="c1"># Search for snaps</span>
+snap<span class="w"> </span>find<span class="w"> </span>keyword
+</code></pre></div>
+<h3 id="software-sources">Software Sources</h3>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Ubuntu Software Sources] --&gt; B[Main Repository]
+    A --&gt; C[Universe Repository]
+    A --&gt; D[Restricted Repository]
+    A --&gt; E[Multiverse Repository]
+    A --&gt; F[Partner Repository]
+
+    B --&gt; B1[Officially supported packages]
+    C --&gt; C1[Community maintained packages]
+    D --&gt; D1[Proprietary drivers/firmware]
+    E --&gt; E1[Non-free software]
+    F --&gt; F1[Software from partners]
+
+    A --&gt; G[Third-party Sources]
+    G --&gt; G1[PPAs - Personal Package Archives]
+    G --&gt; G2[Snap Store]
+    G --&gt; G3[Flatpak Repositories]
+</code></pre></div>
+<h2 id="file-system-structure">File System Structure</h2>
+<div class="highlight"><pre><span></span><code>/                    ← Root directory
+├── bin/            ← Essential command binaries
+├── boot/           ← Boot loader files
+├── dev/            ← Device files
+├── etc/            ← Configuration files
+├── home/           ← User home directories
+│   └── username/   ← Your personal directory
+├── lib/            ← Essential shared libraries
+├── media/          ← Removable media mount points
+├── mnt/            ← Temporary mount points
+├── opt/            ← Optional software packages
+├── proc/           ← Process information
+├── root/           ← Root user&#39;s home directory
+├── run/            ← Runtime variable data
+├── sbin/           ← System administration binaries
+├── srv/            ← Service data
+├── sys/            ← System information
+├── tmp/            ← Temporary files
+├── usr/            ← User programs and data
+│   ├── bin/        ← User command binaries
+│   ├── lib/        ← Libraries for /usr/bin and /usr/sbin
+│   ├── local/      ← Local hierarchy
+│   └── share/      ← Architecture-independent data
+└── var/            ← Variable data files
+    ├── log/        ← Log files
+    ├── cache/      ← Application cache data
+    └── lib/        ← Variable state information
+</code></pre></div>
+<h2 id="terminal-and-command-line">Terminal and Command Line</h2>
+<h3 id="essential-commands">Essential Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Navigation</span>
+<span class="nb">pwd</span><span class="w">                 </span><span class="c1"># Print working directory</span>
+ls<span class="w">                  </span><span class="c1"># List directory contents</span>
+<span class="nb">cd</span><span class="w"> </span>/path/to/dir<span class="w">     </span><span class="c1"># Change directory</span>
+<span class="nb">cd</span><span class="w"> </span>~<span class="w">                </span><span class="c1"># Go to home directory</span>
+<span class="nb">cd</span><span class="w"> </span>..<span class="w">               </span><span class="c1"># Go up one directory</span>
+
+<span class="c1"># File Operations</span>
+cp<span class="w"> </span><span class="nb">source</span><span class="w"> </span>dest<span class="w">      </span><span class="c1"># Copy files/directories</span>
+mv<span class="w"> </span><span class="nb">source</span><span class="w"> </span>dest<span class="w">      </span><span class="c1"># Move/rename files</span>
+rm<span class="w"> </span>filename<span class="w">         </span><span class="c1"># Remove file</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>directory<span class="w">    </span><span class="c1"># Remove directory recursively</span>
+mkdir<span class="w"> </span>dirname<span class="w">       </span><span class="c1"># Create directory</span>
+touch<span class="w"> </span>filename<span class="w">      </span><span class="c1"># Create empty file</span>
+
+<span class="c1"># File Viewing</span>
+cat<span class="w"> </span>filename<span class="w">        </span><span class="c1"># Display file contents</span>
+less<span class="w"> </span>filename<span class="w">       </span><span class="c1"># View file page by page</span>
+head<span class="w"> </span>filename<span class="w">       </span><span class="c1"># Show first 10 lines</span>
+tail<span class="w"> </span>filename<span class="w">       </span><span class="c1"># Show last 10 lines</span>
+grep<span class="w"> </span>pattern<span class="w"> </span>file<span class="w">   </span><span class="c1"># Search for pattern in file</span>
+
+<span class="c1"># System Information</span>
+top<span class="w">                 </span><span class="c1"># Show running processes</span>
+ps<span class="w"> </span>aux<span class="w">              </span><span class="c1"># List all processes</span>
+df<span class="w"> </span>-h<span class="w">               </span><span class="c1"># Show disk usage</span>
+free<span class="w"> </span>-h<span class="w">             </span><span class="c1"># Show memory usage</span>
+uname<span class="w"> </span>-a<span class="w">            </span><span class="c1"># System information</span>
+whoami<span class="w">              </span><span class="c1"># Current username</span>
+</code></pre></div>
+<h3 id="file-permissions">File Permissions</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Understanding permissions: rwxrwxrwx</span>
+<span class="c1"># r = read (4), w = write (2), x = execute (1)</span>
+<span class="c1"># First rwx: Owner, Second rwx: Group, Third rwx: Others</span>
+
+<span class="c1"># Change permissions</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>filename<span class="w">  </span><span class="c1"># rwxr-xr-x</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>script<span class="w">     </span><span class="c1"># Add execute permission</span>
+chmod<span class="w"> </span>-w<span class="w"> </span>file<span class="w">       </span><span class="c1"># Remove write permission</span>
+
+<span class="c1"># Change ownership</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>user:group<span class="w"> </span>filename
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>user:group<span class="w"> </span>directory/
+</code></pre></div>
+<h2 id="ubuntu-for-different-use-cases">Ubuntu for Different Use Cases</h2>
+<h3 id="1-home-desktop">1. <strong>Home Desktop</strong></h3>
+<ul>
+<li><strong>Web browsing</strong>: Firefox, Chrome</li>
+<li><strong>Office suite</strong>: LibreOffice</li>
+<li><strong>Media</strong>: VLC, Rhythmbox</li>
+<li><strong>Graphics</strong>: GIMP, Inkscape</li>
+</ul>
+<h3 id="2-development-workstation">2. <strong>Development Workstation</strong></h3>
+<ul>
+<li><strong>IDEs</strong>: VS Code, IntelliJ IDEA, Eclipse</li>
+<li><strong>Programming languages</strong>: Python, Java, Node.js, C++</li>
+<li><strong>Version control</strong>: Git, GitHub Desktop</li>
+<li><strong>Containers</strong>: Docker, Podman</li>
+</ul>
+<h3 id="3-server-environment">3. <strong>Server Environment</strong></h3>
+<ul>
+<li><strong>Web servers</strong>: Apache, Nginx</li>
+<li><strong>Databases</strong>: MySQL, PostgreSQL, MongoDB</li>
+<li><strong>Monitoring</strong>: Prometheus, Grafana</li>
+<li><strong>Automation</strong>: Ansible, Puppet</li>
+</ul>
+<h3 id="4-educational-institution">4. <strong>Educational Institution</strong></h3>
+<ul>
+<li><strong>Classroom management</strong>: Epoptes</li>
+<li><strong>Educational software</strong>: GCompris, Stellarium</li>
+<li><strong>Programming education</strong>: Scratch, Python IDLE</li>
+<li><strong>Cost-effective</strong>: No licensing fees</li>
+</ul>
+<h2 id="getting-started-workflow">Getting Started Workflow</h2>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Download Ubuntu] --&gt; B[Create Installation Media]
+    B --&gt; C[Boot from USB/DVD]
+    C --&gt; D[Try Ubuntu Live]
+    D --&gt; E{Satisfied?}
+    E --&gt;|Yes| F[Install Ubuntu]
+    E --&gt;|No| G[Try Different Flavor]
+    F --&gt; H[Initial Setup]
+    H --&gt; I[Update System]
+    I --&gt; J[Install Software]
+    J --&gt; K[Configure Settings]
+    K --&gt; L[Start Using Ubuntu]
+    G --&gt; D
+</code></pre></div>
+<h3 id="installation-options">Installation Options</h3>
+<ol>
+<li><strong>Dual Boot</strong>: Keep existing OS alongside Ubuntu</li>
+<li><strong>Replace OS</strong>: Complete Ubuntu installation</li>
+<li><strong>Virtual Machine</strong>: Run Ubuntu inside another OS</li>
+<li><strong>Live USB</strong>: Portable Ubuntu without installation</li>
+</ol>
+<h2 id="community-and-support">Community and Support</h2>
+<h3 id="getting-help">Getting Help</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ubuntu Forums</strong></td>
+<td>Community</td>
+<td>General questions, troubleshooting</td>
+</tr>
+<tr>
+<td><strong>Ask Ubuntu</strong></td>
+<td>Q&amp;A Site</td>
+<td>Specific technical problems</td>
+</tr>
+<tr>
+<td><strong>Ubuntu Documentation</strong></td>
+<td>Official</td>
+<td>Comprehensive guides</td>
+</tr>
+<tr>
+<td><strong>IRC/Discord</strong></td>
+<td>Real-time Chat</td>
+<td>Quick questions, discussions</td>
+</tr>
+<tr>
+<td><strong>Local User Groups</strong></td>
+<td>In-person</td>
+<td>Networking, learning</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contributing-back">Contributing Back</h3>
+<div class="highlight"><pre><span></span><code>graph LR
+    A[Ways to Contribute] --&gt; B[Bug Reporting]
+    A --&gt; C[Documentation]
+    A --&gt; D[Translation]
+    A --&gt; E[Code Development]
+    A --&gt; F[Community Support]
+    A --&gt; G[Testing]
+
+    B --&gt; B1[Launchpad Bug Tracker]
+    C --&gt; C1[Wiki Editing]
+    D --&gt; D1[Launchpad Translations]
+    E --&gt; E1[Bazaar/Git Repositories]
+    F --&gt; F1[Forums/IRC Help]
+    G --&gt; G1[Daily Builds Testing]
+</code></pre></div>
+<h2 id="advantages-summary">Advantages Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Advantage</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free</strong></td>
+<td>No cost for download, use, or distribution</td>
+</tr>
+<tr>
+<td><strong>Secure</strong></td>
+<td>Built-in security features and regular updates</td>
+</tr>
+<tr>
+<td><strong>Stable</strong></td>
+<td>Reliable for both personal and professional use</td>
+</tr>
+<tr>
+<td><strong>Customizable</strong></td>
+<td>Modify interface and behavior to your needs</td>
+</tr>
+<tr>
+<td><strong>Community</strong></td>
+<td>Large, helpful community for support</td>
+</tr>
+<tr>
+<td><strong>Privacy</strong></td>
+<td>No data collection or telemetry by default</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Efficient resource usage</td>
+</tr>
+<tr>
+<td><strong>Compatibility</strong></td>
+<td>Runs on wide range of hardware</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<h3 id="for-beginners">For Beginners</h3>
+<ul>
+<li>Replace Windows/macOS with familiar interface</li>
+<li>Learn Linux without complexity</li>
+<li>Safe environment for experimentation</li>
+</ul>
+<h3 id="for-developers">For Developers</h3>
+<ul>
+<li>Native development environment</li>
+<li>Package management for tools</li>
+<li>Container support built-in</li>
+</ul>
+<h3 id="for-system-administrators">For System Administrators</h3>
+<ul>
+<li>Server management and automation</li>
+<li>Cloud deployment platform</li>
+<li>Enterprise support available</li>
+</ul>
+<h3 id="for-students">For Students</h3>
+<ul>
+<li>Free alternative to expensive software</li>
+<li>Learning programming and system administration</li>
+<li>Academic discounts not needed</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>After understanding Ubuntu basics:</p>
+<ol>
+<li><strong><a href="../ubuntu-installation/">Install Ubuntu on your system</a></strong></li>
+<li><strong><a href="../ubuntu-terminal-basics/">Learn basic terminal commands</a></strong></li>
+<li><strong><a href="../ubuntu-desktop-environment/">Explore the desktop environment</a></strong></li>
+<li><strong><a href="../ubuntu-software-installation/">Install and manage software</a></strong></li>
+</ol>
+<p>Ubuntu represents freedom, community, and accessibility in computing. Whether you're a complete beginner or an experienced user, Ubuntu provides a solid foundation for your computing needs while respecting your privacy and giving you complete control over your system.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 TB. Maulana Aghni
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

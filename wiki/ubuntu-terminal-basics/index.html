@@ -1,0 +1,3114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This personal wiki is my go-to resource for documenting key knowledge,  project notes, and cheat sheets across various technologies.">
+      
+      
+        <meta name="author" content="TB Maulana Aghni">
+      
+      
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-terminal-basics/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Basic Ubuntu Terminal Commands - MekProjects Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-ubuntu-terminal-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MekProjects Wiki" class="md-header__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MekProjects Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basic Ubuntu Terminal Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../content-list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Content List
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../when-you-bored/" class="md-tabs__link">
+          
+  
+  
+  Interesting Pages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dicoding-machine-learning/" class="md-tabs__link">
+          
+  
+  
+  Ongoing Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MekProjects Wiki" class="md-nav__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    MekProjects Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            .NET Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-basic-1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-class-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-clean-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-logging-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-nuget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-basic.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-cheatsheet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-class-objects.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-clean-architecture.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-logging-tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-microservices.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-nuget.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Category
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Category
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-devops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevOps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-linux.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-containerization.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containerization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-dotnet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-backend.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-cloud.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-operating-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-terminal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interesting Pages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interesting Pages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips and Tricks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ongoing Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ongoing Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicoding-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Golang Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is the Terminal?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opening-the-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opening the Terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opening the Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-to-access-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods to Access Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-interface-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Interface Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-the-file-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding the File System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-and-directory-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File and Directory Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File and Directory Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Files and Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying Files and Directories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-and-renaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving and Renaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deleting Files and Directories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-content-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Content Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Content Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-file-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing File Contents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-editing-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating and Editing Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#searching-in-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Searching in Files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-permissions-and-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Permissions and Ownership
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Permissions and Ownership">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission Values
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Ownership
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-information-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Information Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Information Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      APT Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Process Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archive-and-compression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Archive and Compression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Archive and Compression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Archives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extracting-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extracting Archives
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Manipulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-text-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Text Processing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputoutput-redirection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input/Output Redirection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input/Output Redirection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redirection-operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redirection Operators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Environment Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-history-and-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History and Shortcuts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Command History and Shortcuts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#command-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Command History
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyboard Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Help">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-command-combinations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Command Combinations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Command Combinations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#useful-one-liners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful One-liners
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminal-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminal Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terminal Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#safety-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safety Tips
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#productivity-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Productivity Tips
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="basic-ubuntu-terminal-commands">Basic Ubuntu Terminal Commands</h1>
+<h2 id="what-is-the-terminal">What is the Terminal?</h2>
+<p>The terminal (also called command line, shell, or console) is a text-based interface for interacting with your Ubuntu system. While Ubuntu has a graphical interface, the terminal provides powerful tools for system administration, development, and automation.</p>
+<h2 id="opening-the-terminal">Opening the Terminal</h2>
+<h3 id="methods-to-access-terminal">Methods to Access Terminal</h3>
+<ol>
+<li><strong>Keyboard Shortcut</strong>: <code>Ctrl + Alt + T</code></li>
+<li><strong>Activities Search</strong>: Press <code>Super</code> key, type "terminal"</li>
+<li><strong>Applications Menu</strong>: Show Applications → Utilities → Terminal</li>
+<li><strong>Right-click</strong>: Right-click on desktop → "Open in Terminal"</li>
+</ol>
+<h3 id="terminal-interface-components">Terminal Interface Components</h3>
+<div class="highlight"><pre><span></span><code>username@hostname:~/current/directory$ command
+    │        │              │           │
+    │        │              │           └── Command to execute
+    │        │              └── Current working directory
+    │        └── Computer name
+    └── Current user
+</code></pre></div>
+<p>Example:
+<div class="highlight"><pre><span></span><code>john@ubuntu-desktop:~/Documents$<span class="w"> </span>ls
+</code></pre></div></p>
+<h2 id="navigation-commands">Navigation Commands</h2>
+<h3 id="understanding-the-file-system">Understanding the File System</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Print current directory</span>
+<span class="nb">pwd</span>
+
+<span class="c1"># List directory contents</span>
+ls
+
+<span class="c1"># List with detailed information</span>
+ls<span class="w"> </span>-l
+
+<span class="c1"># List including hidden files</span>
+ls<span class="w"> </span>-la
+
+<span class="c1"># List with human-readable file sizes</span>
+ls<span class="w"> </span>-lh
+
+<span class="c1"># Change directory</span>
+<span class="nb">cd</span><span class="w"> </span>/path/to/directory
+
+<span class="c1"># Go to home directory</span>
+<span class="nb">cd</span><span class="w"> </span>~
+<span class="c1"># or simply</span>
+<span class="nb">cd</span>
+
+<span class="c1"># Go up one directory</span>
+<span class="nb">cd</span><span class="w"> </span>..
+
+<span class="c1"># Go to previous directory</span>
+<span class="nb">cd</span><span class="w"> </span>-
+
+<span class="c1"># Go to root directory</span>
+<span class="nb">cd</span><span class="w"> </span>/
+</code></pre></div>
+<h3 id="navigation-examples">Navigation Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Navigate to your home directory</span>
+<span class="nb">cd</span><span class="w"> </span>~
+
+<span class="c1"># Navigate to Documents folder</span>
+<span class="nb">cd</span><span class="w"> </span>Documents
+
+<span class="c1"># Go back to previous directory</span>
+<span class="nb">cd</span><span class="w"> </span>..
+
+<span class="c1"># Navigate using absolute path</span>
+<span class="nb">cd</span><span class="w"> </span>/usr/local/bin
+
+<span class="c1"># Navigate using relative path</span>
+<span class="nb">cd</span><span class="w"> </span>../Downloads
+
+<span class="c1"># Quick navigation to common directories</span>
+<span class="nb">cd</span><span class="w"> </span>~/Desktop<span class="w">     </span><span class="c1"># Desktop folder</span>
+<span class="nb">cd</span><span class="w"> </span>~/Downloads<span class="w">   </span><span class="c1"># Downloads folder</span>
+<span class="nb">cd</span><span class="w"> </span>~/Pictures<span class="w">    </span><span class="c1"># Pictures folder</span>
+</code></pre></div>
+<h2 id="file-and-directory-operations">File and Directory Operations</h2>
+<h3 id="creating-files-and-directories">Creating Files and Directories</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create an empty file</span>
+touch<span class="w"> </span>filename.txt
+
+<span class="c1"># Create multiple files</span>
+touch<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt
+
+<span class="c1"># Create a directory</span>
+mkdir<span class="w"> </span>directory_name
+
+<span class="c1"># Create multiple directories</span>
+mkdir<span class="w"> </span>dir1<span class="w"> </span>dir2<span class="w"> </span>dir3
+
+<span class="c1"># Create nested directories</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>parent/child/grandchild
+
+<span class="c1"># Create directory with specific permissions</span>
+mkdir<span class="w"> </span>-m<span class="w"> </span><span class="m">755</span><span class="w"> </span>secure_directory
+</code></pre></div>
+<h3 id="copying-files-and-directories">Copying Files and Directories</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Copy a file</span>
+cp<span class="w"> </span>source_file.txt<span class="w"> </span>destination_file.txt
+
+<span class="c1"># Copy file to another directory</span>
+cp<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Copy multiple files</span>
+cp<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Copy directory and its contents</span>
+cp<span class="w"> </span>-r<span class="w"> </span>source_directory<span class="w"> </span>destination_directory
+
+<span class="c1"># Copy with verbose output</span>
+cp<span class="w"> </span>-v<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Copy preserving attributes</span>
+cp<span class="w"> </span>-p<span class="w"> </span>file.txt<span class="w"> </span>backup_file.txt
+</code></pre></div>
+<h3 id="moving-and-renaming">Moving and Renaming</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Move/rename a file</span>
+mv<span class="w"> </span>old_name.txt<span class="w"> </span>new_name.txt
+
+<span class="c1"># Move file to another directory</span>
+mv<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Move multiple files</span>
+mv<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>~/Documents/
+
+<span class="c1"># Move directory</span>
+mv<span class="w"> </span>old_directory<span class="w"> </span>new_directory
+
+<span class="c1"># Move with confirmation</span>
+mv<span class="w"> </span>-i<span class="w"> </span>file.txt<span class="w"> </span>~/Documents/
+</code></pre></div>
+<h3 id="deleting-files-and-directories">Deleting Files and Directories</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Remove a file</span>
+rm<span class="w"> </span>filename.txt
+
+<span class="c1"># Remove multiple files</span>
+rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt
+
+<span class="c1"># Remove with confirmation</span>
+rm<span class="w"> </span>-i<span class="w"> </span>filename.txt
+
+<span class="c1"># Remove directory and contents</span>
+rm<span class="w"> </span>-r<span class="w"> </span>directory_name
+
+<span class="c1"># Force remove (be careful!)</span>
+rm<span class="w"> </span>-f<span class="w"> </span>filename.txt
+
+<span class="c1"># Force remove directory and contents (DANGEROUS!)</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>directory_name
+
+<span class="c1"># Remove empty directory</span>
+rmdir<span class="w"> </span>empty_directory
+</code></pre></div>
+<h2 id="file-content-operations">File Content Operations</h2>
+<h3 id="viewing-file-contents">Viewing File Contents</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display entire file</span>
+cat<span class="w"> </span>filename.txt
+
+<span class="c1"># Display file with line numbers</span>
+cat<span class="w"> </span>-n<span class="w"> </span>filename.txt
+
+<span class="c1"># View file page by page</span>
+less<span class="w"> </span>filename.txt
+<span class="c1"># Navigation in less: Space (next page), b (previous page), q (quit)</span>
+
+<span class="c1"># Alternative pager</span>
+more<span class="w"> </span>filename.txt
+
+<span class="c1"># Display first 10 lines</span>
+head<span class="w"> </span>filename.txt
+
+<span class="c1"># Display first N lines</span>
+head<span class="w"> </span>-n<span class="w"> </span><span class="m">20</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Display last 10 lines</span>
+tail<span class="w"> </span>filename.txt
+
+<span class="c1"># Display last N lines</span>
+tail<span class="w"> </span>-n<span class="w"> </span><span class="m">15</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Follow file changes (useful for logs)</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog
+</code></pre></div>
+<h3 id="creating-and-editing-files">Creating and Editing Files</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create file with content using echo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, World!&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>hello.txt
+
+<span class="c1"># Append content to file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Second line&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>hello.txt
+
+<span class="c1"># Create file using cat (Ctrl+D to save)</span>
+cat<span class="w"> </span>&gt;<span class="w"> </span>newfile.txt
+This<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>content
+Press<span class="w"> </span>Ctrl+D<span class="w"> </span>to<span class="w"> </span>save
+
+<span class="c1"># Edit file with nano (beginner-friendly)</span>
+nano<span class="w"> </span>filename.txt
+
+<span class="c1"># Edit file with vim (advanced)</span>
+vim<span class="w"> </span>filename.txt
+
+<span class="c1"># Edit file with gedit (GUI editor)</span>
+gedit<span class="w"> </span>filename.txt
+</code></pre></div>
+<h3 id="searching-in-files">Searching in Files</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Search for pattern in file</span>
+grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Search case-insensitively</span>
+grep<span class="w"> </span>-i<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Search recursively in directories</span>
+grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>/path/to/directory
+
+<span class="c1"># Search and show line numbers</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Search for whole words only</span>
+grep<span class="w"> </span>-w<span class="w"> </span><span class="s2">&quot;word&quot;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Search for multiple patterns</span>
+grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;pattern1|pattern2&quot;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Count matching lines</span>
+grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>filename.txt
+</code></pre></div>
+<h2 id="file-permissions-and-ownership">File Permissions and Ownership</h2>
+<h3 id="understanding-permissions">Understanding Permissions</h3>
+<div class="highlight"><pre><span></span><code>-rwxrwxrwx
+│││││││││
+│││└┬┘└┬┘
+│││ │  └── Others permissions (read, write, execute)
+│││ └──── Group permissions (read, write, execute)
+│└┬────── Owner permissions (read, write, execute)
+└─────── File type (- for file, d for directory)
+</code></pre></div>
+<h3 id="permission-values">Permission Values</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Symbol</th>
+<th>Numeric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read</td>
+<td>r</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Write</td>
+<td>w</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Execute</td>
+<td>x</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Common combinations:
+- <code>755</code> = rwxr-xr-x (Owner: read+write+execute, Group: read+execute, Others: read+execute)
+- <code>644</code> = rw-r--r-- (Owner: read+write, Group: read, Others: read)
+- <code>600</code> = rw------- (Owner: read+write, Group: none, Others: none)</p>
+<h3 id="changing-permissions">Changing Permissions</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Change permissions using symbolic notation</span>
+chmod<span class="w"> </span>u+x<span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># Add execute for owner</span>
+chmod<span class="w"> </span>g-w<span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># Remove write for group</span>
+chmod<span class="w"> </span>o+r<span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># Add read for others</span>
+chmod<span class="w"> </span>a+x<span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># Add execute for all</span>
+
+<span class="c1"># Change permissions using numeric notation</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># rwxr-xr-x</span>
+chmod<span class="w"> </span><span class="m">644</span><span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># rw-r--r--</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>filename.txt<span class="w">    </span><span class="c1"># rw-------</span>
+
+<span class="c1"># Change permissions recursively</span>
+chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>directory/
+</code></pre></div>
+<h3 id="changing-ownership">Changing Ownership</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Change file owner</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>username<span class="w"> </span>filename.txt
+
+<span class="c1"># Change file owner and group</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>username:groupname<span class="w"> </span>filename.txt
+
+<span class="c1"># Change ownership recursively</span>
+sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>username:groupname<span class="w"> </span>directory/
+
+<span class="c1"># Change only group</span>
+sudo<span class="w"> </span>chgrp<span class="w"> </span>groupname<span class="w"> </span>filename.txt
+</code></pre></div>
+<h2 id="system-information-commands">System Information Commands</h2>
+<h3 id="system-status">System Status</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display system information</span>
+uname<span class="w"> </span>-a
+
+<span class="c1"># Display operating system information</span>
+lsb_release<span class="w"> </span>-a
+
+<span class="c1"># Show current user</span>
+whoami
+
+<span class="c1"># Show current user ID</span>
+id
+
+<span class="c1"># Display system uptime</span>
+uptime
+
+<span class="c1"># Show system date and time</span>
+date
+
+<span class="c1"># Show calendar</span>
+cal
+
+<span class="c1"># Show users currently logged in</span>
+who
+
+<span class="c1"># Show what users are doing</span>
+w
+</code></pre></div>
+<h3 id="resource-monitoring">Resource Monitoring</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display running processes</span>
+ps<span class="w"> </span>aux
+
+<span class="c1"># Interactive process viewer</span>
+top
+
+<span class="c1"># Better process viewer (if installed)</span>
+htop
+
+<span class="c1"># Display memory usage</span>
+free<span class="w"> </span>-h
+
+<span class="c1"># Display disk usage</span>
+df<span class="w"> </span>-h
+
+<span class="c1"># Display directory size</span>
+du<span class="w"> </span>-h<span class="w"> </span>directory/
+
+<span class="c1"># Display directory size summary</span>
+du<span class="w"> </span>-sh<span class="w"> </span>directory/
+
+<span class="c1"># Monitor system resources</span>
+iostat
+vmstat
+</code></pre></div>
+<h3 id="hardware-information">Hardware Information</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List PCI devices</span>
+lspci
+
+<span class="c1"># List USB devices</span>
+lsusb
+
+<span class="c1"># List block devices (storage)</span>
+lsblk
+
+<span class="c1"># CPU information</span>
+lscpu
+
+<span class="c1"># Memory information</span>
+cat<span class="w"> </span>/proc/meminfo
+
+<span class="c1"># Hardware information</span>
+sudo<span class="w"> </span>lshw
+
+<span class="c1"># Hardware summary</span>
+sudo<span class="w"> </span>lshw<span class="w"> </span>-short
+</code></pre></div>
+<h2 id="package-management">Package Management</h2>
+<h3 id="apt-commands">APT Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update package lists</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Upgrade installed packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Full system upgrade</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>full-upgrade
+
+<span class="c1"># Install package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># Install multiple packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package1<span class="w"> </span>package2<span class="w"> </span>package3
+
+<span class="c1"># Remove package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>package-name
+
+<span class="c1"># Remove package and configuration files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>package-name
+
+<span class="c1"># Remove orphaned packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+
+<span class="c1"># Search for packages</span>
+apt<span class="w"> </span>search<span class="w"> </span>keyword
+
+<span class="c1"># Show package information</span>
+apt<span class="w"> </span>show<span class="w"> </span>package-name
+
+<span class="c1"># List installed packages</span>
+apt<span class="w"> </span>list<span class="w"> </span>--installed
+
+<span class="c1"># List upgradable packages</span>
+apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+</code></pre></div>
+<h3 id="package-information">Package Information</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check if package is installed</span>
+dpkg<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>package-name
+
+<span class="c1"># List files installed by package</span>
+dpkg<span class="w"> </span>-L<span class="w"> </span>package-name
+
+<span class="c1"># Find which package provides a file</span>
+dpkg<span class="w"> </span>-S<span class="w"> </span>/path/to/file
+
+<span class="c1"># Show package dependencies</span>
+apt<span class="w"> </span>depends<span class="w"> </span>package-name
+
+<span class="c1"># Show reverse dependencies</span>
+apt<span class="w"> </span>rdepends<span class="w"> </span>package-name
+</code></pre></div>
+<h2 id="network-commands">Network Commands</h2>
+<h3 id="network-information">Network Information</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display network interfaces</span>
+ip<span class="w"> </span>addr<span class="w"> </span>show
+<span class="c1"># or</span>
+ifconfig
+
+<span class="c1"># Display routing table</span>
+ip<span class="w"> </span>route<span class="w"> </span>show
+<span class="c1"># or</span>
+route<span class="w"> </span>-n
+
+<span class="c1"># Test network connectivity</span>
+ping<span class="w"> </span>google.com
+
+<span class="c1"># Test specific port connectivity</span>
+telnet<span class="w"> </span>hostname<span class="w"> </span>port
+
+<span class="c1"># Download files from internet</span>
+wget<span class="w"> </span>http://example.com/file.zip
+
+<span class="c1"># Alternative download tool</span>
+curl<span class="w"> </span>-O<span class="w"> </span>http://example.com/file.zip
+
+<span class="c1"># Display network connections</span>
+netstat<span class="w"> </span>-tuln
+
+<span class="c1"># Show listening ports</span>
+ss<span class="w"> </span>-tuln
+</code></pre></div>
+<h3 id="network-configuration">Network Configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Bring interface up</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>interface_name<span class="w"> </span>up
+
+<span class="c1"># Bring interface down</span>
+sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>interface_name<span class="w"> </span>down
+
+<span class="c1"># Restart network service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>networking
+
+<span class="c1"># Flush DNS cache</span>
+sudo<span class="w"> </span>systemd-resolve<span class="w"> </span>--flush-caches
+
+<span class="c1"># Show DNS configuration</span>
+systemd-resolve<span class="w"> </span>--status
+</code></pre></div>
+<h2 id="process-management">Process Management</h2>
+<h3 id="process-control">Process Control</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Start process in background</span>
+<span class="nb">command</span><span class="w"> </span><span class="p">&amp;</span>
+
+<span class="c1"># List background jobs</span>
+<span class="nb">jobs</span>
+
+<span class="c1"># Bring background job to foreground</span>
+<span class="nb">fg</span><span class="w"> </span>%1
+
+<span class="c1"># Send job to background</span>
+<span class="nb">bg</span><span class="w"> </span>%1
+
+<span class="c1"># Kill process by PID</span>
+<span class="nb">kill</span><span class="w"> </span>PID
+
+<span class="c1"># Kill process forcefully</span>
+<span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>PID
+
+<span class="c1"># Kill process by name</span>
+killall<span class="w"> </span>process-name
+
+<span class="c1"># Kill all processes matching pattern</span>
+pkill<span class="w"> </span>pattern
+</code></pre></div>
+<h3 id="service-management">Service Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check service status</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>service-name
+
+<span class="c1"># Start service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>service-name
+
+<span class="c1"># Stop service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>service-name
+
+<span class="c1"># Restart service</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>service-name
+
+<span class="c1"># Enable service at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>service-name
+
+<span class="c1"># Disable service at boot</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>service-name
+
+<span class="c1"># List all services</span>
+systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service
+
+<span class="c1"># List failed services</span>
+systemctl<span class="w"> </span>--failed
+</code></pre></div>
+<h2 id="archive-and-compression">Archive and Compression</h2>
+<h3 id="creating-archives">Creating Archives</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create tar archive</span>
+tar<span class="w"> </span>-cvf<span class="w"> </span>archive.tar<span class="w"> </span>files/
+
+<span class="c1"># Create compressed tar archive (gzip)</span>
+tar<span class="w"> </span>-czvf<span class="w"> </span>archive.tar.gz<span class="w"> </span>files/
+
+<span class="c1"># Create compressed tar archive (bzip2)</span>
+tar<span class="w"> </span>-cjvf<span class="w"> </span>archive.tar.bz2<span class="w"> </span>files/
+
+<span class="c1"># Create zip archive</span>
+zip<span class="w"> </span>-r<span class="w"> </span>archive.zip<span class="w"> </span>files/
+</code></pre></div>
+<h3 id="extracting-archives">Extracting Archives</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Extract tar archive</span>
+tar<span class="w"> </span>-xvf<span class="w"> </span>archive.tar
+
+<span class="c1"># Extract compressed tar archive (gzip)</span>
+tar<span class="w"> </span>-xzvf<span class="w"> </span>archive.tar.gz
+
+<span class="c1"># Extract compressed tar archive (bzip2)</span>
+tar<span class="w"> </span>-xjvf<span class="w"> </span>archive.tar.bz2
+
+<span class="c1"># Extract to specific directory</span>
+tar<span class="w"> </span>-xzvf<span class="w"> </span>archive.tar.gz<span class="w"> </span>-C<span class="w"> </span>/path/to/directory
+
+<span class="c1"># Extract zip archive</span>
+unzip<span class="w"> </span>archive.zip
+
+<span class="c1"># List archive contents without extracting</span>
+tar<span class="w"> </span>-tzvf<span class="w"> </span>archive.tar.gz
+zip<span class="w"> </span>-l<span class="w"> </span>archive.zip
+</code></pre></div>
+<h2 id="text-processing">Text Processing</h2>
+<h3 id="text-manipulation">Text Manipulation</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Sort lines in file</span>
+sort<span class="w"> </span>filename.txt
+
+<span class="c1"># Sort and remove duplicates</span>
+sort<span class="w"> </span>-u<span class="w"> </span>filename.txt
+
+<span class="c1"># Remove duplicate lines</span>
+uniq<span class="w"> </span>filename.txt
+
+<span class="c1"># Count lines, words, characters</span>
+wc<span class="w"> </span>filename.txt
+
+<span class="c1"># Count only lines</span>
+wc<span class="w"> </span>-l<span class="w"> </span>filename.txt
+
+<span class="c1"># Cut specific columns</span>
+cut<span class="w"> </span>-d<span class="s1">&#39;,&#39;</span><span class="w"> </span>-f1,3<span class="w"> </span>file.csv
+
+<span class="c1"># Find and replace text</span>
+sed<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Replace text in-place</span>
+sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/old/new/g&#39;</span><span class="w"> </span>filename.txt
+</code></pre></div>
+<h3 id="advanced-text-processing">Advanced Text Processing</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Process text with awk</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Print specific columns</span>
+awk<span class="w"> </span><span class="s1">&#39;{print $1, $3}&#39;</span><span class="w"> </span>filename.txt
+
+<span class="c1"># Filter and process</span>
+awk<span class="w"> </span><span class="s1">&#39;$3 &gt; 100 {print $1, $3}&#39;</span><span class="w"> </span>data.txt
+
+<span class="c1"># Compare files</span>
+diff<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
+
+<span class="c1"># Compare directories</span>
+diff<span class="w"> </span>-r<span class="w"> </span>dir1/<span class="w"> </span>dir2/
+</code></pre></div>
+<h2 id="inputoutput-redirection">Input/Output Redirection</h2>
+<h3 id="redirection-operators">Redirection Operators</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Redirect output to file</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>output.txt
+
+<span class="c1"># Append output to file</span>
+<span class="nb">command</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>output.txt
+
+<span class="c1"># Redirect error to file</span>
+<span class="nb">command</span><span class="w"> </span><span class="m">2</span>&gt;<span class="w"> </span>error.txt
+
+<span class="c1"># Redirect both output and error</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>output.txt<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+
+<span class="c1"># Redirect to null (discard)</span>
+<span class="nb">command</span><span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+
+<span class="c1"># Pipe output to another command</span>
+command1<span class="w"> </span><span class="p">|</span><span class="w"> </span>command2
+
+<span class="c1"># Pipe with tee (output to file and screen)</span>
+<span class="nb">command</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>output.txt
+</code></pre></div>
+<h3 id="practical-examples">Practical Examples</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Save directory listing to file</span>
+ls<span class="w"> </span>-la<span class="w"> </span>&gt;<span class="w"> </span>directory_listing.txt
+
+<span class="c1"># Search and save results</span>
+grep<span class="w"> </span><span class="s2">&quot;error&quot;</span><span class="w"> </span>/var/log/syslog<span class="w"> </span>&gt;<span class="w"> </span>errors.txt
+
+<span class="c1"># Count files in directory</span>
+ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+
+<span class="c1"># Find largest files</span>
+ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k5<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10
+
+<span class="c1"># Monitor log file with filter</span>
+tail<span class="w"> </span>-f<span class="w"> </span>/var/log/syslog<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;error&quot;</span>
+</code></pre></div>
+<h2 id="environment-variables">Environment Variables</h2>
+<h3 id="working-with-environment-variables">Working with Environment Variables</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Display all environment variables</span>
+env
+
+<span class="c1"># Display specific variable</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$USER</span>
+
+<span class="c1"># Set temporary variable</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+
+<span class="c1"># Add to PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/new/path
+
+<span class="c1"># Make permanent (add to ~/.bashrc)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export MY_VAR=&quot;value&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<h3 id="common-environment-variables">Common Environment Variables</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$HOME</code></td>
+<td>User's home directory</td>
+<td><code>/home/username</code></td>
+</tr>
+<tr>
+<td><code>$PATH</code></td>
+<td>Executable search path</td>
+<td><code>/usr/bin:/bin:/usr/local/bin</code></td>
+</tr>
+<tr>
+<td><code>$USER</code></td>
+<td>Current username</td>
+<td><code>username</code></td>
+</tr>
+<tr>
+<td><code>$PWD</code></td>
+<td>Current working directory</td>
+<td><code>/home/username/Documents</code></td>
+</tr>
+<tr>
+<td><code>$SHELL</code></td>
+<td>Current shell</td>
+<td><code>/bin/bash</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="command-history-and-shortcuts">Command History and Shortcuts</h2>
+<h3 id="command-history">Command History</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Show command history</span>
+<span class="nb">history</span>
+
+<span class="c1"># Show last N commands</span>
+<span class="nb">history</span><span class="w"> </span><span class="m">10</span>
+
+<span class="c1"># Search command history</span>
+<span class="nb">history</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;command&quot;</span>
+
+<span class="c1"># Execute command from history</span>
+!123<span class="w">        </span><span class="c1"># Execute command number 123</span>
+!!<span class="w">          </span><span class="c1"># Execute last command</span>
+!string<span class="w">     </span><span class="c1"># Execute last command starting with &#39;string&#39;</span>
+</code></pre></div>
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl + C</code></td>
+<td>Cancel current command</td>
+</tr>
+<tr>
+<td><code>Ctrl + D</code></td>
+<td>Exit shell/logout</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>Suspend current process</td>
+</tr>
+<tr>
+<td><code>Ctrl + L</code></td>
+<td>Clear screen</td>
+</tr>
+<tr>
+<td><code>Ctrl + A</code></td>
+<td>Move to beginning of line</td>
+</tr>
+<tr>
+<td><code>Ctrl + E</code></td>
+<td>Move to end of line</td>
+</tr>
+<tr>
+<td><code>Ctrl + U</code></td>
+<td>Delete from cursor to beginning</td>
+</tr>
+<tr>
+<td><code>Ctrl + K</code></td>
+<td>Delete from cursor to end</td>
+</tr>
+<tr>
+<td><code>Ctrl + R</code></td>
+<td>Search command history</td>
+</tr>
+<tr>
+<td><code>Tab</code></td>
+<td>Auto-complete</td>
+</tr>
+<tr>
+<td><code>Tab Tab</code></td>
+<td>Show all possibilities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-help">Getting Help</h2>
+<h3 id="help-commands">Help Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Show command manual</span>
+man<span class="w"> </span><span class="nb">command</span>
+
+<span class="c1"># Show command help</span>
+<span class="nb">command</span><span class="w"> </span>--help
+
+<span class="c1"># Show brief description</span>
+whatis<span class="w"> </span><span class="nb">command</span>
+
+<span class="c1"># Search manual pages</span>
+apropos<span class="w"> </span>keyword
+
+<span class="c1"># Show command location</span>
+which<span class="w"> </span><span class="nb">command</span>
+
+<span class="c1"># Show command type</span>
+<span class="nb">type</span><span class="w"> </span><span class="nb">command</span>
+
+<span class="c1"># Get info about command</span>
+info<span class="w"> </span><span class="nb">command</span>
+</code></pre></div>
+<h2 id="common-command-combinations">Common Command Combinations</h2>
+<h3 id="useful-one-liners">Useful One-liners</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Find and delete files older than 30 days</span>
+find<span class="w"> </span>/path<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-mtime<span class="w"> </span>+30<span class="w"> </span>-delete
+
+<span class="c1"># Show disk usage of current directory, sorted</span>
+du<span class="w"> </span>-h<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr
+
+<span class="c1"># Find largest directories</span>
+du<span class="w"> </span>-h<span class="w"> </span>--max-depth<span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr
+
+<span class="c1"># Monitor system load</span>
+watch<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="s1">&#39;uptime&#39;</span>
+
+<span class="c1"># Show network connections with process names</span>
+sudo<span class="w"> </span>netstat<span class="w"> </span>-tulpn
+
+<span class="c1"># Find processes using most memory</span>
+ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%mem<span class="w"> </span><span class="p">|</span><span class="w"> </span>head
+
+<span class="c1"># Find files containing text</span>
+find<span class="w"> </span>/path<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
+
+<span class="c1"># Count files by extension</span>
+find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span><span class="s1">&#39;s/.*\.//&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nr
+</code></pre></div>
+<h2 id="terminal-best-practices">Terminal Best Practices</h2>
+<h3 id="safety-tips">Safety Tips</h3>
+<ol>
+<li>
+<p><strong>Always double-check destructive commands</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Use -i flag for confirmation</span>
+rm<span class="w"> </span>-i<span class="w"> </span>important_file.txt
+cp<span class="w"> </span>-i<span class="w"> </span><span class="nb">source</span><span class="w"> </span>dest
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use tab completion to avoid typos</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Type partial command and press Tab</span>
+<span class="nb">cd</span><span class="w"> </span>Doc&lt;Tab&gt;<span class="w">  </span><span class="c1"># Expands to Documents/</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Test commands on sample data first</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Test regex on small file before applying to large dataset</span>
+grep<span class="w"> </span><span class="s2">&quot;pattern&quot;</span><span class="w"> </span>small_file.txt
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Keep backups of important files</strong>
+   <div class="highlight"><pre><span></span><code>cp<span class="w"> </span>important_file.txt<span class="w"> </span>important_file.txt.backup
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="productivity-tips">Productivity Tips</h3>
+<ol>
+<li>
+<p><strong>Use aliases for frequent commands</strong>
+   <div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -la&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use command substitution</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Use output of one command in another</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Today is </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="k">$(</span>dirname<span class="w"> </span><span class="k">$(</span>which<span class="w"> </span>python<span class="k">))</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Chain commands efficiently</strong>
+   <div class="highlight"><pre><span></span><code><span class="c1"># Execute second command only if first succeeds</span>
+make<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+
+<span class="c1"># Execute second command only if first fails</span>
+<span class="nb">test</span><span class="w"> </span>-f<span class="w"> </span>file.txt<span class="w"> </span><span class="o">||</span><span class="w"> </span>touch<span class="w"> </span>file.txt
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<p>After mastering basic terminal commands:</p>
+<ol>
+<li><strong><a href="ubuntu-file-folder-management.md">Learn file and folder management</a></strong></li>
+<li><strong><a href="ubuntu-user-permissions.md">Understand user and permissions</a></strong></li>
+<li><strong><a href="../ubuntu-software-installation/">Explore software installation</a></strong></li>
+<li><strong><a href="ubuntu-software-development.md">Set up development environment</a></strong></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>The terminal is a powerful tool that becomes more valuable as you learn to use it effectively. Start with basic commands and gradually build your skills:</p>
+<table>
+<thead>
+<tr>
+<th>Skill Level</th>
+<th>Focus Areas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beginner</strong></td>
+<td>Navigation, file operations, basic text viewing</td>
+</tr>
+<tr>
+<td><strong>Intermediate</strong></td>
+<td>Permissions, process management, text processing</td>
+</tr>
+<tr>
+<td><strong>Advanced</strong></td>
+<td>Scripting, automation, system administration</td>
+</tr>
+</tbody>
+</table>
+<p>Remember: The terminal might seem intimidating at first, but with practice, it becomes an indispensable tool for efficient system management and development work.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 TB. Maulana Aghni
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2959 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="This personal wiki is my go-to resource for documenting key knowledge,  project notes, and cheat sheets across various technologies.">
+      
+      
+        <meta name="author" content="TB Maulana Aghni">
+      
+      
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-software-installation/">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Software Installation in Ubuntu (APT, Snap, Flatpak) - MekProjects Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#software-installation-in-ubuntu-apt-snap-flatpak" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MekProjects Wiki" class="md-header__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MekProjects Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Software Installation in Ubuntu (APT, Snap, Flatpak)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../content-list/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Content List
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../when-you-bored/" class="md-tabs__link">
+          
+  
+  
+  Interesting Pages
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dicoding-machine-learning/" class="md-tabs__link">
+          
+  
+  
+  Ongoing Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MekProjects Wiki" class="md-nav__button md-logo" aria-label="MekProjects Wiki" data-md-component="logo">
+      
+  <img src="../assets/images/67958.png" alt="logo">
+
+    </a>
+    MekProjects Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maulanaaghnii" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    maulanaaghnii/maulanaaghnii
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            .NET Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-basic-1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-cheatsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-class-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-clean-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-logging-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-nuget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python Basic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-basic.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Basic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-cheatsheet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Cheatsheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-class-objects.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Class Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-clean-architecture.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Clean Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-logging-tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Logging Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-microservices.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-nuget.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Nuget
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_9" id="__nav_1_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Category
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_9">
+            <span class="md-nav__icon md-icon"></span>
+            Category
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-programming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-devops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DevOps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-linux.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-containerization.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containerization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-dotnet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-backend.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-cloud.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-operating-system.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../category-terminal.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../content-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Content List
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interesting Pages
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interesting Pages
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../when-you-bored/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    When You Bored
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../underrated-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Underrated Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cheat-sheets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cheat Sheets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips and Tricks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Ongoing Projects
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Ongoing Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dicoding-machine-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Machine Learning
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../golang-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Golang Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dotnet-microservices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    .NET Microservices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-management-systems-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Management Systems Comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apt-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      APT Package Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="APT Package Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding APT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-apt-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic APT Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search and Information
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-software-with-apt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Software with APT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Software with APT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#media-and-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Media and Graphics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#snap-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Package Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Snap Package Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-snap-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are Snap Packages?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-snap-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Snap Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Channels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-snap-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popular Snap Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flatpak-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak Package Manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flatpak Package Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-flatpak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing Flatpak
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-flatpak-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Flatpak Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-flatpak-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popular Flatpak Applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatpak-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appimage-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImage Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AppImage Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-appimages" class="md-nav__link">
+    <span class="md-ellipsis">
+      What are AppImages?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-appimages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using AppImages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appimage-management-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppImage Management Tools
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-centers-and-gui-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Centers and GUI Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Centers and GUI Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ubuntu-software-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ubuntu Software Center
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#synaptic-package-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synaptic Package Manager
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appcenter-elementary-os-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      AppCenter (elementary OS style)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-from-source-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing from Source Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing from Source Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-source-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Source Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python Packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nodejs-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node.js Packages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-ppas-personal-package-archives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding PPAs (Personal Package Archives)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding PPAs (Personal Package Archives)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-ppas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understanding PPAs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-ppas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing PPAs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#popular-ppas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Popular PPAs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package-installation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Installation Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Package Installation Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#choosing-the-right-package-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Package Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-priority" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Priority
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-installation-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting Installation Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Installation Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-apt-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common APT Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snap-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Snap Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flatpak-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flatpak Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation-and-scripting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automation and Scripting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Automation and Scripting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-installation-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Installation Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-list-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package List Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Verification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safe-installation-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Safe Installation Practices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repository-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository Trust
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Optimization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-cache-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Cache Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parallel Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regular-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regular Maintenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package-selection-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package Selection Guidelines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Next Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="software-installation-in-ubuntu-apt-snap-flatpak">Software Installation in Ubuntu (APT, Snap, Flatpak)</h1>
+<h2 id="overview">Overview</h2>
+<p>Ubuntu offers multiple package management systems for installing software. Each has its own advantages and use cases. This guide covers APT, Snap, Flatpak, and other installation methods comprehensively.</p>
+<h2 id="package-management-systems-comparison">Package Management Systems Comparison</h2>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Ubuntu Software Installation] --&gt; B[APT]
+    A --&gt; C[Snap]
+    A --&gt; D[Flatpak]
+    A --&gt; E[AppImage]
+    A --&gt; F[DEB Packages]
+    A --&gt; G[Source Code]
+
+    B --&gt; B1[System Packages]
+    B --&gt; B2[PPAs]
+    B --&gt; B3[.deb files]
+
+    C --&gt; C1[Universal Packages]
+    C --&gt; C2[Sandboxed Apps]
+    C --&gt; C3[Auto Updates]
+
+    D --&gt; D1[Cross-distro]
+    D --&gt; D2[Sandboxed]
+    D --&gt; D3[Runtime Libraries]
+
+    E --&gt; E1[Portable Apps]
+    E --&gt; E2[No Installation]
+    E --&gt; E3[Self-contained]
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>APT</th>
+<th>Snap</th>
+<th>Flatpak</th>
+<th>AppImage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security</strong></td>
+<td>System-level</td>
+<td>Sandboxed</td>
+<td>Sandboxed</td>
+<td>Varies</td>
+</tr>
+<tr>
+<td><strong>Updates</strong></td>
+<td>Manual/Automatic</td>
+<td>Automatic</td>
+<td>Manual</td>
+<td>Manual</td>
+</tr>
+<tr>
+<td><strong>Size</strong></td>
+<td>Small</td>
+<td>Large</td>
+<td>Medium</td>
+<td>Large</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Fast</td>
+<td>Slower startup</td>
+<td>Medium</td>
+<td>Fast</td>
+</tr>
+<tr>
+<td><strong>Permissions</strong></td>
+<td>Full system</td>
+<td>Confined</td>
+<td>Confined</td>
+<td>Varies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apt-package-manager">APT Package Manager</h2>
+<h3 id="understanding-apt">Understanding APT</h3>
+<p>APT (Advanced Package Tool) is the default package manager for Ubuntu, handling .deb packages and system libraries.</p>
+<h3 id="basic-apt-commands">Basic APT Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Update package lists</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Upgrade installed packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+
+<span class="c1"># Full system upgrade</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>full-upgrade
+
+<span class="c1"># Install package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># Install multiple packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>package1<span class="w"> </span>package2<span class="w"> </span>package3
+
+<span class="c1"># Remove package</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>package-name
+
+<span class="c1"># Remove package and configuration files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>purge<span class="w"> </span>package-name
+
+<span class="c1"># Remove orphaned packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove
+
+<span class="c1"># Clean package cache</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoclean
+sudo<span class="w"> </span>apt<span class="w"> </span>clean
+</code></pre></div>
+<h3 id="search-and-information">Search and Information</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Search for packages</span>
+apt<span class="w"> </span>search<span class="w"> </span>keyword
+
+<span class="c1"># Show package information</span>
+apt<span class="w"> </span>show<span class="w"> </span>package-name
+
+<span class="c1"># List installed packages</span>
+apt<span class="w"> </span>list<span class="w"> </span>--installed
+
+<span class="c1"># List upgradable packages</span>
+apt<span class="w"> </span>list<span class="w"> </span>--upgradable
+
+<span class="c1"># Check if package is installed</span>
+dpkg<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>package-name
+
+<span class="c1"># Show package dependencies</span>
+apt<span class="w"> </span>depends<span class="w"> </span>package-name
+
+<span class="c1"># Show reverse dependencies</span>
+apt<span class="w"> </span>rdepends<span class="w"> </span>package-name
+</code></pre></div>
+<h3 id="repository-management">Repository Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List repositories</span>
+grep<span class="w"> </span>-rhE<span class="w"> </span>^deb<span class="w"> </span>/etc/apt/sources.list*
+
+<span class="c1"># Add repository key</span>
+wget<span class="w"> </span>-qO<span class="w"> </span>-<span class="w"> </span>https://example.com/key.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+
+<span class="c1"># Add repository (modern method)</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://example.com/key.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/example.gpg
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/example.gpg] https://example.com/repo stable main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/example.list
+
+<span class="c1"># Update after adding repository</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+</code></pre></div>
+<h3 id="installing-software-with-apt">Installing Software with APT</h3>
+<h4 id="development-tools">Development Tools</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build essentials</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential
+
+<span class="c1"># Programming languages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>npm
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-17-jdk
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>golang-go
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>rust-all
+
+<span class="c1"># Version control</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>subversion
+
+<span class="c1"># Text editors</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim<span class="w"> </span>neovim<span class="w"> </span>emacs
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code<span class="w">  </span><span class="c1"># May need Microsoft repository</span>
+</code></pre></div>
+<h4 id="media-and-graphics">Media and Graphics</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Media players</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vlc<span class="w"> </span>audacious<span class="w"> </span>rhythmbox
+
+<span class="c1"># Graphics editors</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gimp<span class="w"> </span>inkscape<span class="w"> </span>blender
+
+<span class="c1"># Image viewers</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>eog<span class="w"> </span>gwenview
+
+<span class="c1"># Video editing</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>kdenlive<span class="w"> </span>openshot
+</code></pre></div>
+<h4 id="system-tools">System Tools</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># File managers</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nautilus<span class="w"> </span>dolphin<span class="w"> </span>thunar
+
+<span class="c1"># Archive tools</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>p7zip-full<span class="w"> </span>unrar
+
+<span class="c1"># System monitoring</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop<span class="w"> </span>btop<span class="w"> </span>neofetch
+
+<span class="c1"># Network tools</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>wget<span class="w"> </span>nmap
+</code></pre></div>
+<h2 id="snap-package-manager">Snap Package Manager</h2>
+<h3 id="what-are-snap-packages">What are Snap Packages?</h3>
+<p>Snap packages are containerized software packages that work across Linux distributions. They include all dependencies and run in sandboxed environments.</p>
+<h3 id="basic-snap-commands">Basic Snap Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List installed snaps</span>
+snap<span class="w"> </span>list
+
+<span class="c1"># Search for snaps</span>
+snap<span class="w"> </span>find<span class="w"> </span>keyword
+
+<span class="c1"># Install snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># Install from specific channel</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>package-name<span class="w"> </span>--channel<span class="o">=</span>stable
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>package-name<span class="w"> </span>--beta
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>package-name<span class="w"> </span>--edge
+
+<span class="c1"># Update all snaps</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh
+
+<span class="c1"># Update specific snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>package-name
+
+<span class="c1"># Remove snap</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>remove<span class="w"> </span>package-name
+
+<span class="c1"># Show snap information</span>
+snap<span class="w"> </span>info<span class="w"> </span>package-name
+</code></pre></div>
+<h3 id="snap-channels">Snap Channels</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Channels explained:</span>
+<span class="c1"># stable   - Production-ready releases</span>
+<span class="c1"># candidate - Release candidates</span>
+<span class="c1"># beta     - Beta releases</span>
+<span class="c1"># edge     - Development builds</span>
+
+<span class="c1"># Install from specific channel</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>code<span class="w"> </span>--classic<span class="w"> </span>--channel<span class="o">=</span>stable
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>discord<span class="w"> </span>--beta
+</code></pre></div>
+<h3 id="popular-snap-applications">Popular Snap Applications</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Development</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>code<span class="w"> </span>--classic
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>intellij-idea-ultimate<span class="w"> </span>--classic
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>atom<span class="w"> </span>--classic
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>sublime-text<span class="w"> </span>--classic
+
+<span class="c1"># Media</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vlc
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>spotify
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>discord
+
+<span class="c1"># Productivity</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>firefox
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>chromium
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>slack<span class="w"> </span>--classic
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>teams
+
+<span class="c1"># Graphics</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>gimp
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>inkscape
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>blender<span class="w"> </span>--classic
+</code></pre></div>
+<h3 id="snap-configuration">Snap Configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># View snap connections</span>
+snap<span class="w"> </span>connections<span class="w"> </span>package-name
+
+<span class="c1"># Connect interface</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>connect<span class="w"> </span>package-name:interface
+
+<span class="c1"># Disconnect interface</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>disconnect<span class="w"> </span>package-name:interface
+
+<span class="c1"># View snap services</span>
+snap<span class="w"> </span>services
+
+<span class="c1"># Start/stop snap service</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>start<span class="w"> </span>package-name.service
+sudo<span class="w"> </span>snap<span class="w"> </span>stop<span class="w"> </span>package-name.service
+</code></pre></div>
+<h2 id="flatpak-package-manager">Flatpak Package Manager</h2>
+<h3 id="installing-flatpak">Installing Flatpak</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Flatpak</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>flatpak
+
+<span class="c1"># Add Flathub repository</span>
+flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+
+<span class="c1"># Install GNOME Software Flatpak plugin</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-software-plugin-flatpak
+
+<span class="c1"># Restart system (recommended)</span>
+sudo<span class="w"> </span>reboot
+</code></pre></div>
+<h3 id="basic-flatpak-commands">Basic Flatpak Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Search for applications</span>
+flatpak<span class="w"> </span>search<span class="w"> </span>keyword
+
+<span class="c1"># Install application</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>application-id
+
+<span class="c1"># List installed applications</span>
+flatpak<span class="w"> </span>list
+
+<span class="c1"># Update all applications</span>
+flatpak<span class="w"> </span>update
+
+<span class="c1"># Update specific application</span>
+flatpak<span class="w"> </span>update<span class="w"> </span>application-id
+
+<span class="c1"># Remove application</span>
+flatpak<span class="w"> </span>uninstall<span class="w"> </span>application-id
+
+<span class="c1"># Show application information</span>
+flatpak<span class="w"> </span>info<span class="w"> </span>application-id
+
+<span class="c1"># Run application</span>
+flatpak<span class="w"> </span>run<span class="w"> </span>application-id
+</code></pre></div>
+<h3 id="popular-flatpak-applications">Popular Flatpak Applications</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Browsers</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.mozilla.firefox
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.google.Chrome
+
+<span class="c1"># Development</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.visualstudio.code
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.gnome.Builder
+
+<span class="c1"># Media</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.videolan.VLC
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.spotify.Client
+
+<span class="c1"># Graphics</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.gimp.GIMP
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.inkscape.Inkscape
+
+<span class="c1"># Office</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.libreoffice.LibreOffice
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>com.github.johnfactotum.Foliate
+</code></pre></div>
+<h3 id="flatpak-management">Flatpak Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List remotes</span>
+flatpak<span class="w"> </span>remotes
+
+<span class="c1"># Add remote repository</span>
+flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>remotename<span class="w"> </span>https://repo-url
+
+<span class="c1"># Remove remote repository</span>
+flatpak<span class="w"> </span>remote-delete<span class="w"> </span>remotename
+
+<span class="c1"># Clean up unused runtimes</span>
+flatpak<span class="w"> </span>uninstall<span class="w"> </span>--unused
+
+<span class="c1"># Show repository information</span>
+flatpak<span class="w"> </span>remote-info<span class="w"> </span>flathub<span class="w"> </span>application-id
+</code></pre></div>
+<h2 id="appimage-applications">AppImage Applications</h2>
+<h3 id="what-are-appimages">What are AppImages?</h3>
+<p>AppImages are portable application packages that don't require installation. They contain the application and all its dependencies.</p>
+<h3 id="using-appimages">Using AppImages</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download AppImage</span>
+wget<span class="w"> </span>https://example.com/app.AppImage
+
+<span class="c1"># Make executable</span>
+chmod<span class="w"> </span>+x<span class="w"> </span>app.AppImage
+
+<span class="c1"># Run application</span>
+./app.AppImage
+
+<span class="c1"># Integrate with system (optional)</span>
+./app.AppImage<span class="w"> </span>--appimage-integrate
+
+<span class="c1"># Remove integration</span>
+./app.AppImage<span class="w"> </span>--appimage-remove
+</code></pre></div>
+<h3 id="appimage-management-tools">AppImage Management Tools</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># AppImageLauncher (GUI manager)</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:appimagelauncher-team/stable
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>appimagelauncher
+
+<span class="c1"># AppImagePool (store-like interface)</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>io.github.prateekmedia.appimagepool
+</code></pre></div>
+<h2 id="software-centers-and-gui-tools">Software Centers and GUI Tools</h2>
+<h3 id="ubuntu-software-center">Ubuntu Software Center</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Launch Ubuntu Software</span>
+gnome-software
+
+<span class="c1"># Or from command line</span>
+ubuntu-software
+
+<span class="c1"># Features:</span>
+<span class="c1"># - Browse categories</span>
+<span class="c1"># - Install/remove packages</span>
+<span class="c1"># - Automatic updates</span>
+<span class="c1"># - Reviews and ratings</span>
+</code></pre></div>
+<h3 id="synaptic-package-manager">Synaptic Package Manager</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Synaptic</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>synaptic
+
+<span class="c1"># Launch</span>
+sudo<span class="w"> </span>synaptic
+
+<span class="c1"># Features:</span>
+<span class="c1"># - Advanced package management</span>
+<span class="c1"># - Repository management</span>
+<span class="c1"># - Package information</span>
+<span class="c1"># - Dependency resolution</span>
+</code></pre></div>
+<h3 id="appcenter-elementary-os-style">AppCenter (elementary OS style)</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install AppCenter</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>appcenter
+
+<span class="c1"># Alternative: GNOME Software</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>gnome-software
+</code></pre></div>
+<h2 id="installing-from-source-code">Installing from Source Code</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install build tools</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cmake
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>autotools-dev
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pkg-config
+
+<span class="c1"># Install common dependencies</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libssl-dev
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libcurl4-openssl-dev
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>zlib1g-dev
+</code></pre></div>
+<h3 id="typical-source-installation">Typical Source Installation</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Download source code</span>
+wget<span class="w"> </span>https://example.com/source.tar.gz
+tar<span class="w"> </span>-xzf<span class="w"> </span>source.tar.gz
+<span class="nb">cd</span><span class="w"> </span>source-directory
+
+<span class="c1"># Configure build</span>
+./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr/local
+
+<span class="c1"># Or with CMake</span>
+mkdir<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
+
+<span class="c1"># Compile</span>
+make<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
+
+<span class="c1"># Install</span>
+sudo<span class="w"> </span>make<span class="w"> </span>install
+
+<span class="c1"># Or using checkinstall (creates .deb package)</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>checkinstall
+sudo<span class="w"> </span>checkinstall
+</code></pre></div>
+<h3 id="python-packages">Python Packages</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using pip</span>
+pip3<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># User installation (recommended)</span>
+pip3<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>package-name
+
+<span class="c1"># Virtual environment (best practice)</span>
+python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>myenv
+<span class="nb">source</span><span class="w"> </span>myenv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>package-name
+</code></pre></div>
+<h3 id="nodejs-packages">Node.js Packages</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Global installation</span>
+sudo<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>package-name
+
+<span class="c1"># Local installation</span>
+npm<span class="w"> </span>install<span class="w"> </span>package-name
+
+<span class="c1"># Using Yarn</span>
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>yarn
+yarn<span class="w"> </span>global<span class="w"> </span>add<span class="w"> </span>package-name
+</code></pre></div>
+<h2 id="adding-ppas-personal-package-archives">Adding PPAs (Personal Package Archives)</h2>
+<h3 id="understanding-ppas">Understanding PPAs</h3>
+<p>PPAs are user-contributed repositories that provide newer or additional software not available in official Ubuntu repositories.</p>
+<h3 id="managing-ppas">Managing PPAs</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add PPA</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:user/ppa-name
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># Remove PPA</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>--remove<span class="w"> </span>ppa:user/ppa-name
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+<span class="c1"># List PPAs</span>
+grep<span class="w"> </span>-rhE<span class="w"> </span>^deb.*ppa<span class="w"> </span>/etc/apt/sources.list*
+
+<span class="c1"># Purge PPA packages</span>
+sudo<span class="w"> </span>ppa-purge<span class="w"> </span>ppa:user/ppa-name
+</code></pre></div>
+<h3 id="popular-ppas">Popular PPAs</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Graphics drivers</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:graphics-drivers/ppa
+
+<span class="c1"># LibreOffice</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:libreoffice/ppa
+
+<span class="c1"># Git (latest version)</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:git-core/ppa
+
+<span class="c1"># OBS Studio</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:obsproject/obs-studio
+
+<span class="c1"># Wine</span>
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:wine/wine-builds
+</code></pre></div>
+<h2 id="package-installation-strategies">Package Installation Strategies</h2>
+<h3 id="choosing-the-right-package-format">Choosing the Right Package Format</h3>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Need Software?] --&gt; B{Type of Software?}
+
+    B --&gt;|System Tool| C[Use APT]
+    B --&gt;|Desktop App| D{Security Important?}
+    B --&gt;|Development Tool| E{Need Latest Version?}
+
+    D --&gt;|Yes| F[Use Flatpak/Snap]
+    D --&gt;|No| G[Use APT/PPA]
+
+    E --&gt;|Yes| H[Use Snap/Source]
+    E --&gt;|No| C
+
+    C --&gt; I[sudo apt install]
+    F --&gt; J[flatpak install]
+    G --&gt; K[Add PPA + APT]
+    H --&gt; L[Compile from source]
+</code></pre></div>
+<h3 id="installation-priority">Installation Priority</h3>
+<ol>
+<li><strong>APT (Official repositories)</strong> - First choice for system packages</li>
+<li><strong>Snap/Flatpak</strong> - For desktop applications requiring sandboxing</li>
+<li><strong>PPA</strong> - For newer versions of existing packages</li>
+<li><strong>AppImage</strong> - For portable applications</li>
+<li><strong>Source compilation</strong> - Last resort or specific requirements</li>
+</ol>
+<h2 id="troubleshooting-installation-issues">Troubleshooting Installation Issues</h2>
+<h3 id="common-apt-issues">Common APT Issues</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Problem: Broken packages</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>--fix-broken<span class="w"> </span>install
+sudo<span class="w"> </span>dpkg<span class="w"> </span>--configure<span class="w"> </span>-a
+
+<span class="c1"># Problem: Lock file exists</span>
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/lib/apt/lists/lock
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/cache/apt/archives/lock
+sudo<span class="w"> </span>rm<span class="w"> </span>/var/lib/dpkg/lock*
+
+<span class="c1"># Problem: GPG key errors</span>
+sudo<span class="w"> </span>apt-key<span class="w"> </span>adv<span class="w"> </span>--keyserver<span class="w"> </span>keyserver.ubuntu.com<span class="w"> </span>--recv-keys<span class="w"> </span>KEY-ID
+
+<span class="c1"># Problem: Repository not found</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">&quot;Failed to fetch|404&quot;</span>
+<span class="c1"># Remove problematic repositories from /etc/apt/sources.list.d/</span>
+</code></pre></div>
+<h3 id="snap-issues">Snap Issues</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Problem: Snap not connecting</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>connect<span class="w"> </span>app-name:interface-name
+
+<span class="c1"># Problem: Snap not starting</span>
+snap<span class="w"> </span>logs<span class="w"> </span>app-name
+
+<span class="c1"># Problem: Permission issues</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh<span class="w"> </span>--devmode<span class="w"> </span>app-name
+
+<span class="c1"># Problem: Interface not available</span>
+snap<span class="w"> </span>interface<span class="w"> </span>interface-name
+</code></pre></div>
+<h3 id="flatpak-issues">Flatpak Issues</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Problem: Runtime missing</span>
+flatpak<span class="w"> </span>install<span class="w"> </span>flathub<span class="w"> </span>org.freedesktop.Platform//22.08
+
+<span class="c1"># Problem: Permission issues</span>
+flatpak<span class="w"> </span>override<span class="w"> </span>--user<span class="w"> </span>--filesystem<span class="o">=</span>home<span class="w"> </span>app-id
+
+<span class="c1"># Problem: Application won&#39;t start</span>
+flatpak<span class="w"> </span>run<span class="w"> </span>--verbose<span class="w"> </span>app-id
+</code></pre></div>
+<h2 id="automation-and-scripting">Automation and Scripting</h2>
+<h3 id="automated-installation-script">Automated Installation Script</h3>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># install-essentials.sh</span>
+
+<span class="nb">set</span><span class="w"> </span>-e
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Updating system...&quot;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing essential packages...&quot;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>curl<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>wget<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>git<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>vim<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>htop<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>tree<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>unzip<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>software-properties-common<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>apt-transport-https<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>ca-certificates<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gnupg<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>lsb-release
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing development tools...&quot;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>build-essential<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>python3-pip<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>nodejs<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>npm
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing media codecs...&quot;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ubuntu-restricted-extras
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing Flatpak...&quot;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>flatpak
+flatpak<span class="w"> </span>remote-add<span class="w"> </span>--if-not-exists<span class="w"> </span>flathub<span class="w"> </span>https://flathub.org/repo/flathub.flatpakrepo
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing Snap applications...&quot;</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>code<span class="w"> </span>--classic
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>discord
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>vlc
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installation complete!&quot;</span>
+</code></pre></div>
+<h3 id="package-list-management">Package List Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Export installed packages</span>
+dpkg<span class="w"> </span>--get-selections<span class="w"> </span>&gt;<span class="w"> </span>installed-packages.txt
+snap<span class="w"> </span>list<span class="w"> </span>&gt;<span class="w"> </span>installed-snaps.txt
+flatpak<span class="w"> </span>list<span class="w"> </span>&gt;<span class="w"> </span>installed-flatpaks.txt
+
+<span class="c1"># Install from package list</span>
+sudo<span class="w"> </span>dpkg<span class="w"> </span>--set-selections<span class="w"> </span>&lt;<span class="w"> </span>installed-packages.txt
+sudo<span class="w"> </span>apt<span class="w"> </span>dselect-upgrade
+</code></pre></div>
+<h2 id="security-considerations">Security Considerations</h2>
+<h3 id="package-verification">Package Verification</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Verify package signatures</span>
+apt-key<span class="w"> </span>list
+
+<span class="c1"># Check package integrity</span>
+debsums<span class="w"> </span>package-name
+
+<span class="c1"># Verify Snap publisher</span>
+snap<span class="w"> </span>info<span class="w"> </span>package-name<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>publisher
+</code></pre></div>
+<h3 id="safe-installation-practices">Safe Installation Practices</h3>
+<ol>
+<li><strong>Use official repositories first</strong></li>
+<li><strong>Verify PPA sources</strong> before adding</li>
+<li><strong>Check application permissions</strong> for Snaps/Flatpaks</li>
+<li><strong>Keep system updated</strong> regularly</li>
+<li><strong>Remove unused packages</strong> periodically</li>
+</ol>
+<h3 id="repository-trust">Repository Trust</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check repository signatures</span>
+apt-key<span class="w"> </span>fingerprint
+
+<span class="c1"># Add trusted keys properly</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://example.com/key.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/example.gpg
+
+<span class="c1"># Avoid apt-key add (deprecated)</span>
+<span class="c1"># Use gpg --dearmor instead</span>
+</code></pre></div>
+<h2 id="performance-optimization">Performance Optimization</h2>
+<h3 id="package-cache-management">Package Cache Management</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check cache size</span>
+du<span class="w"> </span>-sh<span class="w"> </span>/var/cache/apt/archives/
+
+<span class="c1"># Clean cache</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>autoclean<span class="w">  </span><span class="c1"># Remove old package files</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>clean<span class="w">     </span><span class="c1"># Remove all package files</span>
+
+<span class="c1"># Configure cache limit</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;APT::Cache-Limit &quot;100000000&quot;;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/apt.conf.d/70cache-limit
+</code></pre></div>
+<h3 id="parallel-downloads">Parallel Downloads</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Enable parallel downloads for APT</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;APT::Acquire::Max-Workers &quot;4&quot;;&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/apt.conf.d/99parallel
+
+<span class="c1"># Configure fastest mirror</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apt-fast
+</code></pre></div>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="regular-maintenance">Regular Maintenance</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Weekly maintenance script</span>
+<span class="c1">#!/bin/bash</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>autoremove<span class="w"> </span>-y
+sudo<span class="w"> </span>apt<span class="w"> </span>autoclean
+sudo<span class="w"> </span>snap<span class="w"> </span>refresh
+flatpak<span class="w"> </span>update<span class="w"> </span>-y
+</code></pre></div>
+<h3 id="package-selection-guidelines">Package Selection Guidelines</h3>
+<ol>
+<li><strong>System integration</strong>: Use APT for system-level software</li>
+<li><strong>Security</strong>: Use Flatpak/Snap for untrusted applications</li>
+<li><strong>Portability</strong>: Use AppImage for portable tools</li>
+<li><strong>Development</strong>: Use language-specific package managers when appropriate</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<p>After mastering software installation:</p>
+<ol>
+<li><strong><a href="ubuntu-system-update.md">Learn system update management</a></strong></li>
+<li><strong><a href="ubuntu-user-permissions.md">Configure user permissions</a></strong></li>
+<li><strong><a href="ubuntu-software-development.md">Set up development environment</a></strong></li>
+<li><strong><a href="ubuntu-system-monitoring.md">Explore system monitoring</a></strong></li>
+</ol>
+<h2 id="summary">Summary</h2>
+<p>Ubuntu's multiple package management systems provide flexibility for different use cases:</p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Recommended Method</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System tools</strong></td>
+<td>APT</td>
+<td><code>sudo apt install htop</code></td>
+</tr>
+<tr>
+<td><strong>Desktop apps</strong></td>
+<td>Snap/Flatpak</td>
+<td><code>snap install discord</code></td>
+</tr>
+<tr>
+<td><strong>Development</strong></td>
+<td>Language managers</td>
+<td><code>npm install -g package</code></td>
+</tr>
+<tr>
+<td><strong>Portable tools</strong></td>
+<td>AppImage</td>
+<td>Download and run</td>
+</tr>
+<tr>
+<td><strong>Latest versions</strong></td>
+<td>PPA + APT</td>
+<td>Add PPA, then APT install</td>
+</tr>
+</tbody>
+</table>
+<p>Understanding these different approaches allows you to choose the best installation method for each situation while maintaining system security and performance.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 TB. Maulana Aghni
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
