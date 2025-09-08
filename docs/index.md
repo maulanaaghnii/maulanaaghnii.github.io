@@ -54,6 +54,23 @@ Understand key concepts and workflows in .NET C# to build a solid programming fo
 </div>
 
 <div class="card" markdown>
+![Image title](https://miro.medium.com/1*x5ZIl_FUjkGQ8LKSYE1D6Q.jpeg){ .card-image }
+
+<div class="card-labels">
+<a href="#"><span class="label label-programming">Programming</span></a>
+</div>
+
+---
+
+__Deep dive Entity Framework Journey: Minimal Tutorial__
+
+Learn minimal shape of implementing Entity Framework (EF) on your first console EF project.
+
+[:octicons-arrow-right-24: Getting started](dotnet-entity-framework-minimal.md)
+</div>
+
+
+<div class="card" markdown>
 ![Image title](https://betanews.com/wp-content/uploads/2018/01/ubuntu-logo.jpg){ .card-image }
 
 <div class="card-labels">
@@ -70,5 +87,7 @@ Learn the key tricks and tools that make Ubuntu a powerhouse for your workflow.
 
 [:octicons-arrow-right-24: Getting started](ubuntu-overview.md)
 </div>
+
+
 
 </div>
