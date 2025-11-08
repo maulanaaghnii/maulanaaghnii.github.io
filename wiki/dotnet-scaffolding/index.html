@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/postgresql/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-scaffolding/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>PostgreSQL - MekProjects Wiki</title>
+        <title>.NET Scaffolding (Existing Databases) - MekProjects Wiki</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#postgresql" class="md-skip">
+        <a href="#net-scaffolding-existing-databases" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PostgreSQL
+              .NET Scaffolding (Existing Databases)
             
           </span>
         </div>
@@ -1505,9 +1505,84 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#postgresql-group-concat-equivalent" class="md-nav__link">
+  <a href="#1-packages-requirements" class="md-nav__link">
     <span class="md-ellipsis">
-      PostgreSQL Group Concat equivalent
+      1. Packages Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Packages Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-ef-if-doesnt-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install EF (if doesn't exist)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-project-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add project package
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-start-scaffolding-dbcontext-models-from-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Start Scaffolding DbContext &amp; Models From Databases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Start Scaffolding DbContext &amp; Models From Databases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#without-sql-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Without SQL Auth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Auth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-start-scaffolding-controllers-for-crud-ex-webapi-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Start Scaffolding Controllers for CRUD (ex. WebApi Template)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-update-programscs" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Update Programs.cs
     </span>
   </a>
   
@@ -1532,9 +1607,58 @@
   
 
 
-<h1 id="postgresql">PostgreSQL</h1>
-<h2 id="postgresql-group-concat-equivalent">PostgreSQL Group Concat equivalent</h2>
-<div class="highlight"><pre><span></span><code>select string_agg(column_name, &#39;, &#39;) from table_name;
+<h1 id="net-scaffolding-existing-databases">.NET Scaffolding (Existing Databases)</h1>
+<h2 id="1-packages-requirements">1. Packages Requirements</h2>
+<h3 id="install-ef-if-doesnt-exist">Install EF (if doesn't exist)</h3>
+<div class="highlight"><pre><span></span><code>dotnet tool install --global dotnet-ef
+</code></pre></div>
+<h3 id="add-project-package">Add project package</h3>
+<div class="highlight"><pre><span></span><code>dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet tool install --global dotnet-aspnet-codegenerator
+</code></pre></div>
+<h2 id="2-start-scaffolding-dbcontext-models-from-databases">2. Start Scaffolding DbContext &amp; Models From Databases</h2>
+<h3 id="without-sql-auth">Without SQL Auth</h3>
+<div class="highlight"><pre><span></span><code>dotnet ef dbcontext scaffold &quot;Server=localhost;Database=meknetic_db;Trusted_Connection=True;TrustServerCertificate=True;&quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Data --context AppDbContext --force
+</code></pre></div>
+<h3 id="sql-auth">SQL Auth</h3>
+<div class="highlight"><pre><span></span><code>dotnet ef dbcontext scaffold &quot;Server=localhost;Database=meknetic_db;User ID=sa;Password=YourPassword;TrustServerCertificate=True;&quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Data --context AppDbContext --force```
+</code></pre></div>
+<h2 id="3-start-scaffolding-controllers-for-crud-ex-webapi-template">3. Start Scaffolding Controllers for CRUD (ex. WebApi Template)</h2>
+<div class="highlight"><pre><span></span><code>dotnet aspnet-codegenerator controller -name YourControllerName -api -m MekneticBlog.Models.YourModelName -dc MekneticBlog.Data.AppDbContext --relativeFolderPath Controllers
+</code></pre></div>
+<h2 id="4-update-programscs">4. Update Programs.cs</h2>
+<div class="highlight"><pre><span></span><code>using Microsoft.EntityFrameworkCore;
+using MekneticBlog.Data;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Tambahkan service untuk controller dan Swagger
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Ambil koneksi dari appsettings.json
+var connectionString = builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;);
+
+// Registrasi DbContext
+builder.Services.AddDbContext&lt;AppDbContext&gt;(options =&gt;
+    options.UseSqlServer(connectionString));
+
+var app = builder.Build();
+
+// Aktifkan Swagger di mode development
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseAuthorization();
+app.MapControllers();
+
+app.Run();
 </code></pre></div>
 
 
