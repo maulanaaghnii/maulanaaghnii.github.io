@@ -33,6 +33,21 @@
 - [C# Windows Presentation Foundation (WPF)](csharp-wpf.md)
 - [C#](csharp.md)
 
+## Golang Programming
+- [Go (Golang) Overview](golang-overview.md)
+- [Go Basics](golang-basics.md)
+- [Go Data Structures](golang-data-structures.md)
+- [Go Functions & Packages](golang-functions.md)
+- [Go Structs & Methods](golang-structs.md)
+- [Go Interfaces & Abstraction](golang-interfaces.md)
+- [Go Error Handling](golang-error-handling.md)
+- [Go Concurrency](golang-concurrency.md)
+- [Go Pointers & Memory](golang-pointers.md)
+- [Go Generics](golang-generics.md)
+- [Go Best Practices](golang-best-practices.md)
+- [Testing in Go](golang-testing.md)
+- [Golang Microservices](golang-microservices.md)
+
 ## .NET
 - [ASP.NET Core Middleware](aspnetcore-middleware.md)
 - [ASP.NET Core REST API](aspnetcore-rest-api.md)
@@ -154,7 +169,6 @@
 ## Miscellaneous
 - [Programming](category-programming.md)
 - [Dicoding Machine Learning - ID Camp](dicoding-machine-learning.md)
-- [Golang Microservices](golang-microservices.md)
 - [Welcome](index-old.md)
 - [Material Mkdocs Yml](material-mkdocs-yml.md)
 - [NuGet Package Management](nuget-management.md)
