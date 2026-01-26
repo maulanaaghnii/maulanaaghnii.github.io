@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/docker-cicd-integration/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Docker CI/CD Integration - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#docker-cicd-integration" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Docker CI/CD Integration
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,63 +1792,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-why-docker-for-cicd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".NET Articles Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic .NET
+        1. Why Docker for CI/CD?
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-typical-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. Typical Workflow
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-github-actions-example" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
+        3. GitHub Actions Example
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1870,51 +1844,37 @@
   
 
 
-  <h1>Dotnet overview</h1>
-
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
+<h1 id="docker-cicd-integration">Docker CI/CD Integration</h1>
+<p>Automating your build, test, and deployment pipeline using Docker.</p>
+<h2 id="1-why-docker-for-cicd">1. Why Docker for CI/CD?</h2>
 <ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
+<li><strong>Consistency</strong>: The same environment is used in development, testing, and production.</li>
+<li><strong>Isolation</strong>: Each build runs in its own clean container.</li>
+<li><strong>Speed</strong>: Take advantage of layer caching.</li>
 </ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<h2 id="2-typical-workflow">2. Typical Workflow</h2>
+<ol>
+<li><strong>Developer pushes code</strong> to GitHub/GitLab.</li>
+<li><strong>CI Server</strong> (GitHub Actions, Jenkins) is triggered.</li>
+<li><strong>Build Image</strong>: Docker builds the image using the <code>Dockerfile</code>.</li>
+<li><strong>Run Tests</strong>: Tasks like <code>dotnet test</code> or <code>npm test</code> are run inside containers.</li>
+<li><strong>Push to Registry</strong>: If tests pass, the image is pushed to a <strong><a href="../docker-private-registry/">Private Registry</a></strong>.</li>
+<li><strong>CD Pipeline</strong>: The image is pulled and deployed to production.</li>
+</ol>
+<h2 id="3-github-actions-example">3. GitHub Actions Example</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">build</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build and Push</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">docker build -t my-image:latest .</span>
+<span class="w">          </span><span class="no">docker login -u ${{ secrets.USER }} -p ${{ secrets.PASS }}</span>
+<span class="w">          </span><span class="no">docker push my-image:latest</span>
+</code></pre></div>
+<hr />
+<p><em>See </em><em><a href="../docker-overview/">Docker Overview</a></em><em> for more.</em></p>
 
 
 

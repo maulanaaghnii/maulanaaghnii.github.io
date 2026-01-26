@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-webapi-frontend/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Connecting Frontend to .NET Web API - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#connecting-frontend-to-net-web-api" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Connecting Frontend to .NET Web API
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,63 +1792,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-cors-cross-origin-resource-sharing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".NET Articles Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic .NET
+        1. CORS (Cross-Origin Resource Sharing)
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-shared-data-models" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. Shared Data Models
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-global-exception-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
+        3. Global Exception Handling
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-environment-switching" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Case Studies
+        4. Environment Switching
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1870,51 +1855,27 @@
   
 
 
-  <h1>Dotnet overview</h1>
+<h1 id="connecting-frontend-to-net-web-api">Connecting Frontend to .NET Web API</h1>
+<p>Best practices for communication between your client-side app (React, Angular, Vue) and your .NET backend.</p>
+<h2 id="1-cors-cross-origin-resource-sharing">1. CORS (Cross-Origin Resource Sharing)</h2>
+<p>By default, browsers block requests to a different domain.
+<div class="highlight"><pre><span></span><code><span class="c1">// Program.cs</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddCors</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">AddPolicy</span><span class="p">(</span><span class="s">&quot;AllowAll&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">builder</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">AllowAnyOrigin</span><span class="p">().</span><span class="n">AllowAnyHeader</span><span class="p">().</span><span class="n">AllowAnyMethod</span><span class="p">());</span>
+<span class="p">});</span>
 
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
-<ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
-</ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<span class="n">app</span><span class="p">.</span><span class="n">UseCors</span><span class="p">(</span><span class="s">&quot;AllowAll&quot;</span><span class="p">);</span>
+</code></pre></div></p>
+<h2 id="2-shared-data-models">2. Shared Data Models</h2>
+<p>Consider using a tool to generate TypeScript interfaces from your C# DTOs to keep them in sync.</p>
+<h2 id="3-global-exception-handling">3. Global Exception Handling</h2>
+<p>Ensure your API returns standard error objects so the frontend can display helpful messages instead of raw stack traces.</p>
+<h2 id="4-environment-switching">4. Environment Switching</h2>
+<p>Use different base URLs for the API depending on whether the frontend is in development or production.</p>
+<hr />
+<p><em>Check </em><em><a href="../aspnetcore-rest-api/">REST API Guide</a></em><em> for backend patterns.</em></p>
 
 
 

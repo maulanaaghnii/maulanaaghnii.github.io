@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-microservices-docker/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Running .NET Microservices with Docker - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#running-net-microservices-with-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Running .NET Microservices with Docker
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,63 +1792,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-organizing-the-solution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".NET Articles Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic .NET
+        1. Organizing the Solution
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-shared-library-pitfall" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. Shared Library Pitfall
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-communication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
+        3. Communication
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-docker-compose-for-local-dev" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Case Studies
+        4. Docker Compose for Local Dev
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1870,51 +1855,28 @@
   
 
 
-  <h1>Dotnet overview</h1>
-
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
+<h1 id="running-net-microservices-with-docker">Running .NET Microservices with Docker</h1>
+<p>Combining .NET's modular architecture with Docker's portability.</p>
+<h2 id="1-organizing-the-solution">1. Organizing the Solution</h2>
+<p>In a microservices repo, each service typically has its own directory and its own <code>Dockerfile</code>.</p>
+<h2 id="2-shared-library-pitfall">2. Shared Library Pitfall</h2>
+<p>If your services share a local library project, your <code>COPY</code> commands in the <code>Dockerfile</code> must be able to reach that project (often by building from the solution root).</p>
+<h2 id="3-communication">3. Communication</h2>
 <ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
+<li><strong>Service Discovery</strong>: Within a docker network, use service names as hostnames.</li>
+<li><strong>Environment Variables</strong>: Configure connection strings for each service differently.</li>
 </ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<h2 id="4-docker-compose-for-local-dev">4. Docker Compose for Local Dev</h2>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">identity-api</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src/Identity.API</span>
+<span class="w">  </span><span class="nt">catalog-api</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./src/Catalog.API</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DatabaseSettings__ConnectionString=mongodb://db</span>
+</code></pre></div>
+<hr />
+<p><em>See </em><em><a href="../dotnet-microservices/">.NET Microservices Architecture</a></em><em> for design patterns.</em></p>
 
 
 

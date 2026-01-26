@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-naming-best-practices/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Ubuntu File and Folder Naming Best Practices - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#ubuntu-file-and-folder-naming-best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Ubuntu File and Folder Naming Best Practices
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,63 +1792,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-avoid-spaces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".NET Articles Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic .NET
+        1. Avoid Spaces
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-use-lowecase" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. Use Lowecase
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-be-descriptive-but-short" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
+        3. Be Descriptive but Short
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-include-dates-yyyy-mm-dd" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Case Studies
+        4. Include Dates (YYYY-MM-DD)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-extensions-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Extensions Matter
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1870,51 +1866,26 @@
   
 
 
-  <h1>Dotnet overview</h1>
-
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
+<h1 id="ubuntu-file-and-folder-naming-best-practices">Ubuntu File and Folder Naming Best Practices</h1>
+<p>Proper naming conventions prevent issues with scripts, terminals, and cross-platform compatibility.</p>
+<h2 id="1-avoid-spaces">1. Avoid Spaces</h2>
+<p>Spaces in filenames require escaping in the terminal (<code>my\ file.txt</code>).
+- <strong>Bad</strong>: <code>My Data Report.pdf</code>
+- <strong>Good</strong>: <code>my-data-report.pdf</code> (kebab-case) or <code>my_data_report.pdf</code> (snake_case)</p>
+<h2 id="2-use-lowecase">2. Use Lowecase</h2>
+<p>Linux is case-sensitive. <code>MyFile.txt</code> and <code>myfile.txt</code> are two different files. Using all lowercase prevents confusion and typos.</p>
+<h2 id="3-be-descriptive-but-short">3. Be Descriptive but Short</h2>
 <ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
+<li><strong>Bad</strong>: <code>f1.sh</code>, <code>stuff.zip</code></li>
+<li><strong>Good</strong>: <code>backup-db.sh</code>, <code>project-assets-2023.zip</code></li>
 </ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<h2 id="4-include-dates-yyyy-mm-dd">4. Include Dates (YYYY-MM-DD)</h2>
+<p>Starting names with dates allows for easy chronological sorting.
+- <code>2023-10-27-log.txt</code></p>
+<h2 id="5-extensions-matter">5. Extensions Matter</h2>
+<p>Always include extensions (<code>.sh</code>, <code>.txt</code>, <code>.conf</code>) so that you and the system know the file type immediately.</p>
+<hr />
+<p><em>For more basics, see </em><em><a href="../ubuntu-file-folder-management/">File Management</a></em><em>.</em></p>
 
 
 

@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/docker-database-development/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Docker for Database Development - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#docker-for-database-development" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Docker for Database Development
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,22 +1792,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-quick-start" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
+        1. Quick Start
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=".NET Articles Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Best Practices">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
+  <a href="#use-persistent-volumes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic .NET
+        Use Persistent Volumes
       
     </span>
   </a>
@@ -1813,10 +1826,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+  <a href="#use-docker-compose" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        Use Docker Compose
       
     </span>
   </a>
@@ -1824,21 +1837,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+  <a href="#custom-initialization" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies
+        Custom Initialization
       
     </span>
   </a>
@@ -1870,51 +1872,34 @@
   
 
 
-  <h1>Dotnet overview</h1>
+<h1 id="docker-for-database-development">Docker for Database Development</h1>
+<p>Using Docker to manage databases during development ensures every developer has the same version and configuration.</p>
+<h2 id="1-quick-start">1. Quick Start</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># PostgreSQL</span>
+docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>my-db<span class="w"> </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>password<span class="w"> </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span>-d<span class="w"> </span>postgres
 
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
-<ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
-</ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<span class="c1"># MySQL</span>
+docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>my-sql<span class="w"> </span>-e<span class="w"> </span><span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>password<span class="w"> </span>-p<span class="w"> </span><span class="m">3306</span>:3306<span class="w"> </span>-d<span class="w"> </span>mysql
+</code></pre></div>
+<h2 id="2-best-practices">2. Best Practices</h2>
+<h3 id="use-persistent-volumes">Use Persistent Volumes</h3>
+<p>Never store data only inside the container.
+<div class="highlight"><pre><span></span><code>-v<span class="w"> </span>my-postgres-data:/var/lib/postgresql/data
+</code></pre></div></p>
+<h3 id="use-docker-compose">Use Docker Compose</h3>
+<p>Perfect for managing an app and its database together.
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:15-alpine</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db-data:/var/lib/postgresql/data</span>
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">db-data</span><span class="p">:</span>
+</code></pre></div></p>
+<h3 id="custom-initialization">Custom Initialization</h3>
+<p>You can mount scripts to <code>/docker-entrypoint-initdb.d/</code> to run them on first startup.</p>
+<hr />
+<p><em>See </em><em><a href="../postgresql/">PostgreSQL</a></em><em> or </em><em><a href="../mysql/">MySQL</a></em><em> for DB-specific commands.</em></p>
 
 
 

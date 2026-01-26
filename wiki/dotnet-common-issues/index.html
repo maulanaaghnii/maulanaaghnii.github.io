@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-common-issues/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Common .NET Issues and Solutions - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#common-net-issues-and-solutions" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Common .NET Issues and Solutions
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,63 +1792,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#1-cs0246-the-type-or-namespace-name-could-not-be-found" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".NET Articles Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Basic .NET
+        1. "CS0246: The type or namespace name could not be found"
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#2-ports-already-in-use" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. Ports already in use
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#3-the-ef-core-tools-version-is-older-than-the-runtime" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
+        3. "The EF Core tools version is older than the runtime"
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#4-https-certificate-issues-local-dev" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Case Studies
+        4. HTTPS Certificate Issues (Local Dev)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#5-startup-failure-after-moving-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Startup failure after moving project
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1870,51 +1866,41 @@
   
 
 
-  <h1>Dotnet overview</h1>
-
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
+<h1 id="common-net-issues-and-solutions">Common .NET Issues and Solutions</h1>
+<p>A troubleshooting guide for common .NET development problems.</p>
+<h2 id="1-cs0246-the-type-or-namespace-name-could-not-be-found">1. "CS0246: The type or namespace name could not be found"</h2>
 <ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
+<li><strong>Cause</strong>: Missing <code>using</code> directive or missing project/package reference.</li>
+<li><strong>Fix</strong>: Check <code>dotnet list package</code> or ensure the project is in the same solution.</li>
 </ul>
-<h3 id="advanced-net">Advanced .NET</h3>
+<h2 id="2-ports-already-in-use">2. Ports already in use</h2>
+<p><em>Error: Failed to bind to address http://localhost:5000</em>
+- <strong>Fix</strong>: Change <code>applicationUrl</code> in <code>Properties/launchSettings.json</code> or kill the process using the port.
+<div class="highlight"><pre><span></span><code><span class="c"># Windows</span>
+<span class="n">netstat</span> <span class="n">-ano</span> <span class="p">|</span> <span class="n">findstr</span> <span class="p">:</span><span class="n">5000</span>
+<span class="n">taskkill</span> <span class="p">/</span><span class="n">PID</span> <span class="p">&lt;</span><span class="n">PID</span><span class="p">&gt;</span> <span class="p">/</span><span class="n">F</span>
+</code></pre></div></p>
+<h2 id="3-the-ef-core-tools-version-is-older-than-the-runtime">3. "The EF Core tools version is older than the runtime"</h2>
 <ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
+<li><strong>Fix</strong>: Update your global tools.
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span>tool<span class="w"> </span>update<span class="w"> </span>--global<span class="w"> </span>dotnet-ef
+</code></pre></div></li>
 </ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
+<h2 id="4-https-certificate-issues-local-dev">4. HTTPS Certificate Issues (Local Dev)</h2>
 <ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
+<li><strong>Fix</strong>: Trust the dev certificate.
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span>dev-certs<span class="w"> </span>https<span class="w"> </span>--trust
+</code></pre></div></li>
 </ul>
-<h3 id="case-studies">Case Studies</h3>
+<h2 id="5-startup-failure-after-moving-project">5. Startup failure after moving project</h2>
 <ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
+<li><strong>Fix</strong>: Clean your <code>bin</code> and <code>obj</code> folders and rebuild.
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span>clean
+dotnet<span class="w"> </span>build
+</code></pre></div></li>
 </ul>
+<hr />
+<p><em>See </em><em><a href="../dotnet-debugging-tips/">Debugging Tips</a></em><em> for more.</em></p>
 
 
 
