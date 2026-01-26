@@ -5,6 +5,14 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/aspnetcore-middleware/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/aspnetcore-rest-api/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/category-programming/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
@@ -29,11 +37,51 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-abstraction/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-async-await/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/csharp-basic/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/csharp-basics/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-class-objects/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-encapsulation/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-exception-handling/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-generics/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-inheritance/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-interface/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-linq/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/csharp-polymorphism/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -49,7 +97,23 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-common-issues/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-compose/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-dockerfile-optimization/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/docker-dockerfile/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-environment-variables/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -65,6 +129,10 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-image-management/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/docker-installation/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
@@ -73,11 +141,43 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-monitoring-logging/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-multi-stage-build/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-naming-tagging-best-practices/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-networking-basics/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/docker-overview/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-security/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-space-saving-tips/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/docker-volumes/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/docker/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-authentication/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -101,6 +201,10 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-dependency-injection/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-entity-framework-minimal/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
@@ -114,6 +218,10 @@
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-introduction/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-jwt-authentication/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -137,6 +245,10 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-performance-optimization/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-ping-pong-api/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
@@ -153,7 +265,19 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-simple-crud/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-sqlserver-integration/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet-starter/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/dotnet-testing/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -162,6 +286,10 @@
     </url>
     <url>
          <loc>https://maulanaaghnii.github.io/docs/dotnet/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/entity-framework-core/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -201,6 +329,10 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/nuget-management/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/postgresql/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
@@ -221,7 +353,31 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-backup-restore/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-basic-security/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-common-issues/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-cron-automation/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/ubuntu-desktop-environment/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-file-folder-management/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-file-server/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -233,7 +389,31 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-keyboard-shortcuts/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-lamp-installation/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-network-configuration/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-nginx-setup/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/ubuntu-overview/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-repository-ppa/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-software-development/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
@@ -241,7 +421,23 @@
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-system-monitoring/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-system-update/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-systemd-management/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
          <loc>https://maulanaaghnii.github.io/docs/ubuntu-terminal-basics/</loc>
+         <lastmod>2026-01-26</lastmod>
+    </url>
+    <url>
+         <loc>https://maulanaaghnii.github.io/docs/ubuntu-user-permissions/</loc>
          <lastmod>2026-01-26</lastmod>
     </url>
     <url>
