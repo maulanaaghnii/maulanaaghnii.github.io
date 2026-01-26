@@ -21,15 +21,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Dotnet basic api gateway endpoint - MekProjects Wiki</title>
+        <title>.NET Basic API Gateway Endpoint - MekProjects Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#net-basic-api-gateway-endpoint" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet basic api gateway endpoint
+              .NET Basic API Gateway Endpoint
             
           </span>
         </div>
@@ -1736,6 +1736,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1744,10 +1746,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
+  <a href="#using-yarp-recommended" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Docker
+        Using YARP (Recommended)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using YARP (Recommended)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-package" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Install Package
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-in-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configure in Program.cs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-appsettings-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. AppSettings Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-an-api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why use an API Gateway?
       
     </span>
   </a>
@@ -1774,9 +1826,52 @@
   
 
 
-  <h1>Dotnet basic api gateway endpoint</h1>
+<h1 id="net-basic-api-gateway-endpoint">.NET Basic API Gateway Endpoint</h1>
+<p>An API Gateway provides a single entry point for all clients. In .NET, we often use Ocelot or YARP (Yet Another Reverse Proxy).</p>
+<h2 id="using-yarp-recommended">Using YARP (Recommended)</h2>
+<p>YARP is a high-performance reverse proxy toolkit from Microsoft.</p>
+<h3 id="1-install-package">1. Install Package</h3>
+<div class="highlight"><pre><span></span><code>dotnet<span class="w"> </span>add<span class="w"> </span>package<span class="w"> </span>Microsoft.ReverseProxy
+</code></pre></div>
+<h3 id="2-configure-in-programcs">2. Configure in Program.cs</h3>
+<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">WebApplication</span><span class="p">.</span><span class="n">CreateBuilder</span><span class="p">(</span><span class="n">args</span><span class="p">);</span>
+<span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddReverseProxy</span><span class="p">()</span>
+<span class="w">    </span><span class="p">.</span><span class="n">LoadFromConfig</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetSection</span><span class="p">(</span><span class="s">&quot;ReverseProxy&quot;</span><span class="p">));</span>
 
-<h3 id="docker">Docker</h3>
+<span class="kt">var</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="n">Build</span><span class="p">();</span>
+<span class="n">app</span><span class="p">.</span><span class="n">MapReverseProxy</span><span class="p">();</span>
+<span class="n">app</span><span class="p">.</span><span class="n">Run</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="3-appsettings-configuration">3. AppSettings Configuration</h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;ReverseProxy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Routes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;route1&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;ClusterId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cluster1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Match&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{**catch-all}&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;Clusters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;cluster1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Destinations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;destination1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://localhost:5001/&quot;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="why-use-an-api-gateway">Why use an API Gateway?</h2>
+<ul>
+<li><strong>Authentication</strong>: Centralize login logic.</li>
+<li><strong>Rate Limiting</strong>: Protect downstream services.</li>
+<li><strong>Routing</strong>: Map public URLs to internal service endpoints.</li>
+<li><strong>SSL Termination</strong>: Handle HTTPS certificates in one place.</li>
+</ul>
 
 
 
@@ -1832,10 +1927,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

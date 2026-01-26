@@ -21,15 +21,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Chocolatey - MekProjects Wiki</title>
+        <title>Chocolatey Package Manager - MekProjects Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chocolatey" class="md-skip">
+        <a href="#chocolatey-package-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chocolatey
+              Chocolatey Package Manager
             
           </span>
         </div>
@@ -1746,10 +1746,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-windows" class="md-nav__link">
+  <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Installation Windows
+        Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popular-packages-for-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Popular Packages for Developers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-use-chocolatey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Use Chocolatey?
       
     </span>
   </a>
@@ -1776,11 +1809,43 @@
   
 
 
-<h1 id="chocolatey">Chocolatey</h1>
-<h2 id="installation-windows">Installation Windows</h2>
-<p>Paste on powershell (Administrator)
-<div class="highlight"><pre><span></span><code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))
-</code></pre></div></p>
+<h1 id="chocolatey-package-manager">Chocolatey Package Manager</h1>
+<p>Chocolatey is a software management solution that allows you to manage Windows software (install, update, uninstall) from the command line.</p>
+<h2 id="installation">Installation</h2>
+<p>Run the following command in an <strong>elevated (Administrator) PowerShell</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span> <span class="nb">iex </span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://community.chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
+</code></pre></div>
+<h2 id="basic-commands">Basic Commands</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Search for a package</span>
+choco<span class="w"> </span>search<span class="w"> </span>nodejs
+
+<span class="c1"># Install a package</span>
+choco<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="c1"># Upgrade a package</span>
+choco<span class="w"> </span>upgrade<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="c1"># Upgrade all packages</span>
+choco<span class="w"> </span>upgrade<span class="w"> </span>all<span class="w"> </span>-y
+
+<span class="c1"># Uninstall a package</span>
+choco<span class="w"> </span>uninstall<span class="w"> </span>nodejs
+</code></pre></div>
+<h2 id="popular-packages-for-developers">Popular Packages for Developers</h2>
+<ul>
+<li><code>vscode</code>: Visual Studio Code</li>
+<li><code>git</code>: Git for Windows</li>
+<li><code>docker-desktop</code>: Docker Desktop</li>
+<li><code>nvm</code>: Node Version Manager</li>
+<li><code>postman</code>: API testing tool</li>
+<li><code>dbeaver</code>: Database manager</li>
+</ul>
+<h2 id="why-use-chocolatey">Why Use Chocolatey?</h2>
+<ul>
+<li><strong>Speed</strong>: No more clicking through installers.</li>
+<li><strong>Automation</strong>: Easily scriptable environments.</li>
+<li><strong>Maintenance</strong>: Update all your software with a single command.</li>
+</ul>
 
 
 
@@ -1836,10 +1901,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
