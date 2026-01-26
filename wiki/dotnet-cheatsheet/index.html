@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-cheatsheet" class="md-skip">
+        <a href="#net-cli-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -631,10 +631,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#add-project-references" class="md-nav__link">
+  <a href="#project-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add project references
+        Project Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build and Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing
       
     </span>
   </a>
@@ -1817,10 +1861,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#add-project-references" class="md-nav__link">
+  <a href="#project-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Add project references
+        Project Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-and-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build and Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing
       
     </span>
   </a>
@@ -1847,9 +1935,55 @@
   
 
 
-<h1 id="net-cheatsheet">.NET CheatSheet</h1>
-<h4 id="add-project-references">Add project references</h4>
-<div class="highlight"><pre><span></span><code>dotnet add reference path_to_reference_csproj
+<h1 id="net-cli-cheat-sheet">.NET CLI Cheat Sheet</h1>
+<p>A quick reference for the most common .NET CLI commands.</p>
+<h2 id="project-management">Project Management</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a new project</span>
+dotnet<span class="w"> </span>new<span class="w"> </span>webapi<span class="w"> </span>-n<span class="w"> </span>MyProject
+dotnet<span class="w"> </span>new<span class="w"> </span>console<span class="w"> </span>-n<span class="w"> </span>MyConsole
+
+<span class="c1"># Create a solution</span>
+dotnet<span class="w"> </span>new<span class="w"> </span>sln<span class="w"> </span>-n<span class="w"> </span>MySolution
+
+<span class="c1"># Add project to solution</span>
+dotnet<span class="w"> </span>sln<span class="w"> </span>add<span class="w"> </span>MyProject/MyProject.csproj
+</code></pre></div>
+<h2 id="dependencies">Dependencies</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Add a NuGet package</span>
+dotnet<span class="w"> </span>add<span class="w"> </span>package<span class="w"> </span>Newtonsoft.Json
+
+<span class="c1"># Add a project reference</span>
+dotnet<span class="w"> </span>add<span class="w"> </span>MyProject.csproj<span class="w"> </span>reference<span class="w"> </span>../Dependency/Dependency.csproj
+
+<span class="c1"># List dependencies</span>
+dotnet<span class="w"> </span>list<span class="w"> </span>package
+</code></pre></div>
+<h2 id="build-and-run">Build and Run</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Restore dependencies</span>
+dotnet<span class="w"> </span>restore
+
+<span class="c1"># Build project</span>
+dotnet<span class="w"> </span>build
+
+<span class="c1"># Run project</span>
+dotnet<span class="w"> </span>run
+
+<span class="c1"># Watch for changes and rerun</span>
+dotnet<span class="w"> </span>watch<span class="w"> </span>run
+</code></pre></div>
+<h2 id="testing">Testing</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run tests</span>
+dotnet<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Run tests with filter</span>
+dotnet<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--filter<span class="w"> </span><span class="s2">&quot;FullyQualifiedName~MyNamespace.MyTest&quot;</span>
+</code></pre></div>
+<h2 id="publishing">Publishing</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Publish for production</span>
+dotnet<span class="w"> </span>publish<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-o<span class="w"> </span>./publish
+
+<span class="c1"># Self-contained publish (includes runtime)</span>
+dotnet<span class="w"> </span>publish<span class="w"> </span>-c<span class="w"> </span>Release<span class="w"> </span>-r<span class="w"> </span>win-x64<span class="w"> </span>--self-contained
 </code></pre></div>
 
 
@@ -1906,10 +2040,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -80,6 +80,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#golang-microservices" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1675,6 +1680,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Golang Microservices
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1692,6 +1717,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-go-for-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Go for Microservices?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grpc-in-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gRPC in Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-brokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Brokers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resilience-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resilience Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1750,6 +1877,99 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-go-for-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Go for Microservices?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Frameworks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grpc-in-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gRPC in Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-brokers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Message Brokers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#standard-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resilience-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resilience Patterns
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1769,9 +1989,47 @@
   
 
 
-  <h1>Golang Microservices</h1>
-
-
+<h1 id="golang-microservices">Golang Microservices</h1>
+<p>Go (Golang) is one of the most popular languages for building microservices due to its performance, concurrency model, and small binary size.</p>
+<h2 id="why-go-for-microservices">Why Go for Microservices?</h2>
+<ul>
+<li><strong>Concurrency</strong>: Goroutines and Channels make it easy to handle thousands of concurrent requests.</li>
+<li><strong>Fast Startup</strong>: Compiled binaries start almost instantly.</li>
+<li><strong>Simple Deployment</strong>: Single static binary with no external dependencies.</li>
+<li><strong>Efficient</strong>: Low memory footprint.</li>
+</ul>
+<h2 id="common-frameworks">Common Frameworks</h2>
+<ul>
+<li><strong>Gin / Echo</strong>: High-performance HTTP frameworks.</li>
+<li><strong>Go-Kit</strong>: A toolkit for microservices (highly opinionated).</li>
+<li><strong>Fiber</strong>: Fast, Express-like framework.</li>
+<li><strong>gRPC-go</strong>: Official Go implementation of gRPC.</li>
+</ul>
+<h2 id="communication">Communication</h2>
+<h3 id="grpc-in-go">gRPC in Go</h3>
+<p>Go has excellent support for gRPC, which is often preferred for internal service-to-service communication.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Example Protobuf definition</span>
+<span class="nx">service</span><span class="w"> </span><span class="nx">Greeter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">rpc</span><span class="w"> </span><span class="nx">SayHello</span><span class="w"> </span><span class="p">(</span><span class="nx">HelloRequest</span><span class="p">)</span><span class="w"> </span><span class="nx">returns</span><span class="w"> </span><span class="p">(</span><span class="nx">HelloReply</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="message-brokers">Message Brokers</h3>
+<ul>
+<li><strong>Go-RabbitMQ</strong>: Simple RabbitMQ wrapper.</li>
+<li><strong>Confluent-Kafka-Go</strong>: Kafka client.</li>
+</ul>
+<h2 id="standard-project-structure">Standard Project Structure</h2>
+<div class="highlight"><pre><span></span><code>/cmd/service-name/main.go
+/internal/app/...        (private code)
+/pkg/utils/...           (public code)
+/api/proto/...           (gRPC definitions)
+</code></pre></div>
+<h2 id="resilience-patterns">Resilience Patterns</h2>
+<ul>
+<li><strong>Retries</strong>: Using libraries like <code>go-resiliency</code>.</li>
+<li><strong>Circuit Breaker</strong>: <code>gobreaker</code>.</li>
+<li><strong>Rate Limiting</strong>: <code>golang.org/x/time/rate</code>.</li>
+</ul>
 
 
 
@@ -1827,10 +2085,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

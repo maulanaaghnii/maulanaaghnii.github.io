@@ -21,15 +21,15 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>Github - MekProjects Wiki</title>
+        <title>Git and GitHub Guide - MekProjects Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -77,6 +77,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#git-and-github-guide" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -106,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Github
+              Git and GitHub Guide
             
           </span>
         </div>
@@ -1731,6 +1736,60 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#branching-merging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branching &amp; Merging
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Synchronizing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1750,18 +1809,58 @@
   
 
 
-  <h1>Github</h1>
+<h1 id="git-and-github-guide">Git and GitHub Guide</h1>
+<p>Essential commands and workflows for version control with Git and hosting on GitHub.</p>
+<h2 id="getting-started">Getting Started</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize a local repository</span>
+git<span class="w"> </span>init
 
-<div class="highlight"><pre><span></span><code>git init
+<span class="c1"># Add files to staging</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>add<span class="w"> </span>path/to/file
+
+<span class="c1"># Commit changes</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Your commit message&quot;</span>
+
+<span class="c1"># Set branch name to main</span>
+git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+
+<span class="c1"># Add remote origin</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/username/repository.git
+
+<span class="c1"># Push to GitHub</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git add &lt;args&gt;
+<h2 id="branching-merging">Branching &amp; Merging</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create and switch to a new branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-name
+
+<span class="c1"># Switch to an existing branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># Merge a branch into current branch</span>
+git<span class="w"> </span>merge<span class="w"> </span>feature-name
+
+<span class="c1"># Delete a branch</span>
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-name
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git commit -m &quot;commit message&quot;
+<h2 id="synchronizing">Synchronizing</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Pull latest changes from remote</span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Fetch changes without merging</span>
+git<span class="w"> </span>fetch<span class="w"> </span>origin
+
+<span class="c1"># Stash temporary changes</span>
+git<span class="w"> </span>stash
+git<span class="w"> </span>stash<span class="w"> </span>pop
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git branch -M main
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>git remote add origin &lt;repository &gt;
-</code></pre></div>
+<h2 id="useful-tips">Useful Tips</h2>
+<ul>
+<li>Use <code>.gitignore</code> to exclude sensitive or unnecessary files.</li>
+<li>Write clear, concise commit messages.</li>
+<li>Use Pull Requests (PRs) for code reviews on GitHub.</li>
+</ul>
 
 
 
@@ -1817,10 +1916,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1746,10 +1746,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#postgresql-group-concat-equivalent" class="md-nav__link">
+  <a href="#basic-commands-psql" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PostgreSQL Group Concat equivalent
+        Basic Commands (psql)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-sql-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful SQL Snippets
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Useful SQL Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-concat-equivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group Concat Equivalent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upsert-insert-or-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upsert (Insert or Update)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JSON Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running with Docker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primary-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Features
       
     </span>
   </a>
@@ -1777,9 +1849,47 @@
 
 
 <h1 id="postgresql">PostgreSQL</h1>
-<h2 id="postgresql-group-concat-equivalent">PostgreSQL Group Concat equivalent</h2>
-<div class="highlight"><pre><span></span><code>select string_agg(column_name, &#39;, &#39;) from table_name;
+<p>PostgreSQL is a powerful, open-source object-relational database system.</p>
+<h2 id="basic-commands-psql">Basic Commands (psql)</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Connect to a database</span>
+psql<span class="w"> </span>-U<span class="w"> </span>username<span class="w"> </span>-d<span class="w"> </span>database_name
+
+<span class="c1"># List databases</span>
+<span class="se">\l</span>
+
+<span class="c1"># List tables</span>
+<span class="se">\d</span>t
+
+<span class="c1"># Quit psql</span>
+<span class="se">\q</span>
 </code></pre></div>
+<h2 id="useful-sql-snippets">Useful SQL Snippets</h2>
+<h3 id="group-concat-equivalent">Group Concat Equivalent</h3>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">string_agg</span><span class="p">(</span><span class="k">column_name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;, &#39;</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="upsert-insert-or-update">Upsert (Insert or Update)</h3>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;New Name&#39;</span><span class="p">)</span>
+<span class="k">ON</span><span class="w"> </span><span class="n">CONFLICT</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="k">DO</span><span class="w"> </span><span class="k">UPDATE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EXCLUDED</span><span class="p">.</span><span class="n">name</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="json-operations">JSON Operations</h3>
+<p>PostgreSQL has excellent support for JSONB.
+<div class="highlight"><pre><span></span><code><span class="c1">-- Select from JSONB column</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="k">data</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;name&#39;</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">data</span><span class="w"> </span><span class="o">@&gt;</span><span class="w"> </span><span class="s1">&#39;{&quot;id&quot;: 1}&#39;</span><span class="p">;</span>
+</code></pre></div></p>
+<h2 id="running-with-docker">Running with Docker</h2>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>--name<span class="w"> </span>postgres-db<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-e<span class="w"> </span><span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>mysecretpassword<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-p<span class="w"> </span><span class="m">5432</span>:5432<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span>postgres
+</code></pre></div>
+<h2 id="primary-features">Primary Features</h2>
+<ul>
+<li><strong>ACID Compliant</strong>: Reliable transactions.</li>
+<li><strong>Extensible</strong>: Custom types and functions.</li>
+<li><strong>Rich Indexing</strong>: B-tree, Hash, GIST, GIN.</li>
+<li><strong>Foreign Data Wrappers</strong>: Connect to other databases.</li>
+</ul>
 
 
 
@@ -1835,10 +1945,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
