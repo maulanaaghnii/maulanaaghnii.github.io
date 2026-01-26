@@ -115,6 +115,7 @@ nav:
     - Machine Learning: dicoding-machine-learning.md
     - Golang Microservices: golang-microservices.md
     - .NET Microservices: dotnet-microservices.md
+  - www.maulanaaghni.id: https://maulanaaghni.id
 
 extra_css:
   - stylesheets/extra.css
