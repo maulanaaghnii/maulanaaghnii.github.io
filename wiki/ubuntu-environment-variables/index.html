@@ -12,7 +12,7 @@
         <meta name="author" content="TB Maulana Aghni">
       
       
-        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/dotnet-overview/">
+        <link rel="canonical" href="https://maulanaaghnii.github.io/docs/ubuntu-environment-variables/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Dotnet overview - MekProjects Wiki</title>
+        <title>Ubuntu Environment Variables - MekProjects Wiki</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-articles-overview" class="md-skip">
+        <a href="#ubuntu-environment-variables" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dotnet overview
+              Ubuntu Environment Variables
             
           </span>
         </div>
@@ -1782,6 +1782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1790,22 +1792,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#net-articles-overview" class="md-nav__link">
+  <a href="#viewing-variables" class="md-nav__link">
     <span class="md-ellipsis">
       
-        .NET Articles Overview
+        Viewing Variables
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label=".NET Articles Overview">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#basic-net" class="md-nav__link">
+  <a href="#1-temporary-current-session" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Basic .NET
+        1. Temporary (Current session)
       
     </span>
   </a>
@@ -1813,10 +1826,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#advanced-net" class="md-nav__link">
+  <a href="#2-user-specific-permanent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Advanced .NET
+        2. User-Specific (Permanent)
       
     </span>
   </a>
@@ -1824,21 +1837,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tips-and-tricks" class="md-nav__link">
+  <a href="#3-system-wide" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tips and Tricks
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#case-studies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Case Studies
+        3. System-Wide
       
     </span>
   </a>
@@ -1847,6 +1849,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Variables
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1870,51 +1883,35 @@
   
 
 
-  <h1>Dotnet overview</h1>
+<h1 id="ubuntu-environment-variables">Ubuntu Environment Variables</h1>
+<p>Managing system and user variables in Ubuntu.</p>
+<h2 id="viewing-variables">Viewing Variables</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Show all variables</span>
+printenv
 
-<h2 id="net-articles-overview">.NET Articles Overview</h2>
-<h3 id="basic-net">Basic .NET</h3>
+<span class="c1"># Show a specific variable</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+</code></pre></div>
+<h2 id="setting-variables">Setting Variables</h2>
+<h3 id="1-temporary-current-session">1. Temporary (Current session)</h3>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">MY_VAR</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span>
+</code></pre></div>
+<h3 id="2-user-specific-permanent">2. User-Specific (Permanent)</h3>
+<p>Add the export command to your <code>~/.bashrc</code> or <code>~/.zshrc</code> file.
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export MY_VAR=&quot;hello&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div></p>
+<h3 id="3-system-wide">3. System-Wide</h3>
+<p>Edit the <code>/etc/environment</code> file (requires sudo).</p>
+<h2 id="common-variables">Common Variables</h2>
 <ul>
-<li><a href="../dotnet-introduction/">Introduction to .NET: What and Why?</a></li>
-<li><a href="../dotnet-installation/">Installing .NET on Various Operating Systems</a></li>
-<li><a href="../csharp-basics/">Getting to Know C# Programming Language</a></li>
-<li><a href="../dotnet-project-structure/">Project and Solution Structure in .NET</a></li>
-<li><a href="../dotnet-cli-basics/">Essential .NET CLI Commands</a></li>
-<li><a href="../dotnet-first-project/">Creating and Running Your First Project</a></li>
-<li><a href="../nuget-management/">Package Management with NuGet</a></li>
-<li><a href="../csharp-class-objects/">Class and Object Concepts in C#</a></li>
-<li><a href="../csharp-interface-inheritance/">Interface and Inheritance Concepts in C#</a></li>
+<li><code>PATH</code>: List of directories where the system looks for executable files.</li>
+<li><code>HOME</code>: Current user's home directory.</li>
+<li><code>USER</code>: Current logged-in user.</li>
+<li><code>EDITOR</code>: Default text editor (e.g., nano, vim).</li>
 </ul>
-<h3 id="advanced-net">Advanced .NET</h3>
-<ul>
-<li><a href="../dotnet-dependency-injection/">Dependency Injection in .NET</a></li>
-<li><a href="../entity-framework-core/">Entity Framework Core: ORM in .NET</a></li>
-<li><a href="../aspnetcore-rest-api/">Building REST API with ASP.NET Core</a></li>
-<li><a href="../aspnetcore-middleware/">Middleware Concepts in ASP.NET Core</a></li>
-<li><a href="../dotnet-authentication/">Authentication &amp; Authorization in .NET</a></li>
-<li><a href="../dotnet-logging-monitoring/">Logging and Monitoring in .NET</a></li>
-<li><a href="../dotnet-testing/">Unit and Integration Testing in .NET</a></li>
-<li><a href="../dotnet-clean-architecture/">Clean Architecture in .NET</a></li>
-<li><a href="../dotnet-microservices/">Microservices with .NET</a></li>
-</ul>
-<h3 id="tips-and-tricks">Tips and Tricks</h3>
-<ul>
-<li><a href="../dotnet-debugging-tips/">Debugging Tips in Visual Studio &amp; VS Code</a></li>
-<li><a href="../dotnet-common-issues/">Solving Common Issues in .NET</a></li>
-<li><a href="../dotnet-performance-optimization/">Performance Optimization for .NET Applications</a></li>
-<li><a href="../dotnet-environment-variables/">Managing Environment Variables in .NET</a></li>
-<li><a href="../dotnet-naming-best-practices/">Best Practices for Naming and Folder Structure</a></li>
-<li><a href="../dotnet-cicd-automation/">Build &amp; Deployment Automation with CI/CD</a></li>
-</ul>
-<h3 id="case-studies">Case Studies</h3>
-<ul>
-<li><a href="../dotnet-simple-crud/">Building Simple CRUD Application with .NET</a></li>
-<li><a href="../dotnet-sqlserver-integration/">Integrating .NET with SQL Server Database</a></li>
-<li><a href="../dotnet-webapi-frontend/">Creating Web API and Frontend Consumption</a></li>
-<li><a href="../dotnet-jwt-authentication/">Implementing JWT Authentication in .NET</a></li>
-<li><a href="../dotnet-microservices-docker/">Case Study: Microservices with .NET and Docker</a></li>
-<li><a href="../dotnet-isolated-development/">Setting Up Isolated Development Environment with .NET</a></li>
-</ul>
+<hr />
+<p><em>For development, see </em><em><a href="../dotnet-environment-variables/">.NET Env Vars</a></em><em>.</em></p>
 
 
 
