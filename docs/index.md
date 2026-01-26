@@ -54,7 +54,7 @@ Understand key concepts and workflows in .NET C# to build a solid programming fo
 </div>
 
 <div class="card" markdown>
-![Image title](https://miro.medium.com/1*x5ZIl_FUjkGQ8LKSYE1D6Q.jpeg){ .card-image }
+![Image title](https://miro.medium.com/1*Zud-L6m4Dd3Ikf_4vcZcKQ.jpeg){ .card-image }
 
 <div class="card-labels">
 <a href="#"><span class="label label-programming">Programming</span></a>
@@ -70,7 +70,7 @@ Learn the key tricks and tools that make Go a powerhouse for your workflow.
 
 
 <div class="card" markdown>
-![Image title](https://miro.medium.com/1*Zud-L6m4Dd3Ikf_4vcZcKQ.jpeg){ .card-image }
+![Image title](https://miro.medium.com/1*x5ZIl_FUjkGQ8LKSYE1D6Q.jpeg){ .card-image }
 
 <div class="card-labels">
 <a href="#"><span class="label label-programming">Programming</span></a>
