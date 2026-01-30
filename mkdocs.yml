@@ -72,6 +72,7 @@ nav:
     # - Blog: blog.md
     - Content List: content-list.md
     - About: about.md
+    - Version History: version.md
     - .NET Basic: 
       - .NET Basic : dotnet-basic-1.md
       - .NET Cheatsheet: dotnet-cheatsheet.md
