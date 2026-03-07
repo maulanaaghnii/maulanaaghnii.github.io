@@ -18,6 +18,7 @@ theme:
   name: material
   icon:
     repo: fontawesome/brands/github
+    logo: material/signal-variant
   features:
     - navigation.tabs
     - content.code.copy
@@ -30,22 +31,22 @@ theme:
     #     name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: red
+      accent: red
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: orange
+      accent: orange
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/images/67958.png
+  # logo: assets/images/67958.png
   favicon: assets/images/favicon.ico
 markdown_extensions:
   - pymdownx.superfences
