@@ -2194,3 +2194,230 @@ header.scrolled {
         font-size: 1.8rem;
     }
 }
+
+/* Current Activity Section */
+.activity {
+    background: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.activity-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.activity-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    backdrop-filter: blur(20px);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.activity-footer {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.activity-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-primary);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--border-radius-pill);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.activity-btn:hover {
+    background: var(--accent-gradient);
+    color: var(--bg-primary);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
+}
+
+.activity-btn i {
+    font-size: 0.8rem;
+    transition: var(--transition-smooth);
+}
+
+.activity-btn:hover i {
+    transform: translateX(5px);
+}
+
+.activity-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-gradient);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--bg-primary);
+    flex-shrink: 0;
+}
+
+.activity-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.activity-header h3 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.status-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.status-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250%;
+    height: 250%;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.status-dot.online { background: #10b981; }
+.status-dot.online::after { background: #10b981; }
+
+.status-dot.blue { background: #3b82f6; }
+.status-dot.blue::after { background: #3b82f6; }
+
+.status-dot.purple { background: #a855f7; }
+.status-dot.purple::after { background: #a855f7; }
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+.activity-info p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.activity-tags {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.activity-tags .tag {
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .activity-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .activity-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .activity-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .activity-footer {
+        justify-content: flex-start;
+    }
+
+    .activity-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .activity-card:hover { 
+        transform: translateY(-5px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-card {
+        padding: 1.5rem 1.2rem;
+    }
+    
+    .activity-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
